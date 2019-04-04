@@ -1,0 +1,47 @@
+\providecommand{\bysame}{\leavevmode\hbox to3em{\hrulefill}\thinspace}
+\providecommand{\MR}{\relax\ifhmode\unskip\space\fi MR }
+% \MRhref is called by the amsart/book/proc definition of \MR.
+\providecommand{\MRhref}[2]{%
+  \href{http://www.ams.org/mathscinet-getitem?mr=#1}{#2}
+}
+\providecommand{\href}[2]{#2}
+\begin{thebibliography}{10}
+
+\bibitem{Tableau}
+\emph{Tableau software}, 2013.
+
+\bibitem{Python}
+Python~Software Foundation, \emph{Python 3.6.7}, 2008.
+
+\bibitem{GitHub}
+Inc. GitHub, \emph{Open source survey}, 2017.
+
+\bibitem{MAS_Warehouse}
+Massimo Cossentino Carmelo Lodato Salvatore Lopes~Patrizia Ribino, \emph{Multi
+  agent simulation for decision making in warehouse management.}, (2006)., ISBN
+  978-83-60810-39-2978-83-.
+
+\bibitem{EvaluationAGVS}
+Yael~Edan Sigal~Berman, Edna~Schechtman, \emph{Evaluation of automatic guided
+  vehicle systems.}, (2006)., Contents lists available at ScienceDirect.
+
+\bibitem{SistemaComplesso}
+Wikipedia, \emph{Sistema complesso --- wikipedia{,} l'enciclopedia libera},
+  2018.
+
+\bibitem{SistemaMultiagente}
+\bysame, \emph{Sistema multiagente --- wikipedia{,} l'enciclopedia libera},
+  2018.
+
+\bibitem{AgenteIntelligente}
+\bysame, \emph{Agente intelligente --- wikipedia{,} l'enciclopedia libera},
+  2019.
+
+\bibitem{PycxSimulator}
+Chun Wong, \emph{Pycxsimulator}, 2012.
+
+\bibitem{CaratteristicheMAS}
+Michael Wooldridge, \emph{An introduction to multiagent systems.}, (2002).,
+  ISBN 978-0-471-49691-5.
+
+\end{thebibliography}

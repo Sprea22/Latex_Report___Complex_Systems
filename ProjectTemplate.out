@@ -1,0 +1,42 @@
+\BOOKMARK [1][-]{section.1}{Introduzione al problema}{}% 1
+\BOOKMARK [2][-]{subsection.1.1}{Panoramica}{section.1}% 2
+\BOOKMARK [2][-]{subsection.1.2}{Obiettivi}{section.1}% 3
+\BOOKMARK [2][-]{subsection.1.3}{Strumenti utilizzati}{section.1}% 4
+\BOOKMARK [1][-]{section.2}{Stato dell'arte}{}% 5
+\BOOKMARK [2][-]{subsection.2.1}{Agente}{section.2}% 6
+\BOOKMARK [2][-]{subsection.2.2}{Sistema}{section.2}% 7
+\BOOKMARK [2][-]{subsection.2.3}{Sistema complesso}{section.2}% 8
+\BOOKMARK [2][-]{subsection.2.4}{Simulazione sistema}{section.2}% 9
+\BOOKMARK [2][-]{subsection.2.5}{Sistema multiagente}{section.2}% 10
+\BOOKMARK [3][-]{subsubsection.2.5.1}{Modelli di interazione tra agenti}{subsection.2.5}% 11
+\BOOKMARK [3][-]{subsubsection.2.5.2}{Tipologie di ambienti}{subsection.2.5}% 12
+\BOOKMARK [2][-]{subsection.2.6}{Automated Guided Vehicle}{section.2}% 13
+\BOOKMARK [2][-]{subsection.2.7}{Automated Guided Vehicle System}{section.2}% 14
+\BOOKMARK [3][-]{subsubsection.2.7.1}{Classificazione di un AGVS}{subsection.2.7}% 15
+\BOOKMARK [3][-]{subsubsection.2.7.2}{Performance di un AGVS}{subsection.2.7}% 16
+\BOOKMARK [2][-]{subsection.2.8}{Lavori precedenti}{section.2}% 17
+\BOOKMARK [1][-]{section.3}{Descrizione del dominio}{}% 18
+\BOOKMARK [2][-]{subsection.3.1}{Azienda}{section.3}% 19
+\BOOKMARK [2][-]{subsection.3.2}{Tipologia di lavoro e di ordini}{section.3}% 20
+\BOOKMARK [2][-]{subsection.3.3}{Ambiente}{section.3}% 21
+\BOOKMARK [2][-]{subsection.3.4}{Lista degli ordini}{section.3}% 22
+\BOOKMARK [1][-]{section.4}{Modellazione del problema}{}% 23
+\BOOKMARK [2][-]{subsection.4.1}{Ambiente del simulatore}{section.4}% 24
+\BOOKMARK [2][-]{subsection.4.2}{Modellazione AGV}{section.4}% 25
+\BOOKMARK [3][-]{subsubsection.4.2.1}{Algoritmo di navigazione}{subsection.4.2}% 26
+\BOOKMARK [3][-]{subsubsection.4.2.2}{Gestione dei conflitti}{subsection.4.2}% 27
+\BOOKMARK [3][-]{subsubsection.4.2.3}{Stati assumibili}{subsection.4.2}% 28
+\BOOKMARK [3][-]{subsubsection.4.2.4}{Transizioni tra stati}{subsection.4.2}% 29
+\BOOKMARK [2][-]{subsection.4.3}{Metodo di gestione ordini}{section.4}% 30
+\BOOKMARK [3][-]{subsubsection.4.3.1}{Behaviour type 1}{subsection.4.3}% 31
+\BOOKMARK [3][-]{subsubsection.4.3.2}{Behaviour type 2}{subsection.4.3}% 32
+\BOOKMARK [3][-]{subsubsection.4.3.3}{Behaviour type 3}{subsection.4.3}% 33
+\BOOKMARK [1][-]{section.5}{Implementazione simulatore}{}% 34
+\BOOKMARK [1][-]{section.6}{Simulazione}{}% 35
+\BOOKMARK [2][-]{subsection.6.1}{Configurazioni simulate}{section.6}% 36
+\BOOKMARK [2][-]{subsection.6.2}{Lista degli ordini per simulazione}{section.6}% 37
+\BOOKMARK [2][-]{subsection.6.3}{Parametri di valutazione}{section.6}% 38
+\BOOKMARK [1][-]{section.7}{Analisi dei risultati}{}% 39
+\BOOKMARK [2][-]{subsection.7.1}{Dati raccolti dalle simulazioni}{section.7}% 40
+\BOOKMARK [1][-]{section.8}{Conclusioni}{}% 41
+\BOOKMARK [2][-]{subsection.8.1}{Lavori e sviluppi futuri}{section.8}% 42
