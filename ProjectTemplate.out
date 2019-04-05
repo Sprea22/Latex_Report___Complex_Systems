@@ -20,23 +20,27 @@
 \BOOKMARK [2][-]{subsection.3.2}{Tipologia di lavoro e di ordini}{section.3}% 20
 \BOOKMARK [2][-]{subsection.3.3}{Ambiente}{section.3}% 21
 \BOOKMARK [2][-]{subsection.3.4}{Lista degli ordini}{section.3}% 22
-\BOOKMARK [1][-]{section.4}{Modellazione del problema}{}% 23
+\BOOKMARK [1][-]{section.4}{Descrizione del modello}{}% 23
 \BOOKMARK [2][-]{subsection.4.1}{Ambiente del simulatore}{section.4}% 24
-\BOOKMARK [2][-]{subsection.4.2}{Modellazione AGV}{section.4}% 25
-\BOOKMARK [3][-]{subsubsection.4.2.1}{Algoritmo di navigazione}{subsection.4.2}% 26
-\BOOKMARK [3][-]{subsubsection.4.2.2}{Gestione dei conflitti}{subsection.4.2}% 27
-\BOOKMARK [3][-]{subsubsection.4.2.3}{Stati assumibili}{subsection.4.2}% 28
-\BOOKMARK [3][-]{subsubsection.4.2.4}{Transizioni tra stati}{subsection.4.2}% 29
-\BOOKMARK [2][-]{subsection.4.3}{Metodo di gestione ordini}{section.4}% 30
-\BOOKMARK [3][-]{subsubsection.4.3.1}{Behaviour type 1}{subsection.4.3}% 31
-\BOOKMARK [3][-]{subsubsection.4.3.2}{Behaviour type 2}{subsection.4.3}% 32
-\BOOKMARK [3][-]{subsubsection.4.3.3}{Behaviour type 3}{subsection.4.3}% 33
-\BOOKMARK [1][-]{section.5}{Implementazione simulatore}{}% 34
-\BOOKMARK [1][-]{section.6}{Simulazione}{}% 35
-\BOOKMARK [2][-]{subsection.6.1}{Configurazioni simulate}{section.6}% 36
-\BOOKMARK [2][-]{subsection.6.2}{Lista degli ordini per simulazione}{section.6}% 37
-\BOOKMARK [2][-]{subsection.6.3}{Parametri di valutazione}{section.6}% 38
-\BOOKMARK [1][-]{section.7}{Analisi dei risultati}{}% 39
-\BOOKMARK [2][-]{subsection.7.1}{Dati raccolti dalle simulazioni}{section.7}% 40
-\BOOKMARK [1][-]{section.8}{Conclusioni}{}% 41
-\BOOKMARK [2][-]{subsection.8.1}{Lavori e sviluppi futuri}{section.8}% 42
+\BOOKMARK [2][-]{subsection.4.2}{Modellazione agenti}{section.4}% 25
+\BOOKMARK [3][-]{subsubsection.4.2.1}{Stati assumibili}{subsection.4.2}% 26
+\BOOKMARK [3][-]{subsubsection.4.2.2}{Transizioni tra stati}{subsection.4.2}% 27
+\BOOKMARK [3][-]{subsubsection.4.2.3}{Algoritmo di navigazione}{subsection.4.2}% 28
+\BOOKMARK [4][-]{paragraph.4.2.3.1}{Esempio navigazione - Libero}{subsubsection.4.2.3}% 29
+\BOOKMARK [4][-]{paragraph.4.2.3.2}{Esempio navigazione - Ostacolo}{subsubsection.4.2.3}% 30
+\BOOKMARK [3][-]{subsubsection.4.2.4}{Gestione dei conflitti}{subsection.4.2}% 31
+\BOOKMARK [4][-]{paragraph.4.2.4.1}{Esempio conflitto - Cambio direzione}{subsubsection.4.2.4}% 32
+\BOOKMARK [4][-]{paragraph.4.2.4.2}{Esempio conflitto - Attesa}{subsubsection.4.2.4}% 33
+\BOOKMARK [2][-]{subsection.4.3}{Metodo di gestione ordini}{section.4}% 34
+\BOOKMARK [3][-]{subsubsection.4.3.1}{Behaviour type 1}{subsection.4.3}% 35
+\BOOKMARK [3][-]{subsubsection.4.3.2}{Behaviour type 2}{subsection.4.3}% 36
+\BOOKMARK [3][-]{subsubsection.4.3.3}{Behaviour type 3}{subsection.4.3}% 37
+\BOOKMARK [1][-]{section.5}{Implementazione simulatore}{}% 38
+\BOOKMARK [1][-]{section.6}{Simulazione}{}% 39
+\BOOKMARK [2][-]{subsection.6.1}{Configurazioni simulate}{section.6}% 40
+\BOOKMARK [2][-]{subsection.6.2}{Lista degli ordini per simulazione}{section.6}% 41
+\BOOKMARK [2][-]{subsection.6.3}{Parametri di valutazione}{section.6}% 42
+\BOOKMARK [1][-]{section.7}{Analisi dei risultati}{}% 43
+\BOOKMARK [2][-]{subsection.7.1}{Dati raccolti dalle simulazioni}{section.7}% 44
+\BOOKMARK [1][-]{section.8}{Conclusioni}{}% 45
+\BOOKMARK [2][-]{subsection.8.1}{Lavori e sviluppi futuri}{section.8}% 46

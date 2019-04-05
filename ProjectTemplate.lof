@@ -1,15 +1,17 @@
 \babel@toc {english}{}
-\contentsline {figure}{\numberline {1}{\ignorespaces Interazione di un agente con l'ambiente esterno}}{5}{figure.caption.4}
-\contentsline {figure}{\numberline {2}{\ignorespaces Ciclo di vita di una simulazione}}{7}{figure.caption.5}
-\contentsline {figure}{\numberline {3}{\ignorespaces Interazione di pi\IeC {\`u} agenti con l'ambiente}}{8}{figure.caption.6}
-\contentsline {figure}{\numberline {4}{\ignorespaces Modelli di interazione tra agenti}}{9}{figure.caption.7}
-\contentsline {figure}{\numberline {5}{\ignorespaces Diversi modelli di AGV}}{11}{figure.caption.9}
-\contentsline {figure}{\numberline {6}{\ignorespaces Mappa fisica del magazzino}}{15}{figure.caption.11}
-\contentsline {figure}{\numberline {7}{\ignorespaces Numero di ordini per ciascun cliente}}{16}{figure.caption.12}
-\contentsline {figure}{\numberline {8}{\ignorespaces Rappresentazione della mappa del magazzino sul simulatore\relax }}{17}{figure.caption.13}
-\contentsline {figure}{\numberline {9}{\ignorespaces Transazioni tra stati di un AGV}}{22}{figure.caption.14}
-\contentsline {figure}{\numberline {10}{\ignorespaces Numero di ordini associati ad ogni cliente}}{26}{figure.caption.15}
-\contentsline {figure}{\numberline {11}{\ignorespaces Numero di diversi articoli per cliente}}{27}{figure.caption.16}
-\contentsline {figure}{\numberline {12}{\ignorespaces A really Awesome Image\relax }}{30}{figure.caption.17}
-\contentsline {figure}{\numberline {13}{\ignorespaces A really Awesome Image\relax }}{30}{figure.caption.17}
-\contentsline {figure}{\numberline {14}{\ignorespaces A really Awesome Image\relax }}{30}{figure.caption.17}
+\contentsline {figure}{\numberline {1}{\ignorespaces Interazione di un agente con l'ambiente esterno}}{5}{figure.caption.1}
+\contentsline {figure}{\numberline {2}{\ignorespaces Ciclo di vita di una simulazione}}{7}{figure.caption.2}
+\contentsline {figure}{\numberline {3}{\ignorespaces Interazione di pi\IeC {\`u} agenti con l'ambiente}}{8}{figure.caption.3}
+\contentsline {figure}{\numberline {4}{\ignorespaces Modelli di interazione tra agenti}}{9}{figure.caption.4}
+\contentsline {figure}{\numberline {5}{\ignorespaces Diversi modelli di AGV}}{11}{figure.caption.6}
+\contentsline {figure}{\numberline {6}{\ignorespaces Mappa fisica del magazzino}}{15}{figure.caption.8}
+\contentsline {figure}{\numberline {7}{\ignorespaces Numero di ordini per ciascun cliente}}{16}{figure.caption.9}
+\contentsline {figure}{\numberline {8}{\ignorespaces Rappresentazione della mappa del magazzino sul simulatore\relax }}{17}{figure.caption.10}
+\contentsline {figure}{\numberline {9}{\ignorespaces Transizioni tra stati di un agente}}{23}{figure.caption.11}
+\contentsline {figure}{\numberline {10}{\ignorespaces GUI del simulatore implementato}}{31}{figure.caption.12}
+\contentsline {figure}{\numberline {11}{\ignorespaces GUI del simulatore durante esecuzione}}{32}{figure.caption.13}
+\contentsline {figure}{\numberline {12}{\ignorespaces Numero di ordini associati ad ogni cliente}}{34}{figure.caption.14}
+\contentsline {figure}{\numberline {13}{\ignorespaces Numero di diversi articoli per cliente}}{34}{figure.caption.15}
+\contentsline {figure}{\numberline {14}{\ignorespaces A really Awesome Image\relax }}{37}{figure.caption.16}
+\contentsline {figure}{\numberline {15}{\ignorespaces A really Awesome Image\relax }}{37}{figure.caption.16}
+\contentsline {figure}{\numberline {16}{\ignorespaces A really Awesome Image\relax }}{37}{figure.caption.16}

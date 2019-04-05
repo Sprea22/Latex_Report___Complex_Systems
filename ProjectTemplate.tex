@@ -9,6 +9,15 @@
 \usepackage{multirow}
 \usepackage{caption}
 
+
+\usepackage{titlesec}
+\setcounter{tocdepth}{4}
+\setcounter{secnumdepth}{4}
+\titleformat{\paragraph}
+{\normalfont\normalsize\bfseries}{\theparagraph}{1em}{}
+\titlespacing*{\paragraph}
+{0pt}{3.25ex plus 1ex minus .2ex}{1.5ex plus .2ex}
+
 \begin{document}
 
 \begin{titlepage}
@@ -259,7 +268,7 @@ Un veicolo a guida autonoma (AGV) identifica dei veicoli, solitamente utilizzati
 \subsection{Automated Guided Vehicle System}
 \noindent Un sistema automatizzato di veicoli a guida autonoma (AGVS) permette una gestione estremamente flessibile per spedizione e gestione di materiali, soprattutto per quegli ambienti in cui i prodotti sono molto vari e le necessità continuano a variare nel tempo. \\
 
-\noindentQuesti sistemi sono stati introdotti nel 1950, e da allora si sono trovati sempre più contesti e applicazioni in cui forniscono un'elevata utilità pratica. Inoltre, con l'avvento di tecnologie sempre più avanzate e di MAS sempre più sofisticati, le performance di questi sistemi sono in continua crescita.
+\noindent Questi sistemi sono stati introdotti nel 1950, e da allora si sono trovati sempre più contesti e applicazioni in cui forniscono un'elevata utilità pratica. Inoltre, con l'avvento di tecnologie sempre più avanzate e di MAS sempre più sofisticati, le performance di questi sistemi sono in continua crescita.
 
 \subsubsection{Classificazione di un AGVS}
 Un AGVS deve essere progettato e implementato considerando il contesto in cui ci si trova e le priorità che si presentano. Tutto sommato, un AGVS può essere classificato in base ai tre seguenti requisiti:
@@ -342,7 +351,7 @@ Il seguente grafico riporta il numero di ordini presenti all'interno della lista
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Modellazione del problema
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Modellazione del problema}
+\section{Descrizione del modello}
 
 \subsection{Ambiente del simulatore}
 Una volta ottenuta la mappa del magazzino, si è andati a cercare di rappresentare la struttura del magazzino in maniera tale da renderla utilizzabile per un sistema di simulazione.
@@ -427,54 +436,235 @@ Una volta ottenuta la mappa del magazzino, si è andati a cercare di rappresenta
 
 \newpage
 
-\subsection{Modellazione AGV}
-Ciascun AGV presente all'interno della simulazione è caratterizzato da:
+\subsection{Modellazione agenti}
+Ciascun agente definito all'interno della simulazione è caratterizzato da i seguenti attributi, che permettono la corretta gestione del sistema di simulazione e del comportamento degli agenti stessi:
 \begin{itemize}
-\item Id:
-\item Colore:
-\item Posizione:
-\item Posizione iniziale:
-\item Stato:
-\item Info sull'ordine:
-\item Cliente:
-\item Percorso:
-\item Gate:
-\item Goal:
-\item Articoli prioritari:
+\item \textbf{Id:} un valore intero [1, 12] univoco associato a ciascun agente presente nella simulazione, permettendo il riconoscimento di ciascuno di essi.
+\item \textbf{Colore:} un valore alfanumerico ["black"] che permette di rappresentare gli agenti con colori differenti all'interno della simulazione. Il simulatore attuale riporta tutti gli agenti con il colore nero.
+\item \textbf{Posizione:} una coppia di numeri interi (x, y) che rappresenta la posizione dell'agente all'interno dell'ambiente di simulazione. Ciò permette di tener traccia della posizione di tutti gli agenti in qualsiasi momento della simulazione.
+\item \textbf{Posizione iniziale:} una coppia di numeri interi (x, y) che rappresenta la posizione da cui l'agente è partito all'inizio della simulazione. Verosimilmente questa posizione dovrebbe coincidere con la posizione di una stazione di ricarica, e permetterebbe all'agente, una volta raggiunto il suo obiettivo, di tornare alla sua postazione di ricarica prestabilita. 
+\item \textbf{Stato:} un valore alfanumerico che permette di capire cosa sta effettivamente facendo un certo agente. Questo attributo è fondamentale per la corretta elaborazione degli ordini e per lo svolgimento della simulazione. Nei seguenti paragrafi sono riportati gli stati assumibili da un agente [\ref{StatiAssumibili}] e le corrispettive transazioni possibili tra di essi [\ref{TransizioniStati}].
+\item \textbf{Info sull'ordine:} un valore intero [-1, 200] che indica il numero dell'ordine su cui sta lavorando l'agente in quel determinato momento. Se il valore è pari a -1 vuol dire che l'agente non sta lavorando su nessun ordine in quel momento.
+\item \textbf{Cliente:} un valore alfanumerico ["MI", "FI", "CO"] che indica la sigla del cliente dell'ordine che sta effettuando in un determinato momento. Ciò permette di determinare dove l'agente dovrà andare a scaricare l'ordine.
+\item \textbf{Percorso:} una lista di coppie di valori interi [(x1, y1), (x2, y2), ... , (xN, yN)] che rappresenta il percorso calcolato e previsto dall'agente per raggiungere una determinata posizione (xN, yN) all'interno dell'ambiente di simulazione .
+\item \textbf{Gate:} un valore alfanumerico [-1, 0, 1, 2] che rappresenta il gate a cui è diretto l'agente in quel momento. Ciascun gate è associato ad un determinato cliente, mentre il valore -1 significa che in quel momento l'agente non si sta dirigendo verso nessun gate. Ciò permette al sistema di gestione di controllare il flusso d'arrivo ai gate dei vari agenti.
+\item \textbf{Goal:} un coppia di valori interi (x, y) che rappresenta la posizione all'interno dell'ambiente di simulazione che l'agente deve raggiungere in quel momento per compiere un'azione qualsiasi.
+\item \textbf{Articoli prioritari:} una lista di valori alfanumerici ["Camicia", "Scarpa arancio", ... "Giubbetto"] che rappresenta il nome degli articoli che rappresenteranno una priorità assoluta per gli agenti in questione. Ciò permette di indirizzare un agente verso l'elaborazione di ordini contenti questi articoli rispetto ad altri ordini.
 
 \end{itemize}
-\subsubsection{Algoritmo di navigazione}
-Navigazione libera. Algoritmo A*.
 
-\subsubsection{Gestione dei conflitti}
-
-\newpage
-
-\subsubsection{Stati assumibili}
+\subsubsection{Stati assumibili}\label{StatiAssumibili}
+Come accennato nel paragrafo precedente, ciascun agente è caratterizzato da svariati attributi, tra cui uno che definisce lo stato in cui si trova l'agente in un determinato momento. Questo attributo ha un'estrema importanza per il corretto funzionamento della simulazione, in quanto regola il comportamento degli agenti in base allo stato in cui si trovano. \\
+\noindent Di seguito è riportata la lista dei possibili stati che un agente può assumere durante il ciclo di vita di una simulazione insieme ad una breve descrizione per ciascuno di essi:
 \begin{itemize}
-    \item \textbf{Free}: Stato iniziale di ogni AGV. In questo stato l’AGV prende a carico, in base al tipo di comportamento scelto per la simulazione, il primo oggetto da prendere.
-    \item \textbf{ToGoal}: l’AGV ha preso in carico un oggetto da prendere e si muove verso il punto di prelievo per quel pacco. Una volta arrivato a destinazione, inizierà a caricare quest’ultimo.
-    \item \textbf{Loading}: l’AGV è fermo in un punto di prelievo e carica un pacco. In base alla disponibilità di un punto di scarico per quel pacco, decide se andare al punto di scarico, o al WP del Gate nel quale dovrebbe scaricare.
-    \item \textbf{ToGate}: l’AGV si appresta a portare il pacco verso il punto di scarico di un Gate per scaricarlo.
-    \item \textbf{ToWaitP}: l’AGV si muove verso un WP. Ogni turno, però, controlla se un punto di scarico di un Gate è ora libero e, in quel caso, cambia direzione andando verso il Gate libero. Questo, però, se e solo se non sono presenti altri AGV in coda  per quel punto di scarico lui (AGV in stato “Wait”)
-    \item \textbf{Wait}: l’AGV è fermo in un WP e aspetta che si liberi un Gate per consegnare un pacco. Ogni turno controlla se un Gate è libero e, se è così, inizia a muoversi verso il punto di scarico del Gate
-    \item \textbf{Unloading}:  l’AGV è fermo in un punto di scarico e scarica un pacco in un Gate. Se sono presenti altri oggetti che necessitano di essere portati ad un gate, di competenza dell’AGV, viene assegnato il nuovo pacco all’AGV che, altrimenti, mette come prossimo obiettivo il ritorno alla postazione di ricarica.
-    \item \textbf{ToHome}: l’AGV ha completato gli ordini di sua competenza e si appresta a tornare alla posizione di ricarica da cui è partito (Home)
-    \item \textbf{Home}: l’AGV è fermo in posizione iniziale
+    \item \textbf{Free}: un agente in questo stato non sta elaborando nessun ordine, rimanendo quindi disponibile ad essere impiegato per l'elaborazione di un ordine. Tutti gli agenti all'inizio di una simulazione si trovano in questo stato.
+    \item \textbf{ToGoal}: un agente in questo stato ha in carico un determinato articolo da prelevare, quindi si starà muovendo verso il punto di prelievo associato all'articolo in questione. 
+    \item \textbf{Loading}:  un agente in questo stato si trova fisicamente all'interno in uno dei punti di prelievi all'interno dell'ambiente di simulazione per caricare un determinato articolo. Una volta caricato l'articolo, prima di lasciare il punto di prelievo, calcola il percorso per arrivare al punto di scarico designato per l'articolo in questione.
+    \item \textbf{ToGate}: un agente in questo stato ha in carico un articolo da scaricare presso un determinato gate, quindi si starà muovendo verso il punto di scarico del cliente designato.
+    \item \textbf{ToWaitP}: un agente in questo stato ha in carico un articolo da scaricare presso un determinato gate ma, in quel determinato momento, il gate è occupato da altri agenti che stanno scaricando articoli, quindi si starà muovendo verso l'area di attesa.
+    \item \textbf{Wait}:  un agente in questo stato ha in carico un articolo da scaricare presso un determinato gate e si trova già all'interno di un'area di attesa dato che il gate interessato è attualmente occupato da altri agenti. Rimarrà quindi in attesa che si liberi un gate per poter andare a scaricare l'articolo prelevato.   
+    \item \textbf{Unloading}:  un agente in questo stato si trova fisicamente all'interno in uno dei gate all'interno dell'ambiente di simulazione per scaricare un determinato articolo. Una volta scaricato l'articolo, prima di lasciare il gate, verifica la presenza di altri articoli da elaborare e, se esistono, calcola il percorso per arrivare al prossimo punto di prelievo altrimenti imposta il percorso per tornare al suo punto di parte iniziale.
+    \item \textbf{ToHome}: un agente in questo stato ha completato gli ordini di sua competenza e si dirige verso la sua postazione di ricarica all'interno dell'ambiente di simulazione. 
+    \item \textbf{Home}: un agente in questo stato si trova fisicamente presso la sua postazione di ricarica all'interno dell'ambiente di simulazione. Tutti gli agenti alla fine di una simulazione si trovano in questo stato.
 \end{itemize}
 
 \newpage
 
-\subsubsection{Transizioni tra stati}
-La seguente immagine permette di farsi una chiara idea degli stati che può assumere un AGV (già riportati poco sopra nella sezione AGV) e come può passare da uno stato all'altro in base al verificarsi di determinati eventi.
+\subsubsection{Transizioni tra stati} \label{TransizioniStati}
+Nel paragrafo precedente [\ref{StatiAssumibili}] sono stati riportati e descritti tutti gli stati assumibili da un qualsiasi agente durante l'esecuzione di una simulazione. Il seguente schema rappresenta tutte le possibili transazioni tra gli stati di un agente, andando a dare una chiara idea del possibile ciclo di vita di un agente durante un'intera simulazione.
 \begin{figure}[ht]
 \centering
 \includegraphics[width=0.75\textwidth,keepaspectratio]{Figures/Graphics/State_Transaction.png}
-\caption[Transazioni tra stati di un AGV]{Transazioni tra stati di un AGV}
-\label{fig:agv_states}
+\caption[Transizioni tra stati di un agente]{Transazioni tra stati di un AGV}
+\label{fig:TransizioniStati}
 \end{figure}
 
+\subsubsection{Algoritmo di navigazione}
+Navigazione libera. \\
+Algoritmo Lee \cite{Lee} 
+basato su BFS \cite{BFS}
+
 \newpage
+
+\paragraph{Esempio navigazione - Libero}
+\vspace{0.2cm}
+
+\begin{minipage}[ht]{0.45\linewidth}
+\centering
+1) Posizioni iniziali
+\includegraphics[width=\textwidth]{SimulazioniNavigazione/2AGV_NoConflitti/0.png}
+\end{minipage}
+\begin{minipage}[ht]{0.45\linewidth}
+\centering
+2) Sovrapposizione di intenzioni
+\includegraphics[width=\textwidth]{SimulazioniNavigazione/2AGV_NoConflitti/1.png}
+\end{minipage}\\
+
+\vspace{1cm}
+
+\noindent \begin{minipage}[ht]{0.45\linewidth}
+\centering
+3) Ricalcolo percorso
+\includegraphics[width=\textwidth]{SimulazioniNavigazione/2AGV_NoConflitti/2.png}
+\end{minipage}
+\begin{minipage}[ht]{0.45\linewidth}
+\centering
+4) Navigazione
+\includegraphics[width=\textwidth]{SimulazioniNavigazione/2AGV_NoConflitti/3.png}
+\end{minipage}\\
+
+\vspace{1cm}
+
+\noindent \begin{minipage}[ht]{0.45\linewidth}
+\centering
+5) Navigazione
+\includegraphics[width=\textwidth]{SimulazioniNavigazione/2AGV_NoConflitti/4.png}
+\end{minipage}
+\begin{minipage}[ht]{0.45\linewidth}
+\centering
+6) Obiettivo raggiunto
+\includegraphics[width=\textwidth]{SimulazioniNavigazione/2AGV_NoConflitti/5.png}
+\end{minipage}
+
+\newpage
+
+\paragraph{Esempio navigazione - Ostacolo}
+\vspace{0.2cm}
+
+\begin{minipage}[ht]{0.45\linewidth}
+\centering
+1) Posizioni iniziali
+\includegraphics[width=\textwidth]{SimulazioniNavigazione/1AGV_Walls/0.png}
+\end{minipage}
+\begin{minipage}[ht]{0.45\linewidth}
+\centering
+2) Sovrapposizione di intenzioni
+\includegraphics[width=\textwidth]{SimulazioniNavigazione/1AGV_Walls/1.png}
+\end{minipage}\\
+
+\vspace{1cm}
+
+\noindent \begin{minipage}[ht]{0.45\linewidth}
+\centering
+3) Ricalcolo percorso
+\includegraphics[width=\textwidth]{SimulazioniNavigazione/1AGV_Walls/2.png}
+\end{minipage}
+\begin{minipage}[ht]{0.45\linewidth}
+\centering
+4) Navigazione
+\includegraphics[width=\textwidth]{SimulazioniNavigazione/1AGV_Walls/3.png}
+\end{minipage}\\
+
+\vspace{1cm}
+
+\noindent \begin{minipage}[ht]{0.45\linewidth}
+\centering
+5) Navigazione
+\includegraphics[width=\textwidth]{SimulazioniNavigazione/1AGV_Walls/4.png}
+\end{minipage}
+\begin{minipage}[ht]{0.45\linewidth}
+\centering
+6) Obiettivo raggiunto
+\includegraphics[width=\textwidth]{SimulazioniNavigazione/1AGV_Walls/5.png}
+\end{minipage}
+
+\newpage
+
+\subsubsection{Gestione dei conflitti}
+Il sistema di navigazione sopra descritto permette agli agenti di navigare in maniera ottimale su una mappa completamente statica, ciò che non varia nessun tipo di variazioni nel corso del loro percorso. Ovviamente un algoritmo di navigazione del genere porterebbe diverse problematiche, dato che durante la simulazione ci sono altri agenti che si muovono per l'ambiente. Proprio per questo motivo è stato necessario andare a progettare e realizzare un gestore dei conflitti di navigazione, in modo da risolvere qualsiasi problema potessero incontrare gli agenti durante il loro percorso.\\
+
+\noindent Si definisce come "conflitto" la situazione in cui un agente si trova ad avere un ostacolo imminente sul suo percorso designato in precedenza, obbligandolo a dover ricalcolare il percorso. Le possibili soluzioni a questo problema sono principalmente due:\\
+\begin{itemize}
+\item L'agente sta fermo per uno step temporale, andando a controllare se lo step successivo persiste ancora lo stesso conflitto o meno.
+\item L'agente ricalcola il percorso per arrivare alla sua destinazione, aggiungendo la posizione dove si è presentato il conflitto alla lista di posizioni non considerabili per la navigazione.
+\end{itemize}
+
+\newpage
+
+\paragraph{Esempio conflitto - Cambio direzione}
+\vspace{0.2cm}
+
+\begin{minipage}[ht]{0.45\linewidth}
+\centering
+1) Posizioni iniziali
+\includegraphics[width=\textwidth]{SimulazioniNavigazione/2AGV_ConflittoStandard/0.png}
+\end{minipage}
+\begin{minipage}[ht]{0.45\linewidth}
+\centering
+2) Sovrapposizione di intenzioni
+\includegraphics[width=\textwidth]{SimulazioniNavigazione/2AGV_ConflittoStandard/1.png}
+\end{minipage}\\
+
+\vspace{1cm}
+
+\noindent\begin{minipage}[ht]{0.45\linewidth}
+\centering
+3) Ricalcolo percorso
+\includegraphics[width=\textwidth]{SimulazioniNavigazione/2AGV_ConflittoStandard/2.png}
+\end{minipage}
+\begin{minipage}[ht]{0.45\linewidth}
+\centering
+4) Navigazione
+\includegraphics[width=\textwidth]{SimulazioniNavigazione/2AGV_ConflittoStandard/3.png}
+\end{minipage}\\
+
+\vspace{1cm}
+
+\noindent\begin{minipage}[ht]{0.45\linewidth}
+\centering
+5) Navigazione
+\includegraphics[width=\textwidth]{SimulazioniNavigazione/2AGV_ConflittoStandard/4.png}
+\end{minipage}
+\begin{minipage}[ht]{0.45\linewidth}
+\centering
+6) Obiettivo raggiunto
+\includegraphics[width=\textwidth]{SimulazioniNavigazione/2AGV_ConflittoStandard/5.png}
+\end{minipage}
+
+\newpage
+
+\paragraph{Esempio conflitto - Attesa}
+\vspace{0.2cm}
+
+\begin{minipage}[ht]{0.45\linewidth}
+\centering
+1) Posizioni iniziali
+\includegraphics[width=\textwidth]{SimulazioniNavigazione/2AGV_ConflittoWait/0t.png}
+\end{minipage}
+\begin{minipage}[ht]{0.45\linewidth}
+\centering
+2) Sovrapposizione di intenzioni
+\includegraphics[width=\textwidth]{SimulazioniNavigazione/2AGV_ConflittoWait/1t.png}
+\end{minipage}\\
+
+\vspace{1cm}
+
+\noindent \begin{minipage}[ht]{0.45\linewidth}
+\centering
+3) Ricalcolo percorso
+\includegraphics[width=\textwidth]{SimulazioniNavigazione/2AGV_ConflittoWait/2t.png}
+\end{minipage}
+\begin{minipage}[ht]{0.45\linewidth}
+\centering
+4) Navigazione
+\includegraphics[width=\textwidth]{SimulazioniNavigazione/2AGV_ConflittoWait/3t.png}
+\end{minipage}\\
+
+\vspace{1cm}
+
+\noindent\begin{minipage}[ht]{0.45\linewidth}
+\centering
+5) Navigazione
+\includegraphics[width=\textwidth]{SimulazioniNavigazione/2AGV_ConflittoWait/4t.png}
+\end{minipage}
+\begin{minipage}[ht]{0.45\linewidth}
+\centering
+6) Navigazione..
+\includegraphics[width=\textwidth]{SimulazioniNavigazione/2AGV_ConflittoWait/5t.png}
+\end{minipage}
+
+\newpage
+
 
 \subsection{Metodo di gestione ordini}
 \subsubsection{Behaviour type 1}
@@ -489,7 +679,45 @@ Ciascun AGV si occupa del primo articolo necessario al completamente degli ordin
 % AImplementazione
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Implementazione simulatore} 
+Il sistema di simulazione è stato interamente sviluppato tramite il linguaggio di programmazione Python, andando ad usufruire in particolare di PycxSimulator.
 
+\begin{figure}[h]
+\centering
+\includegraphics[width=1\textwidth,height=\textheight,keepaspectratio]{Figures/GUI/Simulatore.jpg}
+\caption[GUI del simulatore implementato]{GUI del simulatore implementato}
+\label{fig:Simulatore}
+\end{figure}
+
+\newpage
+
+\begin{minipage}[ht]{0.45\linewidth}
+\centering
+\includegraphics[width=\textwidth]{Figures/GUI/Console2.jpg}
+\end{minipage}
+\hspace{0.5cm}
+\begin{minipage}[ht]{0.45\linewidth}
+\centering
+\includegraphics[width=\textwidth]{Figures/GUI/Console3.jpg}
+\end{minipage}
+
+\begin{minipage}[ht]{0.45\linewidth}
+\vspace{0.2cm}
+\textbf{Settings:} 
+
+\end{minipage}
+\hspace{0.5cm}
+\begin{minipage}[ht]{0.45\linewidth}
+\vspace{0.2cm}
+\textbf{Parameters:} 
+
+\end{minipage}
+
+\begin{figure}[ht]
+\centering
+\includegraphics[width=0.6\textwidth,height=\textheight,keepaspectratio]{Figures/GUI/Simulatore_run2.jpg}
+\caption[GUI del simulatore durante esecuzione]{GUI del simulatore  durante esecuzione}
+\label{fig:SimulatoreEsec}
+\end{figure}
 
 \newpage
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -517,7 +745,7 @@ Successivamente si sono selezionati N ordini casuali da quelli disponibili, mant
 
 \begin{figure}[ht]
 \centering
-\includegraphics[width=0.6\textwidth,keepaspectratio]{Figures/Graphics/Orders_simulation.png}
+\includegraphics[width=0.3\textwidth,keepaspectratio]{Figures/Graphics/Orders_simulation.png}
 \captionof{figure}[Numero di ordini associati ad ogni cliente]{Numero di ordini associati ad ogni cliente.}
 \label{fig:OrdiniSimulazione}
 \end{figure}
@@ -597,7 +825,8 @@ FASE MOLTO IMPORTANTE CHE VA AD ANALIZZARE LE COSE PIUì IMPORTANTI SUI DATI RAC
 \section{Conclusioni}
 
 \subsection{Lavori e sviluppi futuri}
-Gestione della batteria \newline
+Implementazione algoritmo A* per navigazione \\
+Gestione della batteria \\
 Gestione di danni o rotture AGV
 
 \newpage

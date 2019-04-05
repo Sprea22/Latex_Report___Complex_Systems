@@ -37,6 +37,14 @@ Wikipedia, \emph{Sistema complesso --- wikipedia{,} l'enciclopedia libera},
 \bysame, \emph{Agente intelligente --- wikipedia{,} l'enciclopedia libera},
   2019.
 
+\bibitem{Lee}
+{Wikipedia contributors}, \emph{Lee algorithm --- {Wikipedia}{,} the free
+  encyclopedia}, 2018, [Online; accessed 4-April-2019].
+
+\bibitem{BFS}
+\bysame, \emph{Breadth-first search --- {Wikipedia}{,} the free encyclopedia},
+  2019, [Online; accessed 4-April-2019].
+
 \bibitem{PycxSimulator}
 Chun Wong, \emph{Pycxsimulator}, 2012.
 

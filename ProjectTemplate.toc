@@ -21,23 +21,27 @@
 \contentsline {subsection}{\numberline {3.2}Tipologia di lavoro e di ordini}{14}{subsection.3.2}
 \contentsline {subsection}{\numberline {3.3}Ambiente}{14}{subsection.3.3}
 \contentsline {subsection}{\numberline {3.4}Lista degli ordini}{16}{subsection.3.4}
-\contentsline {section}{\numberline {4}Modellazione del problema}{17}{section.4}
+\contentsline {section}{\numberline {4}Descrizione del modello}{17}{section.4}
 \contentsline {subsection}{\numberline {4.1}Ambiente del simulatore}{17}{subsection.4.1}
-\contentsline {subsection}{\numberline {4.2}Modellazione AGV}{20}{subsection.4.2}
-\contentsline {subsubsection}{\numberline {4.2.1}Algoritmo di navigazione}{20}{subsubsection.4.2.1}
-\contentsline {subsubsection}{\numberline {4.2.2}Gestione dei conflitti}{20}{subsubsection.4.2.2}
-\contentsline {subsubsection}{\numberline {4.2.3}Stati assumibili}{21}{subsubsection.4.2.3}
-\contentsline {subsubsection}{\numberline {4.2.4}Transizioni tra stati}{22}{subsubsection.4.2.4}
-\contentsline {subsection}{\numberline {4.3}Metodo di gestione ordini}{23}{subsection.4.3}
-\contentsline {subsubsection}{\numberline {4.3.1}Behaviour type 1}{23}{subsubsection.4.3.1}
-\contentsline {subsubsection}{\numberline {4.3.2}Behaviour type 2}{23}{subsubsection.4.3.2}
-\contentsline {subsubsection}{\numberline {4.3.3}Behaviour type 3}{23}{subsubsection.4.3.3}
-\contentsline {section}{\numberline {5}Implementazione simulatore}{24}{section.5}
-\contentsline {section}{\numberline {6}Simulazione}{25}{section.6}
-\contentsline {subsection}{\numberline {6.1}Configurazioni simulate}{25}{subsection.6.1}
-\contentsline {subsection}{\numberline {6.2}Lista degli ordini per simulazione}{25}{subsection.6.2}
-\contentsline {subsection}{\numberline {6.3}Parametri di valutazione}{27}{subsection.6.3}
-\contentsline {section}{\numberline {7}Analisi dei risultati}{29}{section.7}
-\contentsline {subsection}{\numberline {7.1}Dati raccolti dalle simulazioni}{29}{subsection.7.1}
-\contentsline {section}{\numberline {8}Conclusioni}{31}{section.8}
-\contentsline {subsection}{\numberline {8.1}Lavori e sviluppi futuri}{31}{subsection.8.1}
+\contentsline {subsection}{\numberline {4.2}Modellazione agenti}{20}{subsection.4.2}
+\contentsline {subsubsection}{\numberline {4.2.1}Stati assumibili}{21}{subsubsection.4.2.1}
+\contentsline {subsubsection}{\numberline {4.2.2}Transizioni tra stati}{23}{subsubsection.4.2.2}
+\contentsline {subsubsection}{\numberline {4.2.3}Algoritmo di navigazione}{24}{subsubsection.4.2.3}
+\contentsline {paragraph}{\numberline {4.2.3.1}Esempio navigazione - Libero}{25}{paragraph.4.2.3.1}
+\contentsline {paragraph}{\numberline {4.2.3.2}Esempio navigazione - Ostacolo}{26}{paragraph.4.2.3.2}
+\contentsline {subsubsection}{\numberline {4.2.4}Gestione dei conflitti}{27}{subsubsection.4.2.4}
+\contentsline {paragraph}{\numberline {4.2.4.1}Esempio conflitto - Cambio direzione}{28}{paragraph.4.2.4.1}
+\contentsline {paragraph}{\numberline {4.2.4.2}Esempio conflitto - Attesa}{29}{paragraph.4.2.4.2}
+\contentsline {subsection}{\numberline {4.3}Metodo di gestione ordini}{30}{subsection.4.3}
+\contentsline {subsubsection}{\numberline {4.3.1}Behaviour type 1}{30}{subsubsection.4.3.1}
+\contentsline {subsubsection}{\numberline {4.3.2}Behaviour type 2}{30}{subsubsection.4.3.2}
+\contentsline {subsubsection}{\numberline {4.3.3}Behaviour type 3}{30}{subsubsection.4.3.3}
+\contentsline {section}{\numberline {5}Implementazione simulatore}{31}{section.5}
+\contentsline {section}{\numberline {6}Simulazione}{33}{section.6}
+\contentsline {subsection}{\numberline {6.1}Configurazioni simulate}{33}{subsection.6.1}
+\contentsline {subsection}{\numberline {6.2}Lista degli ordini per simulazione}{33}{subsection.6.2}
+\contentsline {subsection}{\numberline {6.3}Parametri di valutazione}{35}{subsection.6.3}
+\contentsline {section}{\numberline {7}Analisi dei risultati}{36}{section.7}
+\contentsline {subsection}{\numberline {7.1}Dati raccolti dalle simulazioni}{36}{subsection.7.1}
+\contentsline {section}{\numberline {8}Conclusioni}{38}{section.8}
+\contentsline {subsection}{\numberline {8.1}Lavori e sviluppi futuri}{38}{subsection.8.1}
