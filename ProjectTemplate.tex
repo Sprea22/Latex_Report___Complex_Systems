@@ -8,9 +8,9 @@
 \usepackage[hidelinks, breaklinks]{hyperref}
 \usepackage{multirow}
 \usepackage{caption}
+\usepackage{float}
 
-
-\usepackage{titlesec}
+\usepackage{titlesec}  
 \setcounter{tocdepth}{4}
 \setcounter{secnumdepth}{4}
 \titleformat{\paragraph}
@@ -32,8 +32,7 @@
 %	HEADING SECTIONS
 %----------------------------------------------------------------------------------------
 
-\textsc{\LARGE Università degli studi di Milano-Bicocca}\\[1cm] % Name of your university/college
-\textsc{\Large Sistemi Complessi: Modelli e Simulazione}\\[0.3cm] % Major heading such as course name
+\textsc{\LARGE Università degli studi di Milano-Bicocca}\\[1cm] % Name of your university/college\n textsc{\Large Sistemi Complessi: Modelli e Simulazione}\\[0.3cm] % Major heading such as course name
 \textsc{\large Final Project}\\[0.1cm] % Minor heading such as course title
 
 %----------------------------------------------------------------------------------------
@@ -374,6 +373,7 @@ Una volta ottenuta la mappa del magazzino, si è andati a cercare di rappresenta
 
 
 \begin{minipage}[ht]{0.45\linewidth}
+\label{ambienteSimulatore}
 \centering
 \includegraphics[width=\textwidth]{Figures/Map/Corsie.png}
 \end{minipage}
@@ -479,14 +479,24 @@ Nel paragrafo precedente [\ref{StatiAssumibili}] sono stati riportati e descritt
 \label{fig:TransizioniStati}
 \end{figure}
 
-\subsubsection{Algoritmo di navigazione}
-Navigazione libera. \\
-Algoritmo Lee \cite{Lee} 
-basato su BFS \cite{BFS}
+\subsection{Gestione navigazione}
+In questo lavoro si è deciso di sperimentare una navigazione libera da parte degli AGV, basandosi sulla loro capacità di visione attraverso sensori.\\
+Si è scelto di prendere una decisione di questo genere per andare ad ottimizzare le distanze percorse dai singoli agenti, migliorando quindi durata della batteria, tempo di esecuzione dei task e usura delle componenti fisiche. Per fare ciò si è dovuto assumere che un sistema del genere non possa prevedere la presenza simultanea di impiegati umani e AGV all'interno del magazzino.\\
 
+\noindent L'algoritmo utilizzato dagli AGV per la navigazione all'interno dell'ambiente di simulazione è l'algoritmo di Lee \cite{Lee}. Questo algoritmo, basato su BFS \cite{BFS}, viene solitamente utilizzato per calcolare il percorso da un punto ad un altro di un labirinto. 
+
+\begin{figure}[ht]
+\centering
+\includegraphics[width=0.75\textwidth,keepaspectratio]{Figures/Vario/BFS.png}
+\caption[BFS: Ordine in cui i nodi vengono esplorati]{BFS: Ordine in cui i nodi vengono esplorati}
+\label{fig:BFS}
+\end{figure}
+
+\noindent Permette infatti di ottenere sempre la soluzione migliore (se esiste), ma allo stesso tempo può essere lento e dispendioso in termini di memoria.
+Si è deciso di utilizzare proprio questo algoritmo rispetto ad altri perchè l'ambiente di simulazione trattato in questo caso presenta delle dimensioni così ridotte che non è necessario andare ad ottimizzare la computazione in termini di tempo e memoria, andando ad ottener sempre la soluzione ottima senza richiedere una mole computazionale significativa.
 \newpage
 
-\paragraph{Esempio navigazione - Libero}
+\subsubsection{Esempio navigazione - Libero}
 \vspace{0.2cm}
 
 \begin{minipage}[ht]{0.45\linewidth}
@@ -528,7 +538,7 @@ basato su BFS \cite{BFS}
 
 \newpage
 
-\paragraph{Esempio navigazione - Ostacolo}
+\subsubsection{Esempio navigazione - Ostacolo}
 \vspace{0.2cm}
 
 \begin{minipage}[ht]{0.45\linewidth}
@@ -570,7 +580,7 @@ basato su BFS \cite{BFS}
 
 \newpage
 
-\subsubsection{Gestione dei conflitti}
+\subsection{Gestione conflitti}
 Il sistema di navigazione sopra descritto permette agli agenti di navigare in maniera ottimale su una mappa completamente statica, ciò che non varia nessun tipo di variazioni nel corso del loro percorso. Ovviamente un algoritmo di navigazione del genere porterebbe diverse problematiche, dato che durante la simulazione ci sono altri agenti che si muovono per l'ambiente. Proprio per questo motivo è stato necessario andare a progettare e realizzare un gestore dei conflitti di navigazione, in modo da risolvere qualsiasi problema potessero incontrare gli agenti durante il loro percorso.\\
 
 \noindent Si definisce come "conflitto" la situazione in cui un agente si trova ad avere un ostacolo imminente sul suo percorso designato in precedenza, obbligandolo a dover ricalcolare il percorso. Le possibili soluzioni a questo problema sono principalmente due:\\
@@ -581,7 +591,7 @@ Il sistema di navigazione sopra descritto permette agli agenti di navigare in ma
 
 \newpage
 
-\paragraph{Esempio conflitto - Cambio direzione}
+\subsubsection{Esempio conflitto - Cambio direzione}
 \vspace{0.2cm}
 
 \begin{minipage}[ht]{0.45\linewidth}
@@ -623,7 +633,7 @@ Il sistema di navigazione sopra descritto permette agli agenti di navigare in ma
 
 \newpage
 
-\paragraph{Esempio conflitto - Attesa}
+\subsubsection{Esempio conflitto - Attesa}
 \vspace{0.2cm}
 
 \begin{minipage}[ht]{0.45\linewidth}
@@ -665,22 +675,39 @@ Il sistema di navigazione sopra descritto permette agli agenti di navigare in ma
 
 \newpage
 
+\subsection{Gestione area scarico merci}
+Come rappresentato nel simulatore [\ref{ambienteSimulatore}] sono presenti tre punti di scarico detti "gates". Queste locazioni sono dove gli AGV devono scaricare gli articoli prelevati all'interno del magazzino. Considerando che gli ordini in input sono indirizzati verso tre destinazioni (MI, FI, CO), si è ipotizzato e deciso di assegnare a ciascun gate una specifica destinazione. 
 
-\subsection{Metodo di gestione ordini}
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.5\textwidth]{Figures/Map/gates2.png}
+\caption{Area scarico merci: MI, FI, CO}
+\end{figure}
+
+\noindent Inoltre, ciascun gate presenta solamente tre aree di scarico merci per gli AGV: una volta che una di queste aree di scarico merci viene occupata da un certo ordine, quest'ultimo deve essere portato a termine prima di poter essere nuovamente occupata con un nuovo ordine.
+
+\subsection{Gestione area di atttesa}
+Si è deciso di collocare due zone di attesa di fronte ai gates, ciascuna delle quali ha sei postazioni di attesa per AGV. Quindi un agente entrerà in attesa se non sono presenti zone di scarico disponibili per il cliente associato all'articolo che sta elaborando. \\
+L'uscita dalla fase di attesa è determinata esclusivamente dalla disponibilità di un punto di scarico associato al cliente interessato. Se dovesse capitare che più AGV in attesa concorrono per la stessa postazione di scarico che si è appena liberata verrà applicato il meccanismo FIFO (First In First Out), che permetterà agli agenti in attesa da maggior tempo di riprendere l'elaborazione dei proprio articoli in maniera corretta.
+\newpage
+
+\subsection{Gestione ordini e agenti}
 \subsubsection{Behaviour type 1}
-Ciascun AGV esegue un singolo ordine.
-\subsubsection{Behaviour type 2}
-Ciascun AGV si occupa solamente di un certo gruppo di articoli.
-\subsubsection{Behaviour type 3}
-Ciascun AGV si occupa del primo articolo necessario al completamente degli ordini all'interno della lista in maniera progressiva.
+Questo metodo fa si che ciascun AGV, una volta preso in carico un ordine, lo inizierà e lo porterà a termina in maniera autonoma. Non è previsto nessun tipo di collaborazione e/o concorrenza. La presa in carico degli ordine è puramente sequenziale. 
 
+\subsubsection{Behaviour type 2}
+Questo metodo fa si che ciascun AGV possa elaborare solamente un certo sottoinsieme degli articoli presenti all'interno del magazzino, come ad esempio una singola corsia oppure una categoria di articoli. Succederà quindi che un AGV andrà a lavorare su tutti quegli ordini che necessitano uno o più articoli di quelli da lui processabili. Ciò permette di ottenere un buon livello di collaborazione tra agenti, in quanto ciascuno si occupa di una parte dell'ordine, ma crea anche degli episodi di concorrenza per quanto riguarda la condivisione delle porte di scarico.
+
+\subsubsection{Behaviour type 3}
+Questo metodo fa si che ciascun AGV possa elaborare un qualsiasi articolo di un qualsiasi ordine in maniera puramente sequenziale. Un AGV andrà quindi a prendere il primo ordine in cima alla lista degli ordini da svolgere e andrà ad elaborare il primo degli articoli che necessitano ancora. Questo metodo di gestione crea una forte collaborazione tra agenti che, in base alle dimensioni di un ordine e non agli articoli al suo interno, possono collaborare tutti insieme su un singolo ordine.
 \newpage
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % AImplementazione
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Implementazione simulatore} 
-Il sistema di simulazione è stato interamente sviluppato tramite il linguaggio di programmazione Python, andando ad usufruire in particolare di PycxSimulator.
-
+\subsection{Interfaccia simulatore}
+Il sistema di simulazione è stato interamente sviluppato tramite il linguaggio di programmazione Python, andando ad usufruire in particolare del modulo PycxSimulator.
+Di seguito è riportata la struttura della schermata durante il ciclo di vita di una simulazione. I tasti sulla destra permettono all'utente di incominciare, finire o mettere in pausa la simulazione, mentre i grafici sulla sinistra permettono di monitorare la simulazione stessa e i relativi dati.
 \begin{figure}[h]
 \centering
 \includegraphics[width=1\textwidth,height=\textheight,keepaspectratio]{Figures/GUI/Simulatore.jpg}
@@ -689,6 +716,16 @@ Il sistema di simulazione è stato interamente sviluppato tramite il linguaggio 
 \end{figure}
 
 \newpage
+
+\begin{minipage}[ht]{0.45\linewidth}
+\textbf{Settings:} dalla tab "settings" della schermata di gestione è possibile scegliere con quale intervallo di step temporali far aggiornare i grafici e l'ambiente relativi alla simulazione.
+\vspace{0.3cm}
+\end{minipage}
+\hspace{0.5cm}
+\begin{minipage}[ht]{0.45\linewidth}
+\textbf{Parameters:} dalla tab "parameters"della schermata di gestione è possibile scegliere con quale parametri avviare la simulazione (Behaviour type e numero di AGV) tra quelli predefiniti:
+\vspace{0.3cm}
+\end{minipage}
 
 \begin{minipage}[ht]{0.45\linewidth}
 \centering
@@ -700,19 +737,10 @@ Il sistema di simulazione è stato interamente sviluppato tramite il linguaggio 
 \includegraphics[width=\textwidth]{Figures/GUI/Console3.jpg}
 \end{minipage}
 
-\begin{minipage}[ht]{0.45\linewidth}
-\vspace{0.2cm}
-\textbf{Settings:} 
+\vspace{0.5 cm}
 
-\end{minipage}
-\hspace{0.5cm}
-\begin{minipage}[ht]{0.45\linewidth}
-\vspace{0.2cm}
-\textbf{Parameters:} 
-
-\end{minipage}
-
-\begin{figure}[ht]
+\noindent Durante l'esecuzione di una simulazione, come già detto in precedenza, i grafici riportati nella GUI del simulatore permettono all'utente di monitorare il ciclo di vita e lo sviluppo di una simulazione. L'immagine \ref{fig:SimulatoreEsec} riporta un esempio di tutto ciò che viene riportato graficamente durante il processo.
+\begin{figure}[H]
 \centering
 \includegraphics[width=0.6\textwidth,height=\textheight,keepaspectratio]{Figures/GUI/Simulatore_run2.jpg}
 \caption[GUI del simulatore durante esecuzione]{GUI del simulatore  durante esecuzione}
@@ -724,38 +752,50 @@ Il sistema di simulazione è stato interamente sviluppato tramite il linguaggio 
 % Simulazione 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Simulazione} % Main chapter title
-
-Questa fase si pone l'obiettivo di simulare il funzionamento dei vari comportamenti implementati nelle fasi precedenti andando a prendere un set di ordini in input predefinito e un numero di AGV variabile, raccogliendo dati statistici riguardanti le simulazioni per permettere un analisi complessiva delle performance.
+Dopo aver progettato l'AGVS ed implementato il sistema di simulazione, si è passati alla fase di simulazione. Questa fase si pone l'obiettivo di simulare il funzionamento degli agenti con diverse configurazioni di comportamento, tenendo invariato il set di ordini in input. Ciò fornisce la possibilità di raccogliere dati e statistiche che permettono di effettuare un analisi complessiva delle performance del sistema con diverse configurazioni.
 
 \subsection{Configurazioni simulate}
-In particolare, si è deciso di eseguire la simulazione su 12 diverse configurazione in modo da poter andare ad analizzare i risultati al variare del comportamento e del numero di AGV.
-Le configurazioni eseguite sono state quindi 12 e sono riportate di seguito:
+In particolare, si è deciso di eseguire la simulazione su 12 diverse configurazione in modo da poter andare ad analizzare i risultati al variare del comportamento e del numero di AGV. Le configurazioni eseguite sono state:
 \begin{itemize}
 \setlength\itemsep{0.1em}
-    \item \textbf{} Behaviour type 1 - Number of AGV 3 / 6 / 9 / 12
-    \item \textbf{} Behaviour type 2 - Number of AGV 3 / 6 / 9 / 12
-    \item \textbf{} Behaviour type 3 - Number of AGV 3 / 6 / 9 / 12
+    \item \textbf{BT1 A3:} Behaviour type 1 - Number of AGV 3 
+    \item \textbf{BT1 A6:} Behaviour type 1 - Number of AGV 6 
+    \item \textbf{BT1 A9:} Behaviour type 1 - Number of AGV 9
+    \item \textbf{BT1 A12:} Behaviour type 1 - Number of AGV 12
+    \vspace{0.3cm}
+    \item \textbf{BT2 A3:} Behaviour type 2 - Number of AGV 3
+    \item \textbf{BT2 A6:} Behaviour type 2 - Number of AGV 6 
+    \item \textbf{BT2 A9:} Behaviour type 2 - Number of AGV 9 
+    \item \textbf{BT2 A12:} Behaviour type 2 - Number of AGV 12 
+    \vspace{0.3cm}
+    \item \textbf{BT3 A3:} Behaviour type 3 - Number of AGV 3 
+    \item \textbf{BT3 A6:} Behaviour type 3 - Number of AGV 6
+    \item \textbf{BT3 A9:} Behaviour type 3 - Number of AGV 9 
+    \item \textbf{BT3 A12:} Behaviour type 3 - Number of AGV 12 
+    
 \end{itemize}
 
+\newpage
+
 \subsection{Lista degli ordini per simulazione}
-La lista di ordini considerata per effettuare la simulazione del sistema è stata scelta in maniera semi arbitraria. Come prima cosa infatti è stato indispensabile aggregare articoli appartenente a classi diverse nella stessa classe oppure al contrario dividere una singola classe di articoli in più sottoclassi. Tutto ciò ha permesso di ottenere un numero di classi adeguato alla simulazione sul sistema implementato. \newline
+La lista di ordini considerata per effettuare le diverse simulazioni del sistema è stata scelta in maniera semi arbitraria. Come prima cosa è stato indispensabile aggregare articoli appartenente a classi diverse nella stessa classe oppure al contrario dividere una singola classe di articoli in più sottoclassi. Tutto ciò ha permesso di ottenere un numero di classi adeguato alla simulazione sul sistema implementato. \newline
 Successivamente si sono selezionati N ordini casuali da quelli disponibili, mantenendo invariate le distribuzioni di classi degli articoli all'interno di essi.\\
 
 \noindent E' possibile notare come gli ordini che indirizzati al cliente "CO" sono di gran lunga più numerosi rispetto a quelli indirizzati a "FI" e "MI": questo rispecchia la distribuzione di ordini suddivisi per cliente presente all'interno degli ordini realmente raccolti dalla logistica.
 
-\begin{figure}[ht]
+\begin{figure}[H]
 \centering
-\includegraphics[width=0.3\textwidth,keepaspectratio]{Figures/Graphics/Orders_simulation.png}
+\includegraphics[width=0.7\textwidth,keepaspectratio]{Figures/Graphics/Orders_simulation.png}
 \captionof{figure}[Numero di ordini associati ad ogni cliente]{Numero di ordini associati ad ogni cliente.}
 \label{fig:OrdiniSimulazione}
 \end{figure}
 
-\noindent Inoltre è possibile vedere dai seguenti grafici come alcuni articoli compaiono molto più spesso all'interno di determinati clienti rispetto ad altri. 
-\noindent Tutto ciò è stato mantenuto di proposito all'interno della lista degli ordini utilizzata per la simulazione in modo tale da renderla il più verosimile possibile e andare a considerare tutte quelle esigenze realmente presenti all'interno del contesto analizzato.
+\noindent Inoltre è possibile vedere dal seguente grafico come alcuni articoli compaiono molto più spesso all'interno di determinati clienti rispetto ad altri. 
+\noindent Tutto ciò è stato mantenuto di proposito all'interno della lista degli ordini utilizzata per le simulazioni in modo tale da renderla il più verosimile possibile e andare a considerare tutte quelle esigenze realmente presenti all'interno del contesto analizzato.
 
-\begin{figure}[ht]
+\begin{figure}[H]
 \centering
-\includegraphics[width=0.8\textwidth,keepaspectratio]{Figures/Graphics/articoli_clienti.png}
+\includegraphics[width=1\textwidth,keepaspectratio]{Figures/Graphics/articoli_clienti.png}
 \caption[Numero di diversi articoli per cliente]{Numero di diversi articoli ordinati per cliente}
 \label{fig:Electron}
 \end{figure}
@@ -764,8 +804,8 @@ Successivamente si sono selezionati N ordini casuali da quelli disponibili, mant
 
 \newpage
 
-\subsection{Parametri di valutazione}
-Per poter valutare le performance di ciascuna configurazione è stato implementato un sistema di raccolta delle statistiche significative. In particolare, questo sistema permette di raccogliere i dati relativi a:
+\subsection{Metriche di valutazione}
+Per poter valutare le performance delle configurazione simulate è stato realizzato un sistema di raccolta dati che ha permesso di raccogliere diverse informazioni, tra cui:
 
 \begin{itemize}
     \item \textbf{Conflicts:} numero di conflitti che sono stati rilevati durante la configurazione per ogni singolo AGV.
@@ -776,7 +816,7 @@ Per poter valutare le performance di ciascuna configurazione è stato implementa
     \item \textbf{Moving Steps:} numero di step, ovvero di spostamenti da una cella ad un'altra adiacente, di ciascun AGV.
 \end{itemize}
 
-Questi parametri sono stati raccolti ad ogni timestep della simulazione per ogni singolo AGV per ogni configurazione, così da poter analizzare i risultati che si otterrano secondo diversi punti di vista.
+\noindent Questi parametri sono stati raccolti ad ogni timestep della simulazione per ogni singolo AGV per ogni configurazione, così da poter analizzare i risultati che si otterrano secondo diversi punti di vista.
 
 
 \newpage
@@ -784,37 +824,95 @@ Questi parametri sono stati raccolti ad ogni timestep della simulazione per ogni
 % Analisi dei risultati 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Analisi dei risultati}
+Una volta raccolti i dati inerenti alle diverse simulazioni, si è passati ad analizzarli, con lo scopo di determinare la configurazione migliore: prima di procedere è indispensabile però dare una definizione di "configurazione migliore". \\
 
-Questa fase si pone l'obiettivo di analizzare i dati raccolti dalla fase precedente di simulazione, con lo scopo finale di determinare quale risulta la configurazione migliore: prima di procedere è indispensabile però dare una definizione di "configurazione migliore". \newline
-Sicuramente una configurazione può essere considerata più performante di un'altra se impiega meno tempo per portare a termine la stessa mole di lavoro. Andando però a consideraro solo il tempo impegato si trascurano alcuni aspetti che sono indispensabili per una azienda reale come in questo caso. E' infatti indispensabile trovare anche un giusto compromesso sul numero di AGV, dato che rappresentano un costo non indifferente di acquisto e gestione da parte delle aziende. \newline 
-Questo numero di AGV ideale si può andare a determinare considerando alcuni dei parametri raccolti nella fase di simulazione: infatti, nel caso in cui ci fosse un valore molto alto per quanto riguarda il parametro Waiting Gate significherebbe che alcuni AGV resi operativi sono rimasti in zona di attesa a lungo, e tutto ciò significa uno spreco di risorse. \newline
-\newline
-Lo scopo di questa fase quindi è proprio quello di individuare quali parametri permettono di dichiarare che una configurazione è migliore rispetto un'altra, tenendo ben presente il contesto lavorativo ed economico in cui questa ricerca è collocata. 
+\noindent Sicuramente una configurazione può essere considerata più performante di un'altra se impiega meno tempo per portare a termine la stessa mole di lavoro. Andando però a consideraro solo il tempo impegato si trascurano alcuni aspetti che sono indispensabili per un'attività reale come in questo caso. E' infatti indispensabile trovare anche un giusto compromesso sul numero di AGV, dato che rappresentano un costo non indifferente di acquisto e mantenimento da parte delle aziende. \\
 
-\subsection{Dati raccolti dalle simulazioni}
-In questa sezione sono riportati, descritti e analizzati alcuni dei grafici generati dai dati raccolti durante la fase di simulazione e che sono stati considerati più rilevanti nel raggiungimento dello scopo di questa sezione. \newline
-
-FASE MOLTO IMPORTANTE CHE VA AD ANALIZZARE LE COSE PIUì IMPORTANTI SUI DATI RACCOLTI. POI I GRAFICI E COME VISUALIZZARLI SI GENERANO.. FA NIENTE PER IL MOMENTO
+\noindent Lo scopo di questa fase quindi è proprio quello di individuare come i parametri delle configurazioni influiscono sulle performance del sistema, in modo tale da poter trovare la configurazione migliore tenendo ben presente il contesto lavorativo ed economico in cui questo lavoro si colloca. \\
+\noindent In questa sezione sono riportati, descritti e analizzati alcuni grafici rappresentativi dei dati raccolti durante la fase di simulazione e che sono stati considerati più rilevanti. In particolare si andrà ad analizzare:\\
 
 \begin{itemize}
-    \item \textbf{Conflicts: } osservazioni sui conflitti.. dove sono di più, perchè, infieriscono su performance? relativi grafici 
-    \item \textbf{Waiting Gate: } osservazioni sulle attese.. dove sono di più, perchè, infieriscono su performance? relativi grafici 
-    \item \textbf{Waiting Gate: } osservazioni sulle attese.. dove sono di più, perchè, infieriscono su performance? relativi grafici 
+\item Timestep per ciascuna configurazione
+\item Conflitti per ciascuna configurazione
+\item Articoli elaborati da ciascun AGV
+\item Timestep di attesa per ciascun AGV
 \end{itemize}
 
-\begin{figure}[!htb]
-\minipage{0.49\textwidth}
-  \includegraphics[width=\linewidth]{Figures/Results_Graphics/AGV_Articles.jpg}
-  \caption{A really Awesome Image}\label{fig:awesome_image1}
-\endminipage\hfill
-\minipage{0.49\textwidth}
-  \includegraphics[width=\linewidth]{Figures/Results_Graphics/Total_Waiting_Gate.jpg}
-  \caption{A really Awesome Image}\label{fig:awesome_image2}
-\endminipage\hfill
-\minipage{1\textwidth}%
-  \includegraphics[width=\linewidth]{Figures/Results_Graphics/Timestep_Conflict_Path.jpg}
-  \caption{A really Awesome Image}\label{fig:awesome_image3}
-\endminipage
+\newpage
+
+\subsection{Analisi generale delle configurazioni}
+\subsubsection{Timestep per ciascuna configurazione}
+Come prima cosa si è andati ad analizzare il tempo richiesto da ciascuna configurazione per elaborare la lista di ordini simulata, essendo questa una metrica di valutazione fondamentale per una possibile implementazione reale del sistema. Il seguente grafico riporta il tempo totale richiesto da ciascuna delle 12 diverse simulazioni avviate. \\
+
+\noindent Andando ad analizzare le configurazioni testate con 3 AGV si può vedere come i tempi richiesti dalle tre diverse simulazioni non presentano grandi differenze tra loro. E' possibile notare, pero, come all'aumentare del numero di AGV questa differenza aumenta significativamente, con le configurazioni testate con BT3 che presentano tempi totali largamente inferiori rispetto alle altre configurazioni testate.
+
+\begin{figure}[H]
+\centering
+  \includegraphics[width=1\linewidth]{Figures/Results_Graphics/Time_Total.png}
+  \caption{Tempo necessario al completamento degli ordini per ciascuna configurazione}\label{fig:articles_agv_bt1}
+\end{figure}
+
+\newpage
+
+\subsubsection{Conflitti per ciascuna configurazione}
+Un'altra metrica che deve essere presa sicuramente in considerazione per eventuali decisioni future di realizzazione del sistema è il numero totale di conflitti tra AGV successi durante il ciclo di vita di una simulazione.\\
+Il seguente grafico riporta sull'asse delle ascisse il tempo richiesto dalla simulazione per terminare gli ordini e sull'asse delle ordinate il numero totale di conflitti. Si può andare ad identificare un forte rapporto inversamente proporzionale tra tempo richiesto al completo degli ordini in una certa configurazione e il relativo numero di conflitti avvenuti. Infatti, al diminuire del tempo richiesto si presenta un forte aumento del numero di conflitti. Questo rapporto è estremamente significativo su configurazioni con un alto numero di AGV, infatti il seguente grafico riporta le tre configurazioni testate con 12 agenti.
+\begin{figure}[H]
+\centering
+  \includegraphics[width=1\linewidth]{Figures/Results_Graphics/Rapporto_tempoconflitti.png}
+  \caption{Rapporto tra tempo richiesto e conflitti avvenuti in ciascuna configurazione}\label{fig:articles_agv_bt1}
+\end{figure}
+
+\newpage
+\subsection{Analisi singoli AGV delle configurazioni}
+\subsubsection{Articoli elaborati da ciascun AGV}
+\noindent I grafici sotto illustrati riportano il numero di articoli correttamente elaborati da ogni singolo AGV per ciascuna configurazione durante l'esecuzione della simulazione. Questa metrica è di estrema importanza in quanto permette di verificare se esistono differenze significative tra la mole di lavoro assegnata ad un AGV rispetto ad un altro all'interno della stessa simulazione.
+
+\begin{figure}[H]
+\centering
+  \includegraphics[width=0.8\linewidth]{Figures/Results_Graphics/Articles_BT1.png}
+  \caption{Numero di articoli elaborati da ciascun AGV con BT1}\label{fig:articles_agv_bt1}
+\end{figure}
+
+\noindent La BT1 [Fig \ref{fig:articles_agv_bt1}] mantiene un carico di lavoro bilanciato quando la simulazione è eseguita con un numero ridotto di AGV, per poi andare a perdere questa distribuzione equa nelle configurazioni con numerosi AGV.\\
+\noindent Invece, come si può vedere di seguito, la configurazione BT2 [Fig \ref{fig:articles_agv_bt2}] presenta delle differenze significative per qualsiasi numero di AGV, mostrando degli agenti che, durante un singolo ciclo di simulazione, elaborano anche il doppio degli articoli elaborati da altri agenti nella stessa simulazione.
+
+\begin{figure}[H]
+\centering
+  \includegraphics[width=0.8\linewidth]{Figures/Results_Graphics/Articles_BT2.png}
+  \caption{Numero di articoli elaborati da ciascun AGV con BT2}\label{fig:articles_agv_bt2}
+\end{figure}
+
+\noindent Per quanto riguarda invece la BT3 [Fig \ref{fig:articles_agv_bt3}] si è rilevata di gran lunga la configurazione che meglio distribuisce la mole di lavoro tra gli AGV, indipendentemente dal numero di AGV operativi. Ciò permette non solo di ridurre il tempo di elaborazione totale degli ordini, ma anche di non sovraccaricare di lavoro un determinato agente che potrebbe danneggiarsi o richiedere manutenzione preventiva, che implicherebbero soldi e tempo.
+ 
+\begin{figure}[H]
+\centering
+  \includegraphics[width=0.8\linewidth]{Figures/Results_Graphics/Articles_BT3.png}
+  \caption{Numero di articoli elaborati da ciascun AGV con BT3}\label{fig:articles_agv_bt3}
+\end{figure}
+
+\newpage
+
+\subsubsection{Timestep di attesa per ciascun AGV}
+Un'altra metrica che ci ha permesso di raggiungere l'obiettivo di questo lavoro è il numero di step temporali passati in attesa da ciascun AGV di ogni simulazione avviata. Considerando il dominio su cui questo lavoro è stato svolto, una delle priorità maggiori è proprio quella di ottimizzare l'utilizzo delle risorse, andando quindi a minimizzare quei momenti in cui le risorse non sono operative. \\
+
+Il seguente grafico riporta il numero di step temporali attesi da ciascun AGV nelle tre diverse BT durante la simulazione con 12 AGV.
+\begin{figure}[H]
+\centering
+  \includegraphics[width=1\linewidth]{Figures/Results_Graphics/Waiting.png}
+  \caption{Numero di step temporali passati in attesa da ciascun AGV per i tre diversi BT}\label{fig:waiting_bt_a12}
+\end{figure}
+
+\noindent Come risulta visibile dal grafico sopra riportato la differenza tra il numero di step attesi da ciascun AGV durante le prime due configurazioni comparate con la BT3 è enorme. La BT3 infatti tende ad azzerare il numero di step spesi in attesa da ciascun AGV.
+
+\newpage 
+
+\noindent Come riportato nel seguente grafico, questa differenza diminuisce al diminuire del numero di AGV nelle simulazioni, andando sempre però a riportare una significativa differenza tra le prime due e la terza configurazione.
+
+\begin{figure}[H]
+\centering
+  \includegraphics[width=1\linewidth]{Figures/Results_Graphics/Waiting_Total.png}
+  \caption{Numero totale di step passati in attesa dagli AGV di una configurazione}\label{fig:waiting_total}
 \end{figure}
 
 
@@ -823,11 +921,29 @@ FASE MOLTO IMPORTANTE CHE VA AD ANALIZZARE LE COSE PIUì IMPORTANTI SUI DATI RAC
 % CONCLUSIONI 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Conclusioni}
+\begin{itemize}
+\item BT3 presenta dei tempi di elaborazione decisamente più bassi di BT1 e BT2, in particolare all'aumentare del numero di AGV disponibili.
+\item BT3 seppur presenta una considerevole diminuzione del tempo di elaborazione degli ordini, presenta un elevato numero di conflitti. 
+\item BT3 distribuisce il maniera equa il lavoro a ciascun AGV indipendentemente dalla loro numerosità, mentre BT1 solo su pochi AGV e invece BT2 non lo fa proprio.
+\item BT3 tende ad azzerare i tempi in cui delle risorse siano in attesa, sia con pochi sia con tanti AGV. BT1 e BT2 invece presentano entrambi dei sostanziali tempi di attesa per tutti gli AGV durante le simulazioni. Al diminuir del numero di AGV diminuisce anche questa differenza, seppur rimanendo sempre presente (BT2 leggermente meglio di BT1).
+\end{itemize}
+
+\noindent BT3 è la migliore, indipendentemente dal numero di AGV. Considerare che, per ottenere delle performance di gran lunga migliore delle altre configurazioni, bisogna investire per un elevato numero di AGV. Notare che, come detto prima, se si decide di utilizzare un elevato numero di AGV,  quindi prestare molta più attenzione alla gestione di conflitti e cercare di ottimizzarla.
+
+\noindent Si potrebbero preferire il BT1 e il BT2 solo in casi particolari:\\
+La BT1 ...\\
+La BT2 potrebbe essere di estrema utilità nel caso in cui ci siano diversi tipi di AGV che si occupano di articoli diversi per questione prettamente fisiche/logistiche. In quel caso allora si potrebbe preferire una soluzione di questo genere, che assegna a ciascun AGV un set limitato di tipi di articoli prelevabili.
+
+\newpage
 
 \subsection{Lavori e sviluppi futuri}
-Implementazione algoritmo A* per navigazione \\
-Gestione della batteria \\
-Gestione di danni o rotture AGV
+I risultati ottenuti da questo lavoro sono stati soddisfacenti: nonostante ciò si potrebbe portare avanti questa ricerca, ampliandola e migliorandola sotto diversi aspetti come:
+\begin{itemize}
+\item Gestione della batteria degli AGV:
+\item Gestione di danni o rotture degli AGV:
+\item Gestione di sistema con AGV eterogene:
+\item Gestione navigazione degli AGV: algoritmo A* oppure navigazione su corsie.
+\end{itemize}
 
 \newpage
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

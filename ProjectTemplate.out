@@ -25,22 +25,30 @@
 \BOOKMARK [2][-]{subsection.4.2}{Modellazione agenti}{section.4}% 25
 \BOOKMARK [3][-]{subsubsection.4.2.1}{Stati assumibili}{subsection.4.2}% 26
 \BOOKMARK [3][-]{subsubsection.4.2.2}{Transizioni tra stati}{subsection.4.2}% 27
-\BOOKMARK [3][-]{subsubsection.4.2.3}{Algoritmo di navigazione}{subsection.4.2}% 28
-\BOOKMARK [4][-]{paragraph.4.2.3.1}{Esempio navigazione - Libero}{subsubsection.4.2.3}% 29
-\BOOKMARK [4][-]{paragraph.4.2.3.2}{Esempio navigazione - Ostacolo}{subsubsection.4.2.3}% 30
-\BOOKMARK [3][-]{subsubsection.4.2.4}{Gestione dei conflitti}{subsection.4.2}% 31
-\BOOKMARK [4][-]{paragraph.4.2.4.1}{Esempio conflitto - Cambio direzione}{subsubsection.4.2.4}% 32
-\BOOKMARK [4][-]{paragraph.4.2.4.2}{Esempio conflitto - Attesa}{subsubsection.4.2.4}% 33
-\BOOKMARK [2][-]{subsection.4.3}{Metodo di gestione ordini}{section.4}% 34
-\BOOKMARK [3][-]{subsubsection.4.3.1}{Behaviour type 1}{subsection.4.3}% 35
-\BOOKMARK [3][-]{subsubsection.4.3.2}{Behaviour type 2}{subsection.4.3}% 36
-\BOOKMARK [3][-]{subsubsection.4.3.3}{Behaviour type 3}{subsection.4.3}% 37
-\BOOKMARK [1][-]{section.5}{Implementazione simulatore}{}% 38
-\BOOKMARK [1][-]{section.6}{Simulazione}{}% 39
-\BOOKMARK [2][-]{subsection.6.1}{Configurazioni simulate}{section.6}% 40
-\BOOKMARK [2][-]{subsection.6.2}{Lista degli ordini per simulazione}{section.6}% 41
-\BOOKMARK [2][-]{subsection.6.3}{Parametri di valutazione}{section.6}% 42
-\BOOKMARK [1][-]{section.7}{Analisi dei risultati}{}% 43
-\BOOKMARK [2][-]{subsection.7.1}{Dati raccolti dalle simulazioni}{section.7}% 44
-\BOOKMARK [1][-]{section.8}{Conclusioni}{}% 45
-\BOOKMARK [2][-]{subsection.8.1}{Lavori e sviluppi futuri}{section.8}% 46
+\BOOKMARK [2][-]{subsection.4.3}{Gestione navigazione}{section.4}% 28
+\BOOKMARK [3][-]{subsubsection.4.3.1}{Esempio navigazione - Libero}{subsection.4.3}% 29
+\BOOKMARK [3][-]{subsubsection.4.3.2}{Esempio navigazione - Ostacolo}{subsection.4.3}% 30
+\BOOKMARK [2][-]{subsection.4.4}{Gestione conflitti}{section.4}% 31
+\BOOKMARK [3][-]{subsubsection.4.4.1}{Esempio conflitto - Cambio direzione}{subsection.4.4}% 32
+\BOOKMARK [3][-]{subsubsection.4.4.2}{Esempio conflitto - Attesa}{subsection.4.4}% 33
+\BOOKMARK [2][-]{subsection.4.5}{Gestione area scarico merci}{section.4}% 34
+\BOOKMARK [2][-]{subsection.4.6}{Gestione area di atttesa}{section.4}% 35
+\BOOKMARK [2][-]{subsection.4.7}{Gestione ordini e agenti}{section.4}% 36
+\BOOKMARK [3][-]{subsubsection.4.7.1}{Behaviour type 1}{subsection.4.7}% 37
+\BOOKMARK [3][-]{subsubsection.4.7.2}{Behaviour type 2}{subsection.4.7}% 38
+\BOOKMARK [3][-]{subsubsection.4.7.3}{Behaviour type 3}{subsection.4.7}% 39
+\BOOKMARK [1][-]{section.5}{Implementazione simulatore}{}% 40
+\BOOKMARK [2][-]{subsection.5.1}{Interfaccia simulatore}{section.5}% 41
+\BOOKMARK [1][-]{section.6}{Simulazione}{}% 42
+\BOOKMARK [2][-]{subsection.6.1}{Configurazioni simulate}{section.6}% 43
+\BOOKMARK [2][-]{subsection.6.2}{Lista degli ordini per simulazione}{section.6}% 44
+\BOOKMARK [2][-]{subsection.6.3}{Metriche di valutazione}{section.6}% 45
+\BOOKMARK [1][-]{section.7}{Analisi dei risultati}{}% 46
+\BOOKMARK [2][-]{subsection.7.1}{Analisi generale delle configurazioni}{section.7}% 47
+\BOOKMARK [3][-]{subsubsection.7.1.1}{Timestep per ciascuna configurazione}{subsection.7.1}% 48
+\BOOKMARK [3][-]{subsubsection.7.1.2}{Conflitti per ciascuna configurazione}{subsection.7.1}% 49
+\BOOKMARK [2][-]{subsection.7.2}{Analisi singoli AGV delle configurazioni}{section.7}% 50
+\BOOKMARK [3][-]{subsubsection.7.2.1}{Articoli elaborati da ciascun AGV}{subsection.7.2}% 51
+\BOOKMARK [3][-]{subsubsection.7.2.2}{Timestep di attesa per ciascun AGV}{subsection.7.2}% 52
+\BOOKMARK [1][-]{section.8}{Conclusioni}{}% 53
+\BOOKMARK [2][-]{subsection.8.1}{Lavori e sviluppi futuri}{section.8}% 54
