@@ -24,4 +24,4 @@
 \contentsline {figure}{\numberline {23}{\ignorespaces Numero di articoli elaborati da ciascun AGV con BT3\relax }}{44}{figure.caption.25}
 \contentsline {figure}{\numberline {24}{\ignorespaces Numero di step temporali passati in attesa da ciascun AGV per i tre diversi BT\relax }}{45}{figure.caption.26}
 \contentsline {figure}{\numberline {25}{\ignorespaces Numero totale di step passati in attesa dagli AGV di una configurazione\relax }}{46}{figure.caption.27}
-\contentsline {figure}{\numberline {26}{\ignorespaces Algoritmo per scegliere tra le configurazioni in base alle priorit\IeC {\`a}\relax }}{49}{figure.caption.28}
+\contentsline {figure}{\numberline {26}{\ignorespaces Algoritmo per scegliere tra le configurazioni migliori\relax }}{49}{figure.caption.28}

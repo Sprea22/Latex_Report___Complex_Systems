@@ -827,6 +827,7 @@ Una volta raccolti i dati inerenti alle diverse simulazioni, si è passati ad an
 \begin{itemize}
 \item Timestep per ciascuna configurazione
 \item Conflitti per ciascuna configurazione
+\item Rapporto timestep/conflitti per ciascun BT
 \item Articoli elaborati da ciascun AGV
 \item Timestep di attesa per ciascun AGV
 \end{itemize}
@@ -848,11 +849,11 @@ Come prima cosa si è andati ad analizzare il tempo richiesto da ciascuna config
 
 \subsubsection{Conflitti per ciascuna configurazione}
 Un'altra metrica che deve essere presa sicuramente in considerazione per eventuali decisioni future di realizzazione del sistema è il numero totale di conflitti tra AGV successi durante il ciclo di vita di una simulazione.\\
-Il seguente grafico riporta sull'asse delle ascisse il tempo richiesto dalla simulazione per terminare gli ordini e sull'asse delle ordinate il numero totale di conflitti. Si può andare ad identificare un forte rapporto inversamente proporzionale tra tempo richiesto al completo degli ordini in una certa configurazione e il relativo numero di conflitti avvenuti. Infatti, al diminuire del tempo richiesto si presenta un forte aumento del numero di conflitti. Questo rapporto è estremamente significativo su configurazioni con un alto numero di AGV, infatti il seguente grafico riporta le tre configurazioni testate con 12 agenti.
+Il seguente grafico riporta sull'asse delle ascisse il tempo richiesto dalla simulazione per terminare gli ordini e sull'asse delle ordinate il numero totale di conflitti. Si può andare ad identificare un forte rapporto inversamente proporzionale tra tempo richiesto al completo degli ordini in una certa configurazione e il relativo numero di conflitti avvenuti. Infatti, al diminuire del tempo richiesto si presenta un forte aumento del numero di conflitti.\\ Questo rapporto è estremamente significativo su configurazioni con un alto numero di AGV, infatti il seguente grafico riporta le tre configurazioni testate con 12 agenti.
 \begin{figure}[H]
 \centering
   \includegraphics[width=1\linewidth]{Figures/Results_Graphics/Rapporto_tempoconflitti.png}
-  \caption{Rapporto tra tempo richiesto e conflitti avvenuti in ciascuna configurazione}\label{fig:articles_agv_bt1}
+  \caption{Rapporto tra tempo richiesto e conflitti avvenuti in ciascuna configurazione}\label{fig:conflicts_time_a12}
 \end{figure}
 
 \newpage
@@ -861,7 +862,7 @@ Il seguente grafico riporta sull'asse delle ascisse il tempo richiesto dalla sim
 Nel seguente paragrafo verranno mostrati e descritti i grafici inerenti al numero di timesteps e il relativo numero di conflitti avvenuti per ciascun Behaviour Type. In particolare, verrà analizzato il rapporto tra queste due metriche di valutazione all'aumentare del numero di AGV per ogni BT.
 
 \subsubsection{Analisi BT 1}
-Per quanto riguarda il BT1 si può notare la presenza di una forte diminuzione dei timestep solo tra le configurazioni che utilizzano rispettivamente 3 e 6 agenti. Infatti, pur aumentando il numero di agenti da 6 a 12, il numero totale di timestep richiesti rimane pressochè invariato a descapito però di un significativo aumento dei conflitti\\
+Per quanto riguarda il BT1 si può notare la presenza di una forte diminuzione dei timestep solo tra le configurazioni che utilizzano rispettivamente 3 e 6 agenti. Infatti, pur aumentando il numero di agenti da 6 a 12, il numero totale di timestep richiesti rimane pressochè invariato a discapito però di un significativo aumento dei conflitti\\
 
 \begin{figure}[H]
 \centering
@@ -919,7 +920,7 @@ Per quanto riguarda il BT3 invece si può notare come, all'aumentare del numero 
 \subsubsection{Timestep di attesa per ciascun AGV}
 Un'altra metrica che ci ha permesso di raggiungere l'obiettivo di questo lavoro è il numero di step temporali passati in attesa da ciascun AGV di ogni simulazione avviata. Considerando il dominio su cui questo lavoro è stato svolto, una delle priorità maggiori è proprio quella di ottimizzare l'utilizzo delle risorse, andando quindi a minimizzare quei momenti in cui le risorse non sono operative. \\
 
-\noindent Il seguente grafico riporta il numero di step temporali attesi da ciascun AGV nelle tre diverse BT durante la simulazione con 12 AGV.
+\noindent Il seguente grafico riporta il numero di step temporali attesi da ciascun AGV nelle tre diverse BT durante le simulazioni con 12 AGV, ovvero quelle con il maggior numero di conflitti.
 \begin{figure}[H]
 \centering
   \includegraphics[width=1\linewidth]{Figures/Results_Graphics/Waiting.png}
@@ -944,48 +945,48 @@ Un'altra metrica che ci ha permesso di raggiungere l'obiettivo di questo lavoro 
 % CONCLUSIONI 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Conclusioni}
-Dopo aver analizzato i risultati ottenuti dalle simulazioni ci si è posti il problema di individuare le configurazioni che riportassero le performance migliori. Come descritto in precedenza, per considerare una configurazione migliore rispetto ad un'altra si sono considerate ed analizzate attentamente le metriche di valutazione riportate nella sezione \ref{MetricheValutazione}. Questo paragrafo ha proprio lo scopo di andare ad individuare le configurazioni migliori prima per quanto riguarda quelle con lo stesso Behaviour Type, successivamente per quanto riguarda tutte le configurazione simulate..
+Dopo aver analizzato i risultati ottenuti dalle simulazioni ci si è posti l'obiettivo di individuare le configurazioni più performanti. Come descritto in precedenza, per considerare una configurazione migliore rispetto ad un'altra si sono considerate le metriche di valutazione scelte  [\ref{MetricheValutazione}]. \\
+In questo paragrafo sono riportate le osservazioni e le relative conclusioni che hanno portato prima di tutto ad individuare le migliori configurazioni intra BT, ovvero con lo stesso Behaviour Type, e successivamente la configurazione migliore tra tutte quelle testate.
 
 \subsection{Intra Behaviour Type}
 Di seguito sono riportate per ogni BT le configurazioni ritenute migliori rispetto alle altre con il medesimo BT: 
 \begin{itemize}
-\item \textbf{BT1:} per quanto riguarda questo BT la configurazione che ha portato a dei risultati più vantaggiosi in termine di tempo, conflitti e risorse è la \text{BT1\_A6}. Infatti, pur andando ad aumentare il numero di AGV, non si è ottenuta una considerevole diminuzione del tempo richiesto, andando quindi a preferire una configurazione con meno agenti (6 in questo caso) che implica dei costi più contenuti in termini di risorse.
+\item \textbf{BT1:} per quanto riguarda questo BT la configurazione che ha portato a dei risultati più vantaggiosi in termine di tempo, conflitti e risorse è la \text{BT1\_A6}. Infatti, pur andando ad aumentare il numero di AGV, non si è ottenuta una considerevole diminuzione del tempo richiesto, andando quindi a preferire una configurazione con meno agenti (6) che comporta dei costi più contenuti in termini di risorse.
 
-\item \textbf{BT2:} per quanto riguarda questo BT si sono considerate due configurazioni: \text{BT2\_A6} e \text{BT2\_A12}. Entrambe queste configurazioni hanno riportato degli ottimi rapporti tempo/conflitti, coerenti con il variare del numero di AGV. Quindi la scelta tra una configurazione o l'altra si basa fondamentalmente sul budget di risorse a disposizione. Se si intende prioritizzare il tempo a descapito di un investimento di risorse maggiore allora conviene \text{BT2\_A12}, altrimenti la configurazione \text{BT2\_A6}. 
+\item \textbf{BT2:} per quanto riguarda questo BT si sono individuate due configurazioni come migliori: \text{BT2\_A6} e \text{BT2\_A12}. Entrambe queste configurazioni hanno riportato un buon rapporto tempo/conflitti, coerente con il relativo numero di AGV. Quindi la scelta tra una configurazione o l'altra si basa fondamentalmente sul budget di risorse a disposizione. Se si intende prioritizzare il tempo a discapito di un investimento di risorse maggiore allora conviene \text{BT2\_A12}, altrimenti la configurazione \text{BT2\_A6}. 
 
-\item \textbf{BT3:} anche per quanto riguarda questo BT si sono si sono individuate due configurazioni: \text{BT3\_A6} e \text{BT3\_A12}. Entrambe queste configurazioni hanno riportato degli ottimi rapporti tempo/conflitti, coerenti con il variare del numero di AGV. Quindi la scelta tra una configurazione o l'altra si basa fondamentalmente sul budget di risorse che si mette a disposizione. Se si intende prioritizzare il tempo a descapito di un investimento di risorse maggiore allora conviene \text{BT3\_A12}, altrimenti la configurazione \text{BT3\_A6}. 
+\item \textbf{BT3:} anche per quanto riguarda questo BT si sono individuate due configurazioni: \text{BT3\_A6} e \text{BT3\_A12}. Entrambe queste configurazioni infatti hanno riportato degli ottimi valori per praticamente tutte le metriche di valutazione considerate, quindi la scelta tra una configurazione o l'altra si basa fondamentalmente sul budget di risorse che si mette a disposizione, che potrebbe portar a scegliere una rispetto all'altra.
 \end{itemize}
 
 \subsection{Conclusioni generali}
-Una volta individuate le configurazioni migliori intra BT si è passati a confrontarle quelle con BT diversi. Le configurazioni considerate durante questa fase sono state: \text{BT1\_A6}, \text{BT2\_A6}, \text{BT2\_A12}, \text{BT3\_A6} e \text{BT3\_A12}.\\
-Di seguito sono riportate le osservazioni più rilevanti per le configurazioni sopra riportate. \\
+Una volta individuate le configurazioni migliori intra BT si è passati a confrontarle quelle con BT diversi. Le configurazioni considerate durante questa ultima fase sono state: \text{BT1\_A6}, \text{BT2\_A6}, \text{BT2\_A12}, \text{BT3\_A6} e \text{BT3\_A12}.\\
+\noindent Come prima cosa, andando a considerare le metriche di valutazione raccolte, ci si è accorti che le configurazione testate con BT1 non si sono mai effettivamente rivelate più vantaggiose di quelle con gli altri BT; per questo motivo si è deciso di concentrare la propria attenzione su BT2 e BT3. \\
 
-\noindent Andando a considerare tutte le metriche di valutazione raccolte ci si è accorti che le configurazione testate con BT1 non si sono mai effettivamente rivelate più vantaggiose di quelle con gli altri BT, quindi si è deciso di concentrare la propria attenzione su BT2 e BT3. \\
+\noindent Le configurazioni testate con BT3 presentano dei tempi di elaborazione significativamente più bassi rispetto a quelle con BT2, in particolare all'aumentare del numero di agenti disponibili [Fig. \ref{fig:articles_agv_bt1}]. Allo stesso tempo BT3 riporta un numero maggiore di conflitti [Fig. \ref{fig:conflicts_time_a12}] rispetto a BT2 che, però, non dovrebbe rappresentare un problema a livello pratico se il gestore dei conflitti risulta essere robusto e affidabile. \\
+Un altro vantaggio non indifferente di BT3 è che distribuisce in maniera equa il lavoro tra gli agenti a disposizione indipendentemente dalla loro numerosità [Fig. \ref{fig:articles_agv_bt3}], mentre con BT2 alcuni agenti, in base alla lista degli ordini da elaborare, rischiano di dover svolgere una mole di lavoro considerevolmente maggiore rispetto ad altri [Fig. \ref{fig:articles_agv_bt2}]. \\
+\noindent Infine, si è notato come BT3 tende ad azzerare i tempi in cui gli agenti rimangono in attesa [Fig. \ref{fig:waiting_total}] mentre BT2, indipendentemente dal numero di agenti, comporta un elevato numero di attese.\\
 
-\noindent BT3 presenta dei tempi di elaborazione decisamente più bassi di BT2, in particolare all'aumentare del numero di AGV disponibili. Questo porta però ad un elevato numero di conflitti.
-Inoltre BT3 distribuisce in maniera equa il lavoro a ciascun AGV indipendentemente dalla loro numerosità, mentre BT1 solo su pochi AGV e invece BT2 non lo fa proprio.\\
-\noindent BT3 tende ad azzerare i tempi in cui delle risorse siano in attesa, sia con pochi sia con tanti AGV. BT1 e BT2 invece presentano entrambi dei sostanziali tempi di attesa per tutti gli AGV durante le simulazioni. Al diminuir del numero di AGV diminuisce anche questa differenza, seppur rimanendo sempre presente (BT2 leggermente meglio di BT1).\\
+\noindent Si può quindi concludere che le configurazioni con BT3 risultano essere decisamente le più performanti, indipendentemente dal numero di AGV. L'unico fattore che potrebbe eventualmente influenzare questa scelta è la presenza di articoli prioritari o fortemente eterogenei all'interno del dominio del sistema: questo requisito potrebbe infatti portare a preferire la BT2 rispetto alla BT1 che, a discapito del tempo di lavorazione degli ordini, permetterebbe una maggiore personalizzazione della gestione di quest'ultimi.\\
 
-\noindent Si può quindi concludere che le configurazioni con BT3 risultano essere decisamente le più performanti, indipendentemente dal numero di AGV. L'unico fattore che potrebbe eventualmente cambiare questa scelta è la presenza di articoli prioritari o fortemente eterogenei: questo requisito potrebbe infatti portare a preferire la BT2 che, a descapito del tempo totale di lavorazione degli ordini, permetterebbe una maggiore personalizzazione della gestione di quest'ultimi.\\
-
-\noindent Per quanto riguarda il numero di AGV da scegliere dipende principalmente dal budget di risorse a propria disposizione: se il tempo di elaborazione degli ordini rappresenta una priorità rispetto all'investimento economico da affrontare, allora converrà adottare configurazioni con 12 agenti, altrimenti anche configurazioni con 6 agenti si sono rivelate discretamente performanti.
+\noindent Per quanto riguarda invece la scelta del numero di AGV dipende principalmente dal budget di risorse a propria disposizione: se il tempo di elaborazione degli ordini rappresenta una priorità rispetto all'investimento economico da affrontare, allora converrà adottare configurazioni con 12 agenti, altrimenti anche configurazioni con 6 agenti si sono rivelate discretamente performanti.
 
 \newpage
 
 \subsection{Algoritmo di scelta}
-Il seguente schema rappresenta una visualizzazione minimalista del processo di scelta della configurazione migliore per un determinato scenario. 
+Il seguente schema rappresenta una visualizzazione minimalista del processo di scelta della configurazione migliore per un determinato scenario, prendendo in considerazione le configurazioni sopra descritte come migliori, ovvero: \text{BT2\_A6}, \text{BT2\_A12}, \text{BT3\_A6} e \text{BT3\_A12}. 
 \begin{figure}[H]
 \centering
-  \includegraphics[width=1\linewidth]{Figures/Scelta_Config/AlgoritmoScelta.png}
-  \caption{Algoritmo per scegliere tra le configurazioni in base alle priorità}\label{fig:waiting_total}
+  \includegraphics[width=1\linewidth]{Figures/Scelta_Config/Algoritmo_Scelta_Config.png}
+  \caption{Algoritmo per scegliere tra le configurazioni migliori}\label{fig:algoritmo_scelta}
 \end{figure}
 
 \subsection{Lavori e sviluppi futuri}
 I risultati ottenuti da questo lavoro sono stati soddisfacenti: nonostante ciò si potrebbe portare avanti questa ricerca, ampliandola e migliorandola sotto diversi aspetti come:
 \begin{itemize}
+\setlength\itemsep{0.1em}
 \item Gestione della batteria degli AGV:
 \item Gestione di danni o rotture degli AGV:
-\item Gestione di sistema con AGV eterogene:
+\item Gestione di sistema con AGV eterogenei:
 \item Gestione navigazione degli AGV: navigazione su corsie.
 \end{itemize}
 
