@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6800 64-bit) (preloaded format=pdflatex 2018.9.17)  11 APR 2019 11:56
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6800 64-bit) (preloaded format=pdflatex 2018.9.17)  24 APR 2019 16:52
 entering extended mode
 **./ProjectTemplate.tex
 (ProjectTemplate.tex
@@ -742,6 +742,9 @@ LaTeX Warning: Label `fig:articles_agv_bt1' multiply defined.
 
 LaTeX Warning: Label `fig:articles_agv_bt1' multiply defined.
 
+
+LaTeX Warning: Label `fig:waiting_total' multiply defined.
+
 )
 \openout1 = `ProjectTemplate.aux'.
 
@@ -825,7 +828,7 @@ Package caption Info: End \AtBeginDocument code.
 ("C:\Users\Andrea\AppData\Local\Programs\MiKTeX 2.9\tex\latex\ucs\uni-0.def"
 File: uni-0.def 2013/05/13 UCS: Unicode data U+0000..U+00FF
 )
-<logo.png, id=246, 160.6pt x 172.645pt>
+<logo.png, id=274, 160.6pt x 172.645pt>
 File: logo.png Graphic file (type png)
 <use logo.png>
 Package pdftex.def Info: logo.png  used on input line 59.
@@ -856,630 +859,665 @@ l.35 ...ne area scarico merci}{30}{subsection.4.5}
 ("C:\Users\Andrea\AppData\Local\Programs\MiKTeX 2.9\tex\latex\ucs\uni-32.def"
 File: uni-32.def 2013/05/13 UCS: Unicode data U+2000..U+20FF
 )
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 96.
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 98.
 
 ("C:\Users\Andrea\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\omscmr.fd"
 File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 96.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 98.
 
 [4]
-Underfull \hbox (badness 10000) in paragraph at lines 110--111
-
- []
-
-<Figures/Vario/Agente.png, id=386, 250.41554pt x 121.4136pt>
+<Figures/Vario/Agente.png, id=429, 250.41554pt x 121.4136pt>
 File: Figures/Vario/Agente.png Graphic file (type png)
 <use Figures/Vario/Agente.png>
-Package pdftex.def Info: Figures/Vario/Agente.png  used on input line 113.
+Package pdftex.def Info: Figures/Vario/Agente.png  used on input line 115.
 (pdftex.def)             Requested size: 390.01239pt x 189.09691pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 118--119
-
- []
-
-[5 <./Figures/Vario/Agente.png>]
-Overfull \hbox (13.05138pt too wide) in paragraph at lines 133--134
-\OT1/cmr/m/n/12 Per questo la-voro an-dremo a con-sid-er-are la prima cat-e-go-
-ria ri-por-tata nell'elenco,
- []
-
-[6]
-<Figures/Vario/Simulazione.jpg, id=400, 587.49487pt x 245.41687pt>
+ [5 <./Figures/Vario/Agente.png>] [6]
+<Figures/Vario/Simulazione.jpg, id=442, 587.49487pt x 245.41687pt>
 File: Figures/Vario/Simulazione.jpg Graphic file (type jpg)
 <use Figures/Vario/Simulazione.jpg>
-Package pdftex.def Info: Figures/Vario/Simulazione.jpg  used on input line 163.
+Package pdftex.def Info: Figures/Vario/Simulazione.jpg  used on input line 162.
 
 (pdftex.def)             Requested size: 351.01154pt x 146.62962pt.
  [7 <./Figures/Vario/Simulazione.jpg>]
-<Figures/Vario/MAS.png, id=406, 405.76593pt x 185.94469pt>
+<Figures/Vario/MAS.png, id=448, 405.76593pt x 185.94469pt>
 File: Figures/Vario/MAS.png Graphic file (type png)
 <use Figures/Vario/MAS.png>
-Package pdftex.def Info: Figures/Vario/MAS.png  used on input line 175.
+Package pdftex.def Info: Figures/Vario/MAS.png  used on input line 174.
 (pdftex.def)             Requested size: 351.00746pt x 160.85127pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 180--181
+Underfull \hbox (badness 10000) in paragraph at lines 179--180
 
  []
 
 [8 <./Figures/Vario/MAS.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 191--192
+Underfull \hbox (badness 10000) in paragraph at lines 190--191
 
  []
 
-<Figures/Vario/Agent_Interaction.png, id=416, 501.37312pt x 303.534pt>
+<Figures/Vario/Agent_Interaction.png, id=458, 501.37312pt x 303.534pt>
 File: Figures/Vario/Agent_Interaction.png Graphic file (type png)
 <use Figures/Vario/Agent_Interaction.png>
 Package pdftex.def Info: Figures/Vario/Agent_Interaction.png  used on input lin
-e 197.
+e 196.
 (pdftex.def)             Requested size: 390.02136pt x 236.12103pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 202--203
+Underfull \hbox (badness 10000) in paragraph at lines 201--202
 
  []
 
 [9 <./Figures/Vario/Agent_Interaction.png>] [10]
-Underfull \hbox (badness 10000) in paragraph at lines 238--239
+Underfull \hbox (badness 10000) in paragraph at lines 235--236
 
  []
 
-<Figures/Vario/AGV.jpg, id=426, 1057.9525pt x 430.60875pt>
+<Figures/Vario/AGV.jpg, id=467, 1057.9525pt x 430.60875pt>
 File: Figures/Vario/AGV.jpg Graphic file (type jpg)
 <use Figures/Vario/AGV.jpg>
-Package pdftex.def Info: Figures/Vario/AGV.jpg  used on input line 242.
+Package pdftex.def Info: Figures/Vario/AGV.jpg  used on input line 239.
 (pdftex.def)             Requested size: 389.99957pt x 158.73795pt.
 [11 <./Figures/Vario/AGV.jpg>]
-Underfull \hbox (badness 10000) in paragraph at lines 268--269
-
- []
-
-
-Overfull \hbox (4.86118pt too wide) in paragraph at lines 275--276
+Overfull \hbox (4.86118pt too wide) in paragraph at lines 273--274
 \OT1/cmr/m/n/12 seguendo una se-rie di per-corsi presta-bil-iti (uni-di-reziona
 le o bidi-rezionale)
  []
 
-[12]
-Underfull \hbox (badness 10000) in paragraph at lines 299--300
+
+Underfull \hbox (badness 10000) in paragraph at lines 291--292
 
  []
 
-
-Overfull \hbox (8.75604pt too wide) in paragraph at lines 301--302
-\OT1/cmr/m/n/12 tosezioni del pro-getto; ad es-em-pio il la-voro doc-u-men-tato
- all'interno dell'articolo
- []
-
-[13]
-Overfull \hbox (1.21132pt too wide) in paragraph at lines 320--321
+[12] [13]
+Overfull \hbox (1.21132pt too wide) in paragraph at lines 313--314
 \OT1/cmr/m/n/12 ricezione di quell'oggetto che viene po-sizion-ato sull'AGV da 
 un ipotetico
  []
 
-<Figures/Graphics/Zoom_Map.jpg, id=444, 1760.12419pt x 1989.36774pt>
+<Figures/Graphics/Zoom_Map.jpg, id=485, 1760.12419pt x 1989.36774pt>
 File: Figures/Graphics/Zoom_Map.jpg Graphic file (type jpg)
 <use Figures/Graphics/Zoom_Map.jpg>
-Package pdftex.def Info: Figures/Graphics/Zoom_Map.jpg  used on input line 326.
+Package pdftex.def Info: Figures/Graphics/Zoom_Map.jpg  used on input line 319.
 
 (pdftex.def)             Requested size: 389.99483pt x 440.78885pt.
 [14] [15 <./Figures/Graphics/Zoom_Map.jpg>]
-<Figures/Initial_Dataset/Orders_client.png, id=453, 779.16093pt x 792.71156pt>
+<Figures/Initial_Dataset/Orders_client.png, id=494, 779.16093pt x 792.71156pt>
 File: Figures/Initial_Dataset/Orders_client.png Graphic file (type png)
 <use Figures/Initial_Dataset/Orders_client.png>
 Package pdftex.def Info: Figures/Initial_Dataset/Orders_client.png  used on inp
-ut line 343.
+ut line 336.
 (pdftex.def)             Requested size: 272.99574pt x 277.7435pt.
  [16 <./Figures/Initial_Dataset/Orders_client.png (PNG copy)>]
-<Figures/Graphics/Simulation_Domain.PNG, id=458, 966.009pt x 423.984pt>
+<Figures/Graphics/Simulation_Domain.PNG, id=499, 966.009pt x 423.984pt>
 File: Figures/Graphics/Simulation_Domain.PNG Graphic file (type png)
 <use Figures/Graphics/Simulation_Domain.PNG>
 Package pdftex.def Info: Figures/Graphics/Simulation_Domain.PNG  used on input 
-line 358.
+line 351.
 (pdftex.def)             Requested size: 390.0pt x 171.16913pt.
  [17 <./Figures/Graphics/Simulation_Domain.PNG>]
-<Figures/Map/Corsie.png, id=465, 471.26062pt x 414.95026pt>
+<Figures/Map/Corsie.png, id=506, 471.26062pt x 414.95026pt>
 File: Figures/Map/Corsie.png Graphic file (type png)
 <use Figures/Map/Corsie.png>
-Package pdftex.def Info: Figures/Map/Corsie.png  used on input line 378.
+Package pdftex.def Info: Figures/Map/Corsie.png  used on input line 371.
 (pdftex.def)             Requested size: 175.49881pt x 154.52959pt.
 File: Figures/Map/Corsie.png Graphic file (type png)
 <use Figures/Map/Corsie.png>
-Package pdftex.def Info: Figures/Map/Corsie.png  used on input line 383.
+Package pdftex.def Info: Figures/Map/Corsie.png  used on input line 376.
 (pdftex.def)             Requested size: 175.49881pt x 154.52959pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 388--389
+Underfull \hbox (badness 10000) in paragraph at lines 381--382
 []\OT1/cmr/bx/n/12 Scaffalature: \OT1/cmr/m/n/12 Rap-p-re-sen-tate
  []
 
 
-Underfull \hbox (badness 3557) in paragraph at lines 388--389
+Underfull \hbox (badness 3557) in paragraph at lines 381--382
 \OT1/cmr/m/n/12 con il col-ore gri-gio al cen-tro
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 388--389
+Underfull \hbox (badness 10000) in paragraph at lines 381--382
 \OT1/cmr/m/n/12 dell'ambiente di sim-u-lazione,
  []
 
 
-Underfull \hbox (badness 2181) in paragraph at lines 388--389
+Underfull \hbox (badness 2181) in paragraph at lines 381--382
 \OT1/cmr/m/n/12 rispec-chi-ando le cor-rispet-tive 8
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 388--389
+Underfull \hbox (badness 10000) in paragraph at lines 381--382
 \OT1/cmr/m/n/12 scaf-fala-ture pre-senti all'interno
  []
 
-<Figures/Map/Gates.png, id=466, 471.26062pt x 414.95026pt>
+<Figures/Map/Gates.png, id=507, 471.26062pt x 414.95026pt>
 File: Figures/Map/Gates.png Graphic file (type png)
 <use Figures/Map/Gates.png>
-Package pdftex.def Info: Figures/Map/Gates.png  used on input line 399.
+Package pdftex.def Info: Figures/Map/Gates.png  used on input line 392.
 (pdftex.def)             Requested size: 175.49881pt x 154.52959pt.
-<Figures/Map/WaitingArea.png, id=467, 471.26062pt x 414.95026pt>
+<Figures/Map/WaitingArea.png, id=508, 471.26062pt x 414.95026pt>
 File: Figures/Map/WaitingArea.png Graphic file (type png)
 <use Figures/Map/WaitingArea.png>
-Package pdftex.def Info: Figures/Map/WaitingArea.png  used on input line 404.
+Package pdftex.def Info: Figures/Map/WaitingArea.png  used on input line 397.
 (pdftex.def)             Requested size: 175.49881pt x 154.52959pt.
-<Figures/Map/ChargingStation.png, id=468, 471.26062pt x 414.95026pt>
+
+Underfull \hbox (badness 10000) in paragraph at lines 407--408
+[]\OT1/cmr/bx/n/12 Area di at-tesa: \OT1/cmr/m/n/12 In-di-cata
+ []
+
+<Figures/Map/ChargingStation.png, id=509, 471.26062pt x 414.95026pt>
 File: Figures/Map/ChargingStation.png Graphic file (type png)
 <use Figures/Map/ChargingStation.png>
 Package pdftex.def Info: Figures/Map/ChargingStation.png  used on input line 41
-9.
+2.
 (pdftex.def)             Requested size: 175.49881pt x 154.52959pt.
-<Figures/Map/Offices.png, id=469, 471.26062pt x 414.95026pt>
+<Figures/Map/Offices.png, id=510, 471.26062pt x 414.95026pt>
 File: Figures/Map/Offices.png Graphic file (type png)
 <use Figures/Map/Offices.png>
-Package pdftex.def Info: Figures/Map/Offices.png  used on input line 424.
+Package pdftex.def Info: Figures/Map/Offices.png  used on input line 417.
 (pdftex.def)             Requested size: 175.49881pt x 154.52959pt.
 [18 <./Figures/Map/Corsie.png> <./Figures/Map/Gates.png> <./Figures/Map/Waiting
 Area.png>]
-Underfull \hbox (badness 3019) in paragraph at lines 429--430
+Underfull \hbox (badness 3019) in paragraph at lines 422--423
 \OT1/cmr/m/n/12 sono state uti-liz-zate so-la-mente
  []
 
 [19 <./Figures/Map/ChargingStation.png> <./Figures/Map/Offices.png>]
-Overfull \hbox (14.9926pt too wide) in paragraph at lines 447--448
+Overfull \hbox (14.9926pt too wide) in paragraph at lines 440--441
 []\OT1/cmr/bx/n/12 Info sull'ordine: \OT1/cmr/m/n/12 un val-ore in-tero [-1, 20
 0] che in-dica il nu-mero dell'ordine
  []
 
 
-Overfull \hbox (6.94041pt too wide) in paragraph at lines 449--450
+Overfull \hbox (6.94041pt too wide) in paragraph at lines 442--443
 \OT1/cmr/m/n/12 rag-giun-gere una de-ter-mi-nata po-sizione (xN, yN) all'intern
 o dell'ambiente
  []
 
 [20]
-Overfull \hbox (7.35118pt too wide) in paragraph at lines 452--453
+Overfull \hbox (7.35118pt too wide) in paragraph at lines 445--446
 []\OT1/cmr/bx/n/12 Articoli pri-or-i-tari: \OT1/cmr/m/n/12 una lista di val-ori
  al-fanu-merici ["Cam-i-cia", "Scarpa
  []
 
 [21] [22]
-<Figures/Graphics/State_Transaction.png, id=499, 714.67pt x 935.495pt>
+<Figures/Graphics/State_Transaction.png, id=540, 714.67pt x 935.495pt>
 File: Figures/Graphics/State_Transaction.png Graphic file (type png)
 <use Figures/Graphics/State_Transaction.png>
 Package pdftex.def Info: Figures/Graphics/State_Transaction.png  used on input 
-line 477.
+line 470.
 (pdftex.def)             Requested size: 292.5pt x 382.88452pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 483--485
+Underfull \hbox (badness 10000) in paragraph at lines 476--478
 
  []
 
 [23 <./Figures/Graphics/State_Transaction.png>]
-<Figures/Vario/BFS.png, id=507, 602.25pt x 386.44376pt>
+<Figures/Vario/BFS.png, id=548, 602.25pt x 386.44376pt>
 File: Figures/Vario/BFS.png Graphic file (type png)
 <use Figures/Vario/BFS.png>
-Package pdftex.def Info: Figures/Vario/BFS.png  used on input line 490.
+Package pdftex.def Info: Figures/Vario/BFS.png  used on input line 483.
 (pdftex.def)             Requested size: 292.5pt x 187.69624pt.
  [24 <./Figures/Vario/BFS.png>]
-<SimulazioniNavigazione/2AGV_NoConflitti/0.png, id=516, 346.896pt x 231.264pt>
+<SimulazioniNavigazione/2AGV_NoConflitti/0.png, id=557, 346.896pt x 231.264pt>
 File: SimulazioniNavigazione/2AGV_NoConflitti/0.png Graphic file (type png)
 <use SimulazioniNavigazione/2AGV_NoConflitti/0.png>
 Package pdftex.def Info: SimulazioniNavigazione/2AGV_NoConflitti/0.png  used on
- input line 505.
+ input line 498.
 (pdftex.def)             Requested size: 175.49881pt x 116.99734pt.
-<SimulazioniNavigazione/2AGV_NoConflitti/1.png, id=517, 346.896pt x 231.264pt>
+<SimulazioniNavigazione/2AGV_NoConflitti/1.png, id=558, 346.896pt x 231.264pt>
 File: SimulazioniNavigazione/2AGV_NoConflitti/1.png Graphic file (type png)
 <use SimulazioniNavigazione/2AGV_NoConflitti/1.png>
 Package pdftex.def Info: SimulazioniNavigazione/2AGV_NoConflitti/1.png  used on
- input line 510.
+ input line 503.
 (pdftex.def)             Requested size: 175.49881pt x 116.99734pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 502--512
+Underfull \hbox (badness 10000) in paragraph at lines 495--505
 
  []
 
-<SimulazioniNavigazione/2AGV_NoConflitti/2.png, id=518, 346.896pt x 231.264pt>
+<SimulazioniNavigazione/2AGV_NoConflitti/2.png, id=559, 346.896pt x 231.264pt>
 File: SimulazioniNavigazione/2AGV_NoConflitti/2.png Graphic file (type png)
 <use SimulazioniNavigazione/2AGV_NoConflitti/2.png>
 Package pdftex.def Info: SimulazioniNavigazione/2AGV_NoConflitti/2.png  used on
- input line 518.
+ input line 511.
 (pdftex.def)             Requested size: 175.49881pt x 116.99734pt.
-<SimulazioniNavigazione/2AGV_NoConflitti/3.png, id=519, 346.896pt x 231.264pt>
+<SimulazioniNavigazione/2AGV_NoConflitti/3.png, id=560, 346.896pt x 231.264pt>
 File: SimulazioniNavigazione/2AGV_NoConflitti/3.png Graphic file (type png)
 <use SimulazioniNavigazione/2AGV_NoConflitti/3.png>
 Package pdftex.def Info: SimulazioniNavigazione/2AGV_NoConflitti/3.png  used on
- input line 523.
+ input line 516.
 (pdftex.def)             Requested size: 175.49881pt x 116.99734pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 515--525
+Underfull \hbox (badness 10000) in paragraph at lines 508--518
 
  []
 
-<SimulazioniNavigazione/2AGV_NoConflitti/4.png, id=520, 346.896pt x 231.264pt>
+<SimulazioniNavigazione/2AGV_NoConflitti/4.png, id=561, 346.896pt x 231.264pt>
 File: SimulazioniNavigazione/2AGV_NoConflitti/4.png Graphic file (type png)
 <use SimulazioniNavigazione/2AGV_NoConflitti/4.png>
 Package pdftex.def Info: SimulazioniNavigazione/2AGV_NoConflitti/4.png  used on
- input line 531.
+ input line 524.
 (pdftex.def)             Requested size: 175.49881pt x 116.99734pt.
-<SimulazioniNavigazione/2AGV_NoConflitti/5.png, id=521, 346.896pt x 231.264pt>
+<SimulazioniNavigazione/2AGV_NoConflitti/5.png, id=562, 346.896pt x 231.264pt>
 File: SimulazioniNavigazione/2AGV_NoConflitti/5.png Graphic file (type png)
 <use SimulazioniNavigazione/2AGV_NoConflitti/5.png>
 Package pdftex.def Info: SimulazioniNavigazione/2AGV_NoConflitti/5.png  used on
- input line 536.
+ input line 529.
 (pdftex.def)             Requested size: 175.49881pt x 116.99734pt.
 [25 <./SimulazioniNavigazione/2AGV_NoConflitti/0.png> <./SimulazioniNavigazione
 /2AGV_NoConflitti/1.png> <./SimulazioniNavigazione/2AGV_NoConflitti/2.png> <./S
 imulazioniNavigazione/2AGV_NoConflitti/3.png> <./SimulazioniNavigazione/2AGV_No
 Conflitti/4.png> <./SimulazioniNavigazione/2AGV_NoConflitti/5.png>]
-<SimulazioniNavigazione/1AGV_Walls/0.png, id=532, 144.54pt x 96.36pt>
+<SimulazioniNavigazione/1AGV_Walls/0.png, id=573, 144.54pt x 96.36pt>
 File: SimulazioniNavigazione/1AGV_Walls/0.png Graphic file (type png)
 <use SimulazioniNavigazione/1AGV_Walls/0.png>
 Package pdftex.def Info: SimulazioniNavigazione/1AGV_Walls/0.png  used on input
- line 547.
+ line 540.
 (pdftex.def)             Requested size: 175.49881pt x 117.00468pt.
-<SimulazioniNavigazione/1AGV_Walls/1.png, id=533, 346.896pt x 231.264pt>
+<SimulazioniNavigazione/1AGV_Walls/1.png, id=574, 346.896pt x 231.264pt>
 File: SimulazioniNavigazione/1AGV_Walls/1.png Graphic file (type png)
 <use SimulazioniNavigazione/1AGV_Walls/1.png>
 Package pdftex.def Info: SimulazioniNavigazione/1AGV_Walls/1.png  used on input
- line 552.
+ line 545.
 (pdftex.def)             Requested size: 175.49881pt x 116.99734pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 544--554
+Underfull \hbox (badness 10000) in paragraph at lines 537--547
 
  []
 
-<SimulazioniNavigazione/1AGV_Walls/2.png, id=534, 346.896pt x 231.264pt>
+<SimulazioniNavigazione/1AGV_Walls/2.png, id=575, 346.896pt x 231.264pt>
 File: SimulazioniNavigazione/1AGV_Walls/2.png Graphic file (type png)
 <use SimulazioniNavigazione/1AGV_Walls/2.png>
 Package pdftex.def Info: SimulazioniNavigazione/1AGV_Walls/2.png  used on input
- line 560.
+ line 553.
 (pdftex.def)             Requested size: 175.49881pt x 116.99734pt.
-<SimulazioniNavigazione/1AGV_Walls/3.png, id=535, 346.896pt x 231.264pt>
+<SimulazioniNavigazione/1AGV_Walls/3.png, id=576, 346.896pt x 231.264pt>
 File: SimulazioniNavigazione/1AGV_Walls/3.png Graphic file (type png)
 <use SimulazioniNavigazione/1AGV_Walls/3.png>
 Package pdftex.def Info: SimulazioniNavigazione/1AGV_Walls/3.png  used on input
- line 565.
+ line 558.
 (pdftex.def)             Requested size: 175.49881pt x 116.99734pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 557--567
+Underfull \hbox (badness 10000) in paragraph at lines 550--560
 
  []
 
-<SimulazioniNavigazione/1AGV_Walls/4.png, id=536, 346.896pt x 231.264pt>
+<SimulazioniNavigazione/1AGV_Walls/4.png, id=577, 346.896pt x 231.264pt>
 File: SimulazioniNavigazione/1AGV_Walls/4.png Graphic file (type png)
 <use SimulazioniNavigazione/1AGV_Walls/4.png>
 Package pdftex.def Info: SimulazioniNavigazione/1AGV_Walls/4.png  used on input
- line 573.
+ line 566.
 (pdftex.def)             Requested size: 175.49881pt x 116.99734pt.
-<SimulazioniNavigazione/1AGV_Walls/5.png, id=537, 346.896pt x 231.264pt>
+<SimulazioniNavigazione/1AGV_Walls/5.png, id=578, 346.896pt x 231.264pt>
 File: SimulazioniNavigazione/1AGV_Walls/5.png Graphic file (type png)
 <use SimulazioniNavigazione/1AGV_Walls/5.png>
 Package pdftex.def Info: SimulazioniNavigazione/1AGV_Walls/5.png  used on input
- line 578.
+ line 571.
 (pdftex.def)             Requested size: 175.49881pt x 116.99734pt.
 [26 <./SimulazioniNavigazione/1AGV_Walls/0.png> <./SimulazioniNavigazione/1AGV_
 Walls/1.png> <./SimulazioniNavigazione/1AGV_Walls/2.png> <./SimulazioniNavigazi
 one/1AGV_Walls/3.png> <./SimulazioniNavigazione/1AGV_Walls/4.png> <./Simulazion
 iNavigazione/1AGV_Walls/5.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 584--585
+Underfull \hbox (badness 10000) in paragraph at lines 577--578
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 586--587
+Underfull \hbox (badness 10000) in paragraph at lines 579--580
 
  []
 
 [27]
-<SimulazioniNavigazione/2AGV_ConflittoStandard/0.png, id=552, 344.0052pt x 229.
-0959pt>
+<SimulazioniNavigazione/2AGV_ConflittoStandard/0.png, id=593, 144.54pt x 96.36p
+t>
 File: SimulazioniNavigazione/2AGV_ConflittoStandard/0.png Graphic file (type pn
 g)
 <use SimulazioniNavigazione/2AGV_ConflittoStandard/0.png>
 Package pdftex.def Info: SimulazioniNavigazione/2AGV_ConflittoStandard/0.png  u
-sed on input line 600.
-(pdftex.def)             Requested size: 175.49881pt x 116.87581pt.
-<SimulazioniNavigazione/2AGV_ConflittoStandard/1.png, id=553, 346.896pt x 231.2
+sed on input line 593.
+(pdftex.def)             Requested size: 175.49881pt x 117.00468pt.
+<SimulazioniNavigazione/2AGV_ConflittoStandard/1.png, id=594, 346.896pt x 231.2
 64pt>
 File: SimulazioniNavigazione/2AGV_ConflittoStandard/1.png Graphic file (type pn
 g)
 <use SimulazioniNavigazione/2AGV_ConflittoStandard/1.png>
 Package pdftex.def Info: SimulazioniNavigazione/2AGV_ConflittoStandard/1.png  u
-sed on input line 605.
+sed on input line 598.
 (pdftex.def)             Requested size: 175.49881pt x 116.99734pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 597--607
+Underfull \hbox (badness 10000) in paragraph at lines 590--600
 
  []
 
-<SimulazioniNavigazione/2AGV_ConflittoStandard/2.png, id=554, 346.896pt x 231.2
+<SimulazioniNavigazione/2AGV_ConflittoStandard/2.png, id=595, 346.896pt x 231.2
 64pt>
 File: SimulazioniNavigazione/2AGV_ConflittoStandard/2.png Graphic file (type pn
 g)
 <use SimulazioniNavigazione/2AGV_ConflittoStandard/2.png>
 Package pdftex.def Info: SimulazioniNavigazione/2AGV_ConflittoStandard/2.png  u
-sed on input line 613.
+sed on input line 606.
 (pdftex.def)             Requested size: 175.49881pt x 116.99734pt.
-<SimulazioniNavigazione/2AGV_ConflittoStandard/3.png, id=555, 346.896pt x 231.2
+<SimulazioniNavigazione/2AGV_ConflittoStandard/3.png, id=596, 346.896pt x 231.2
 64pt>
 File: SimulazioniNavigazione/2AGV_ConflittoStandard/3.png Graphic file (type pn
 g)
 <use SimulazioniNavigazione/2AGV_ConflittoStandard/3.png>
 Package pdftex.def Info: SimulazioniNavigazione/2AGV_ConflittoStandard/3.png  u
-sed on input line 618.
+sed on input line 611.
 (pdftex.def)             Requested size: 175.49881pt x 116.99734pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 610--620
+Underfull \hbox (badness 10000) in paragraph at lines 603--613
 
  []
 
-<SimulazioniNavigazione/2AGV_ConflittoStandard/4.png, id=556, 346.896pt x 231.2
+<SimulazioniNavigazione/2AGV_ConflittoStandard/4.png, id=597, 346.896pt x 231.2
 64pt>
 File: SimulazioniNavigazione/2AGV_ConflittoStandard/4.png Graphic file (type pn
 g)
 <use SimulazioniNavigazione/2AGV_ConflittoStandard/4.png>
 Package pdftex.def Info: SimulazioniNavigazione/2AGV_ConflittoStandard/4.png  u
-sed on input line 626.
+sed on input line 619.
 (pdftex.def)             Requested size: 175.49881pt x 116.99734pt.
-<SimulazioniNavigazione/2AGV_ConflittoStandard/5.png, id=557, 346.896pt x 231.2
+<SimulazioniNavigazione/2AGV_ConflittoStandard/5.png, id=598, 346.896pt x 231.2
 64pt>
 File: SimulazioniNavigazione/2AGV_ConflittoStandard/5.png Graphic file (type pn
 g)
 <use SimulazioniNavigazione/2AGV_ConflittoStandard/5.png>
 Package pdftex.def Info: SimulazioniNavigazione/2AGV_ConflittoStandard/5.png  u
-sed on input line 631.
+sed on input line 624.
 (pdftex.def)             Requested size: 175.49881pt x 116.99734pt.
 [28 <./SimulazioniNavigazione/2AGV_ConflittoStandard/0.png> <./SimulazioniNavig
 azione/2AGV_ConflittoStandard/1.png> <./SimulazioniNavigazione/2AGV_ConflittoSt
 andard/2.png> <./SimulazioniNavigazione/2AGV_ConflittoStandard/3.png> <./Simula
 zioniNavigazione/2AGV_ConflittoStandard/4.png> <./SimulazioniNavigazione/2AGV_C
 onflittoStandard/5.png>]
-<SimulazioniNavigazione/2AGV_ConflittoWait/0t.png, id=568, 346.896pt x 260.172p
+<SimulazioniNavigazione/2AGV_ConflittoWait/0t.png, id=609, 346.896pt x 260.172p
 t>
 File: SimulazioniNavigazione/2AGV_ConflittoWait/0t.png Graphic file (type png)
 <use SimulazioniNavigazione/2AGV_ConflittoWait/0t.png>
 Package pdftex.def Info: SimulazioniNavigazione/2AGV_ConflittoWait/0t.png  used
- on input line 642.
+ on input line 635.
 (pdftex.def)             Requested size: 175.49881pt x 131.62201pt.
-<SimulazioniNavigazione/2AGV_ConflittoWait/1t.png, id=569, 346.896pt x 260.172p
+<SimulazioniNavigazione/2AGV_ConflittoWait/1t.png, id=610, 346.896pt x 260.172p
 t>
 File: SimulazioniNavigazione/2AGV_ConflittoWait/1t.png Graphic file (type png)
 <use SimulazioniNavigazione/2AGV_ConflittoWait/1t.png>
 Package pdftex.def Info: SimulazioniNavigazione/2AGV_ConflittoWait/1t.png  used
- on input line 647.
+ on input line 640.
 (pdftex.def)             Requested size: 175.49881pt x 131.62201pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 639--649
+Underfull \hbox (badness 10000) in paragraph at lines 632--642
 
  []
 
-<SimulazioniNavigazione/2AGV_ConflittoWait/2t.png, id=570, 346.896pt x 260.172p
+<SimulazioniNavigazione/2AGV_ConflittoWait/2t.png, id=611, 346.896pt x 260.172p
 t>
 File: SimulazioniNavigazione/2AGV_ConflittoWait/2t.png Graphic file (type png)
 <use SimulazioniNavigazione/2AGV_ConflittoWait/2t.png>
 Package pdftex.def Info: SimulazioniNavigazione/2AGV_ConflittoWait/2t.png  used
- on input line 655.
+ on input line 648.
 (pdftex.def)             Requested size: 175.49881pt x 131.62201pt.
-<SimulazioniNavigazione/2AGV_ConflittoWait/3t.png, id=571, 346.896pt x 260.172p
+<SimulazioniNavigazione/2AGV_ConflittoWait/3t.png, id=612, 346.896pt x 260.172p
 t>
 File: SimulazioniNavigazione/2AGV_ConflittoWait/3t.png Graphic file (type png)
 <use SimulazioniNavigazione/2AGV_ConflittoWait/3t.png>
 Package pdftex.def Info: SimulazioniNavigazione/2AGV_ConflittoWait/3t.png  used
- on input line 660.
+ on input line 653.
 (pdftex.def)             Requested size: 175.49881pt x 131.62201pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 652--662
+Underfull \hbox (badness 10000) in paragraph at lines 645--655
 
  []
 
-<SimulazioniNavigazione/2AGV_ConflittoWait/4t.png, id=572, 346.896pt x 260.172p
+<SimulazioniNavigazione/2AGV_ConflittoWait/4t.png, id=613, 346.896pt x 260.172p
 t>
 File: SimulazioniNavigazione/2AGV_ConflittoWait/4t.png Graphic file (type png)
 <use SimulazioniNavigazione/2AGV_ConflittoWait/4t.png>
 Package pdftex.def Info: SimulazioniNavigazione/2AGV_ConflittoWait/4t.png  used
- on input line 668.
+ on input line 661.
 (pdftex.def)             Requested size: 175.49881pt x 131.62201pt.
-<SimulazioniNavigazione/2AGV_ConflittoWait/5t.png, id=573, 346.896pt x 260.172p
+<SimulazioniNavigazione/2AGV_ConflittoWait/5t.png, id=614, 346.896pt x 260.172p
 t>
 File: SimulazioniNavigazione/2AGV_ConflittoWait/5t.png Graphic file (type png)
 <use SimulazioniNavigazione/2AGV_ConflittoWait/5t.png>
 Package pdftex.def Info: SimulazioniNavigazione/2AGV_ConflittoWait/5t.png  used
- on input line 673.
+ on input line 666.
 (pdftex.def)             Requested size: 175.49881pt x 131.62201pt.
 [29 <./SimulazioniNavigazione/2AGV_ConflittoWait/0t.png> <./SimulazioniNavigazi
 one/2AGV_ConflittoWait/1t.png> <./SimulazioniNavigazione/2AGV_ConflittoWait/2t.
 png> <./SimulazioniNavigazione/2AGV_ConflittoWait/3t.png> <./SimulazioniNavigaz
 ione/2AGV_ConflittoWait/4t.png> <./SimulazioniNavigazione/2AGV_ConflittoWait/5t
 .png>]
-<Figures/Map/gates2.png, id=585, 201.45262pt x 67.15088pt>
+<Figures/Map/gates2.png, id=626, 201.45262pt x 67.15088pt>
 File: Figures/Map/gates2.png Graphic file (type png)
 <use Figures/Map/gates2.png>
-Package pdftex.def Info: Figures/Map/gates2.png  used on input line 683.
+Package pdftex.def Info: Figures/Map/gates2.png  used on input line 676.
 (pdftex.def)             Requested size: 195.0pt x 65.00409pt.
  [30 <./Figures/Map/gates2.png>] [31]
-<Figures/GUI/Simulatore.jpg, id=596, 395.97937pt x 312.86888pt>
+<Figures/GUI/Simulatore.jpg, id=637, 395.97937pt x 312.86888pt>
 File: Figures/GUI/Simulatore.jpg Graphic file (type jpg)
 <use Figures/GUI/Simulatore.jpg>
-Package pdftex.def Info: Figures/GUI/Simulatore.jpg  used on input line 713.
+Package pdftex.def Info: Figures/GUI/Simulatore.jpg  used on input line 706.
 (pdftex.def)             Requested size: 390.00876pt x 308.15141pt.
  [32 <./Figures/GUI/Simulatore.jpg>]
-Underfull \hbox (badness 1292) in paragraph at lines 721--723
+Underfull \hbox (badness 1292) in paragraph at lines 714--716
 []\OT1/cmr/bx/n/12 Settings: \OT1/cmr/m/n/12 dalla tab "set-tings"
  []
 
 
-Underfull \hbox (badness 2818) in paragraph at lines 726--728
+Underfull \hbox (badness 2818) in paragraph at lines 719--721
 \OT1/cmr/m/n/12 e pos-si-bile scegliere con quale
  []
 
 
-Underfull \hbox (badness 4316) in paragraph at lines 726--728
+Underfull \hbox (badness 4316) in paragraph at lines 719--721
 \OT1/cmr/m/n/12 (Be-haviour type e nu-mero di
  []
 
-<Figures/GUI/Console2.jpg, id=601, 136.71075pt x 74.679pt>
+<Figures/GUI/Console2.jpg, id=642, 136.71075pt x 74.679pt>
 File: Figures/GUI/Console2.jpg Graphic file (type jpg)
 <use Figures/GUI/Console2.jpg>
-Package pdftex.def Info: Figures/GUI/Console2.jpg  used on input line 732.
+Package pdftex.def Info: Figures/GUI/Console2.jpg  used on input line 725.
 (pdftex.def)             Requested size: 175.49881pt x 95.87137pt.
-<Figures/GUI/Console3.jpg, id=602, 136.71075pt x 74.679pt>
+<Figures/GUI/Console3.jpg, id=643, 136.71075pt x 74.679pt>
 File: Figures/GUI/Console3.jpg Graphic file (type jpg)
 <use Figures/GUI/Console3.jpg>
-Package pdftex.def Info: Figures/GUI/Console3.jpg  used on input line 737.
+Package pdftex.def Info: Figures/GUI/Console3.jpg  used on input line 730.
 (pdftex.def)             Requested size: 175.49881pt x 95.87137pt.
-<Figures/GUI/Simulatore_run2.jpg, id=604, 289.08pt x 313.17pt>
+<Figures/GUI/Simulatore_run2.jpg, id=645, 289.08pt x 313.17pt>
 File: Figures/GUI/Simulatore_run2.jpg Graphic file (type jpg)
 <use Figures/GUI/Simulatore_run2.jpg>
-Package pdftex.def Info: Figures/GUI/Simulatore_run2.jpg  used on input line 74
-5.
+Package pdftex.def Info: Figures/GUI/Simulatore_run2.jpg  used on input line 73
+8.
 (pdftex.def)             Requested size: 233.99911pt x 253.49904pt.
 [33 <./Figures/GUI/Console2.jpg> <./Figures/GUI/Console3.jpg> <./Figures/GUI/Si
 mulatore_run2.jpg>] [34]
-Underfull \hbox (badness 10000) in paragraph at lines 781--783
+Underfull \hbox (badness 10000) in paragraph at lines 774--776
 
  []
 
-<Figures/Graphics/Orders_simulation.png, id=613, 752.0597pt x 792.71156pt>
+<Figures/Graphics/Orders_simulation.png, id=654, 752.0597pt x 792.71156pt>
 File: Figures/Graphics/Orders_simulation.png Graphic file (type png)
 <use Figures/Graphics/Orders_simulation.png>
 Package pdftex.def Info: Figures/Graphics/Orders_simulation.png  used on input 
-line 788.
+line 781.
 (pdftex.def)             Requested size: 272.99881pt x 287.7588pt.
 [35 <./Figures/Graphics/Orders_simulation.png (PNG copy)>]
-<Figures/Graphics/articoli_clienti.png, id=618, 1008.76875pt x 565.11125pt>
+<Figures/Graphics/articoli_clienti.png, id=659, 1008.76875pt x 565.11125pt>
 File: Figures/Graphics/articoli_clienti.png Graphic file (type png)
 <use Figures/Graphics/articoli_clienti.png>
 Package pdftex.def Info: Figures/Graphics/articoli_clienti.png  used on input l
-ine 798.
+ine 791.
 (pdftex.def)             Requested size: 390.0pt x 218.47821pt.
  [36 <./Figures/Graphics/articoli_clienti.png>]
-Overfull \hbox (7.00931pt too wide) in paragraph at lines 814--815
+Overfull \hbox (7.00931pt too wide) in paragraph at lines 807--808
 []\OT1/cmr/bx/n/12 Waiting Gate: \OT1/cmr/m/n/12 nu-mero di timestep trascorsi 
 da cias-cun AGV all'interno
  []
 
 [37]
-Underfull \hbox (badness 10000) in paragraph at lines 827--828
+Underfull \hbox (badness 10000) in paragraph at lines 820--821
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 829--830
+Underfull \hbox (badness 10000) in paragraph at lines 822--823
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 831--833
+Underfull \hbox (badness 10000) in paragraph at lines 824--826
 
  []
 
 [38]
-Underfull \hbox (badness 10000) in paragraph at lines 845--846
+Underfull \hbox (badness 10000) in paragraph at lines 837--838
 
  []
 
-<Figures/Results_Graphics/Time_Total.png, id=633, 1406.25375pt x 706.89093pt>
+<Figures/Results_Graphics/Time_Total.png, id=674, 1406.25375pt x 706.89093pt>
 File: Figures/Results_Graphics/Time_Total.png Graphic file (type png)
 <use Figures/Results_Graphics/Time_Total.png>
 Package pdftex.def Info: Figures/Results_Graphics/Time_Total.png  used on input
- line 851.
+ line 843.
 (pdftex.def)             Requested size: 390.0pt x 196.04051pt.
 [39 <./Figures/Results_Graphics/Time_Total.png>]
-<Figures/Results_Graphics/Rapporto_tempoconflitti.png, id=639, 1497.34406pt x 7
+<Figures/Results_Graphics/Rapporto_tempoconflitti.png, id=680, 1497.34406pt x 7
 06.89093pt>
 File: Figures/Results_Graphics/Rapporto_tempoconflitti.png Graphic file (type p
 ng)
 <use Figures/Results_Graphics/Rapporto_tempoconflitti.png>
 Package pdftex.def Info: Figures/Results_Graphics/Rapporto_tempoconflitti.png  
-used on input line 862.
+used on input line 854.
 (pdftex.def)             Requested size: 390.0pt x 184.11089pt.
  [40 <./Figures/Results_Graphics/Rapporto_tempoconflitti.png (PNG copy)>]
-<Figures/Results_Graphics/Articles_BT1.png, id=644, 1156.32pt x 706.89093pt>
+Underfull \hbox (badness 10000) in paragraph at lines 864--865
+
+ []
+
+<Figures/Results_Graphics/BT1_TimeConflicts.png, id=685, 1501.86093pt x 706.890
+93pt>
+File: Figures/Results_Graphics/BT1_TimeConflicts.png Graphic file (type png)
+<use Figures/Results_Graphics/BT1_TimeConflicts.png>
+Package pdftex.def Info: Figures/Results_Graphics/BT1_TimeConflicts.png  used o
+n input line 868.
+(pdftex.def)             Requested size: 390.0pt x 183.56079pt.
+<Figures/Results_Graphics/BT2_TimeConflicts.png, id=686, 1501.86093pt x 706.890
+93pt>
+File: Figures/Results_Graphics/BT2_TimeConflicts.png Graphic file (type png)
+<use Figures/Results_Graphics/BT2_TimeConflicts.png>
+Package pdftex.def Info: Figures/Results_Graphics/BT2_TimeConflicts.png  used o
+n input line 877.
+(pdftex.def)             Requested size: 390.0pt x 183.56079pt.
+[41 <./Figures/Results_Graphics/BT1_TimeConflicts.png (PNG copy)>]
+<Figures/Results_Graphics/BT3_TimeConflicts.png, id=691, 1501.86093pt x 706.890
+93pt>
+File: Figures/Results_Graphics/BT3_TimeConflicts.png Graphic file (type png)
+<use Figures/Results_Graphics/BT3_TimeConflicts.png>
+Package pdftex.def Info: Figures/Results_Graphics/BT3_TimeConflicts.png  used o
+n input line 885.
+(pdftex.def)             Requested size: 390.0pt x 183.56079pt.
+ [42 <./Figures/Results_Graphics/BT2_TimeConflicts.png (PNG copy)> <./Figures/R
+esults_Graphics/BT3_TimeConflicts.png (PNG copy)>]
+<Figures/Results_Graphics/Articles_BT1.png, id=697, 1156.32pt x 706.89093pt>
 File: Figures/Results_Graphics/Articles_BT1.png Graphic file (type png)
 <use Figures/Results_Graphics/Articles_BT1.png>
 Package pdftex.def Info: Figures/Results_Graphics/Articles_BT1.png  used on inp
-ut line 873.
+ut line 896.
 (pdftex.def)             Requested size: 312.00119pt x 190.73366pt.
-<Figures/Results_Graphics/Articles_BT2.png, id=647, 1154.06157pt x 706.89093pt>
+<Figures/Results_Graphics/Articles_BT2.png, id=700, 1154.06157pt x 706.89093pt>
 
 File: Figures/Results_Graphics/Articles_BT2.png Graphic file (type png)
 <use Figures/Results_Graphics/Articles_BT2.png>
 Package pdftex.def Info: Figures/Results_Graphics/Articles_BT2.png  used on inp
-ut line 882.
+ut line 905.
 (pdftex.def)             Requested size: 312.00119pt x 191.11118pt.
- [41 <./Figures/Results_Graphics/Articles_BT1.png (PNG copy)>]
-<Figures/Results_Graphics/Articles_BT3.png, id=653, 1156.32pt x 706.89093pt>
+ [43 <./Figures/Results_Graphics/Articles_BT1.png (PNG copy)>]
+<Figures/Results_Graphics/Articles_BT3.png, id=706, 1156.32pt x 706.89093pt>
 File: Figures/Results_Graphics/Articles_BT3.png Graphic file (type png)
 <use Figures/Results_Graphics/Articles_BT3.png>
 Package pdftex.def Info: Figures/Results_Graphics/Articles_BT3.png  used on inp
-ut line 890.
+ut line 913.
 (pdftex.def)             Requested size: 312.00119pt x 190.73366pt.
- [42 <./Figures/Results_Graphics/Articles_BT2.png (PNG copy)> <./Figures/Result
+ [44 <./Figures/Results_Graphics/Articles_BT2.png (PNG copy)> <./Figures/Result
 s_Graphics/Articles_BT3.png (PNG copy)>]
-Underfull \hbox (badness 10000) in paragraph at lines 897--898
+Underfull \hbox (badness 10000) in paragraph at lines 920--921
 
  []
 
-<Figures/Results_Graphics/Waiting.png, id=659, 1357.32094pt x 706.89093pt>
+<Figures/Results_Graphics/Waiting.png, id=711, 1357.32094pt x 706.89093pt>
 File: Figures/Results_Graphics/Waiting.png Graphic file (type png)
 <use Figures/Results_Graphics/Waiting.png>
 Package pdftex.def Info: Figures/Results_Graphics/Waiting.png  used on input li
-ne 902.
+ne 925.
 (pdftex.def)             Requested size: 390.0pt x 203.10551pt.
-[43 <./Figures/Results_Graphics/Waiting.png>]
-<Figures/Results_Graphics/Waiting_Total.png, id=664, 1397.22pt x 708.39656pt>
+[45 <./Figures/Results_Graphics/Waiting.png>]
+<Figures/Results_Graphics/Waiting_Total.png, id=716, 1397.22pt x 708.39656pt>
 File: Figures/Results_Graphics/Waiting_Total.png Graphic file (type png)
 <use Figures/Results_Graphics/Waiting_Total.png>
 Package pdftex.def Info: Figures/Results_Graphics/Waiting_Total.png  used on in
-put line 914.
+put line 937.
 (pdftex.def)             Requested size: 390.0pt x 197.73355pt.
- [44 <./Figures/Results_Graphics/Waiting_Total.png>] [45] [46] (ProjectTemplate
-.bbl) [47]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 955.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 955.
+ [46 <./Figures/Results_Graphics/Waiting_Total.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 960--962
+
+ []
+
+[47]
+Underfull \hbox (badness 10000) in paragraph at lines 963--964
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 965--968
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 969--970
+
+ []
+
+[48]
+<Figures/Scelta_Config/AlgoritmoScelta.png, id=732, 1629.08624pt x 1078.0275pt>
+
+File: Figures/Scelta_Config/AlgoritmoScelta.png Graphic file (type png)
+<use Figures/Scelta_Config/AlgoritmoScelta.png>
+Package pdftex.def Info: Figures/Scelta_Config/AlgoritmoScelta.png  used on inp
+ut line 979.
+(pdftex.def)             Requested size: 390.0pt x 258.07391pt.
+ [49 <./Figures/Scelta_Config/AlgoritmoScelta.png>] (ProjectTemplate.bbl)
+[50]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 999.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 999.
  (ProjectTemplate.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 955.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 955.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 999.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 999.
 Package rerunfilecheck Info: File `ProjectTemplate.out' has not changed.
-(rerunfilecheck)             Checksum: D37F1540C1BEA217D6B991E60F4D1512;4005.
+(rerunfilecheck)             Checksum: 31C35A996A1DC572846D9A66ADBF6358;4507.
 
 
 LaTeX Warning: There were multiply-defined labels.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 955.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 999.
  ) 
 Here is how much of TeX's memory you used:
- 19860 strings out of 492973
- 375459 string characters out of 3126249
- 447587 words of memory out of 3000000
- 23182 multiletter control sequences out of 15000+200000
+ 19906 strings out of 492973
+ 376784 string characters out of 3126249
+ 447917 words of memory out of 3000000
+ 23209 multiletter control sequences out of 15000+200000
  10771 words of font info for 38 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 62i,18n,92p,766b,596s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 62i,19n,92p,766b,596s stack positions out of 5000i,500n,10000p,200000b,50000s
 <C:/Users/Andrea/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfont
 s/cm/cmbx12.pfb><C:/Users/Andrea/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/
 public/amsfonts/cm/cmcsc10.pfb><C:/Users/Andrea/AppData/Local/Programs/MiKTeX 2
 .9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/Andrea/AppData/Local/Prog
 rams/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/Andrea/AppD
 ata/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti12.pfb>
-Output written on ProjectTemplate.pdf (48 pages, 2564398 bytes).
+Output written on ProjectTemplate.pdf (51 pages, 2851482 bytes).
 PDF statistics:
- 731 PDF objects out of 1000 (max. 8388607)
- 138 named destinations out of 1000 (max. 500000)
- 811 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 795 PDF objects out of 1000 (max. 8388607)
+ 152 named destinations out of 1000 (max. 500000)
+ 887 words of extra memory for PDF output out of 10000 (max. 10000000)
 

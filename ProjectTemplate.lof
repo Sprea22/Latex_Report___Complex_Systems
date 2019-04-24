@@ -16,8 +16,12 @@
 \contentsline {figure}{\numberline {15}{\ignorespaces Numero di diversi articoli per cliente}}{36}{figure.caption.17}
 \contentsline {figure}{\numberline {16}{\ignorespaces Tempo necessario al completamento degli ordini per ciascuna configurazione\relax }}{39}{figure.caption.18}
 \contentsline {figure}{\numberline {17}{\ignorespaces Rapporto tra tempo richiesto e conflitti avvenuti in ciascuna configurazione\relax }}{40}{figure.caption.19}
-\contentsline {figure}{\numberline {18}{\ignorespaces Numero di articoli elaborati da ciascun AGV con BT1\relax }}{41}{figure.caption.20}
-\contentsline {figure}{\numberline {19}{\ignorespaces Numero di articoli elaborati da ciascun AGV con BT2\relax }}{42}{figure.caption.21}
-\contentsline {figure}{\numberline {20}{\ignorespaces Numero di articoli elaborati da ciascun AGV con BT3\relax }}{42}{figure.caption.22}
-\contentsline {figure}{\numberline {21}{\ignorespaces Numero di step temporali passati in attesa da ciascun AGV per i tre diversi BT\relax }}{43}{figure.caption.23}
-\contentsline {figure}{\numberline {22}{\ignorespaces Numero totale di step passati in attesa dagli AGV di una configurazione\relax }}{44}{figure.caption.24}
+\contentsline {figure}{\numberline {18}{\ignorespaces BT1: Confronto tra numero di conflitti e timestep richiesti\relax }}{41}{figure.caption.20}
+\contentsline {figure}{\numberline {19}{\ignorespaces BT2: Confronto tra numero di conflitti e timestep richiesti\relax }}{42}{figure.caption.21}
+\contentsline {figure}{\numberline {20}{\ignorespaces BT3: Confronto tra numero di conflitti e timestep richiesti\relax }}{42}{figure.caption.22}
+\contentsline {figure}{\numberline {21}{\ignorespaces Numero di articoli elaborati da ciascun AGV con BT1\relax }}{43}{figure.caption.23}
+\contentsline {figure}{\numberline {22}{\ignorespaces Numero di articoli elaborati da ciascun AGV con BT2\relax }}{44}{figure.caption.24}
+\contentsline {figure}{\numberline {23}{\ignorespaces Numero di articoli elaborati da ciascun AGV con BT3\relax }}{44}{figure.caption.25}
+\contentsline {figure}{\numberline {24}{\ignorespaces Numero di step temporali passati in attesa da ciascun AGV per i tre diversi BT\relax }}{45}{figure.caption.26}
+\contentsline {figure}{\numberline {25}{\ignorespaces Numero totale di step passati in attesa dagli AGV di una configurazione\relax }}{46}{figure.caption.27}
+\contentsline {figure}{\numberline {26}{\ignorespaces Algoritmo per scegliere tra le configurazioni in base alle priorit\IeC {\`a}\relax }}{49}{figure.caption.28}

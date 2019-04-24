@@ -64,13 +64,15 @@ Francesco Prete - 793389 - f.prete4@campus.unimib.it   \\[2cm] % Your name
 \end{titlepage}
 
 
+\renewcommand{\contentsname}{Contenuti}
+\renewcommand\listfigurename{Lista delle figure}
+\renewcommand\listtablename{Lista delle tabelle}
 
 \tableofcontents
 
 \newpage
 
 \listoffigures
-
 \listoftables
 
 
@@ -83,8 +85,8 @@ Francesco Prete - 793389 - f.prete4@campus.unimib.it   \\[2cm] % Your name
 \subsection{Panoramica}
 IoT, guida autonoma, domotica e tutto quello che riguarda l’automazione di processi (produttivi e domestici) attraverso l’uso di “macchine intelligenti” sono argomenti sempre più presenti nella vita di tutti i giorni e sono destinati, in un futuro molto vicino, ad essere la normalità.
 
-\noindent Questo è l’ambito in cui si sviluppa il nostro progetto: l’automazione dei processi produttivi di un’azienda di trasporti e logistica, la LDE S.r.l. di Brembate . Questa società ci ha fornito i dati riguardanti la gestione tecnica, gli ordini e il magazzino e, quindi, tutti i dati utilizzati per lo sviluppo di questo lavoro sono interamente reali e derivati dalla sopracitata azienda.
-Ad oggi, nella LDE lo smistamento dei pacchi è eseguito in maniera totalmente manuale dai dipendenti, che prevede un grande sforzo lavorativo ed organizzativo.
+\noindent Questo è l’ambito in cui si sviluppa il nostro progetto: l’automazione dei processi produttivi di un’azienda di trasporti e logistica, la LDE S.r.l. di Brembate. Questa società ci ha fornito i dati riguardanti la gestione tecnica, gli ordini e il magazzino e, quindi, tutti i dati utilizzati per lo sviluppo di questo lavoro sono reali e derivati dalla sopracitata azienda.
+Ad oggi, in LDE lo smistamento dei pacchi è eseguito in maniera totalmente manuale dai dipendenti e questo prevede un grande sforzo lavorativo ed organizzativo.
 
 \subsection{Obiettivi}
 Lo scopo di questo lavoro è quello di implementare, simulare e valutare la realizzazione di un sistema a veicoli a guida autonoma per la gestione semi automatica di un magazzino.
@@ -107,7 +109,7 @@ Gli strumenti principali utilizzati per la progettazione e l'implementazione di 
 
 \subsection{Agente}
 
-L'agente è una qualunque entità in grado di percepire l'ambiente che lo circonda attraverso dei sensori e di eseguire delle azioni attraverso degli attuatori. Ad esempio, in un essere umano alcuni sensori sono gli occhi e le orecchie. Gli attuatori possono essere le mani, i piedi o più in generale i muscoli.\\
+Un agente è una qualunque entità in grado di percepire l’ambiente che lo circonda attraverso l’uso di sensori e di eseguire delle azioni attraverso degli attuatori. Ad esempio, in un essere umano alcuni sensori sono gli occhi e le orecchie. Gli attuatori possono essere le mani, i piedi o pi`u in generale i muscoli.
 
 \begin{figure}[ht]
 \includegraphics[width=\textwidth,height=\textheight,keepaspectratio]{Figures/Vario/Agente.png}
@@ -115,13 +117,10 @@ L'agente è una qualunque entità in grado di percepire l'ambiente che lo circon
 \label{fig:Agente}
 \end{figure}
 
-\noindent Nel campo dell'Intelligenza artificiale un obiettivo fondamentale è la realizzazione degli agenti intelligenti (o agenti razionali). Nella fattispecie un agente si definisce intelligente se fa la cosa giusta al momento giusto.\\
+Nel campo dell’Intelligenza artificiale un obiettivo fondamentale è la realizzazione di agenti intelligenti (o agenti razionali). Nella fattispecie un agente si definisce intelligente se fa la cosa giusta al momento giusto. \\
+Per poter stabilire questo, però, occorre fornire una qualche misura delle prestazioni e definire come e quando eseguire la valutazione. Inoltre, questo rende necessario un modello di successo, stabilito a priori, con il quale confrontare i risultati ottenuti. \cite{AgenteIntelligente}
 
-\noindent Per poter stabilire questo occorre fornire una qualche misura delle prestazioni. In particolare è importante definire il come e il quando eseguire la valutazione delle azioni. Perciò si rende necessario un modello di successo, stabilito a priori, con il quale confrontare i risultati ottenuti. \cite{AgenteIntelligente}
-
-\newpage
-	
-\noindent È possibile raggruppare gli agenti in 5 classi in base al grado di intelligenza percepita e alle capacità: \cite{AgenteIntelligente} \label{Agente}
+\label{Agente}
 \begin{itemize}
 \item agenti con riflessi semplici (detti anche puramente reattivi);
 \item agenti con riflessi basati su modello;
@@ -130,7 +129,7 @@ L'agente è una qualunque entità in grado di percepire l'ambiente che lo circon
 \item agenti che apprendono;
 \end{itemize}
 
-\noindent Per questo lavoro andremo a considerare la prima categoria riportata nell'elenco, ovvero agenti con riflessi semplici. Questa funzione d'agente infatti si comporta bene nel caso in cui l'ambiente sia completamente osservabile, come appunto sarà possibile fare in questo caso.
+\noindent Per questo lavoro andremo a considerare agenti basati su obiettivo, ovvero agenti con uno stato interno e che memorizzano informazioni per permettergli di raggiungere il proprio obiettivo. 
 
 \subsection{Sistema}
 Prima di comprendere il termine "sistema complesso" bisogna andare a capire cos'è un sistema. Esistono varie definizioni di questo termine, che dipendono principalmente dal contesto in cui viene utilizzato. Generalmente però si può definire un sistema come un gruppo di oggetti interagenti oppure indipendenti che fanno parte di un tutt'uno. Notare che i limiti di un sistema non sono sempre ben definiti.\\
@@ -168,7 +167,7 @@ Rappresenta un modo di sfruttare modelli computazionali con lo scopo di valutare
 \newpage
 
 \subsection{Sistema multiagente}
-Un sistema multiagente o (sistema ad agenti multipli) è un insieme di agenti situati in un certo ambiente ed interagenti tra loro mediante una opportuna organizzazione. Un agente è cioè un'entità caratterizzata dal fatto di essere, almeno parzialmente, autonoma, sia essa un programma informatico, un robot, un essere umano, e così via.
+Un sistema multiagente o (sistema ad agenti multipli) è un insieme di agenti situati in un certo ambiente ed interagenti tra loro mediante una opportuna organizzazione. Un agente è un'entità caratterizzata dal fatto di essere, almeno parzialmente, autonoma, sia essa un programma informatico, un robot, un essere umano, e così via.
 
 \begin{figure}[ht]
 \centering
@@ -205,9 +204,7 @@ Due o più agenti interagiscono tra loro se sono in una relazione dinamica attra
 
 
 \subsubsection{Tipologie di ambienti}
-\noindent Un sistema multiagente consiste negli agente e del relativo ambiente. Le diverse categorie di agenti sono già state riportate nella sezione precedente \ref{Agente}, mentre per quanto riguarda l'ambiente può essere suddiviso in:
-
-
+Esistono diverse tipologie di ambienti che possono essere caratterizzati nelle seguenti categorie:
 \begin{table}[ht]
 \centering
 \resizebox{\textwidth}{!}{%
@@ -265,9 +262,10 @@ Un veicolo a guida autonoma (AGV) identifica dei veicoli, solitamente utilizzati
 \newpage
 
 \subsection{Automated Guided Vehicle System}
-\noindent Un sistema automatizzato di veicoli a guida autonoma (AGVS) permette una gestione estremamente flessibile per spedizione e gestione di materiali, soprattutto per quegli ambienti in cui i prodotti sono molto vari e le necessità continuano a variare nel tempo. \\
+\noindent Un sistema automatizzato di veicoli a guida autonoma (AGVS) permette di gestire molteplici AGV al fine di raggiungere un obiettivo o di portare a termine un compito.
 
-\noindent Questi sistemi sono stati introdotti nel 1950, e da allora si sono trovati sempre più contesti e applicazioni in cui forniscono un'elevata utilità pratica. Inoltre, con l'avvento di tecnologie sempre più avanzate e di MAS sempre più sofisticati, le performance di questi sistemi sono in continua crescita.
+\noindent Questi sistemi sono stati introdotti nel 1950, e da allora si sono trovati sempre più contesti e applicazioni in cui forniscono un'elevata utilità pratica. Essi permettono una gestione estremamente flessibile soprattutto in ambienti dinamici, dove le necessità continuano a variare nel tempo. Negli ultimi anni l'avvento di tecnologie sempre più avanzate e di MAS sempre più sofisticati ha portato ad un incremento delle performance di questi sistemi.
+
 
 \subsubsection{Classificazione di un AGVS}
 Un AGVS deve essere progettato e implementato considerando il contesto in cui ci si trova e le priorità che si presentano. Tutto sommato, un AGVS può essere classificato in base ai tre seguenti requisiti:
@@ -286,19 +284,14 @@ Solitamente la valutazione delle performance di un AGVS avviene tramite simulazi
 \setlength\itemsep{0.1em}
     \item Ordini svolti
     \item Tempo medio di attesa per ordini pronti
-    \item Coda di ordini in attesa
     \item Numero di conflitti
-    \item Numero di deadlock
-    \item Numero totale di AGV impiegati
-    \item Tempo totale di utilizzo degli AGV
-    \item Tempo in cui un AGV è impiegato di un azione
-    \item Tempo in cui un AGV non è impiegato in nessuna azione
 \end{itemize}
 
 \subsection{Lavori precedenti}
-Nonostante svariati lavori sono stati già ampliamenti portati a termine e documentati non è risultato del tutto facile ed intuitivo trovare dei lavori su cui basare le nostre scelte implementative e progettuali.\\
+Nonostante esistano parecchi lavori e pubblicazioni che riguardano AGV e AGVS, non è stato semplice trovare indicazioni che potessero guidare le scelte implementative a causa della scarsità di simulazioni che riguardano questi argomenti.\\
 
-\noindent Nonostante ciò alcuni lavori ci sono tornati estremamente utili per delle sottosezioni del progetto; ad esempio il lavoro documentato all'interno dell'articolo scientifico "Evaluation of automatic guided vehicle systems" \cite{EvaluationAGVS} ci ha permesso di individuare e definire le metriche utili alla valutazione del nostro simulatore. \noindent Un altro articolo scientifico di estrema utilità è risultato essere "Multi Agent Simulation for Decision Making in Warehouse Management"\cite{MAS_Warehouse}, in cui viene analizzato e simulato un sistema su un ambiente molto simile a quello affrontato da questo studio.
+\noindent Nonostante ciò, due lavori sono stati molto utili:  ”Evaluation of automatic guided vehicle systems” \cite{EvaluationAGVS}, che ci ha permesso di individuare e definire le metriche utili alla valutazione del nostro simulatore e "Multi Agent Simulation for Decision Making in Warehouse Management” 1\cite{MAS_Warehouse}, in cui si analizza e simula un sistema complesso in un ambiente molto simile al nostro caso di studio.
+Molte delle scelte non arbitrarie del progetto, quindi, sono prese o ricavate dai due documenti sopra citati.
 
 \newpage
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -306,7 +299,7 @@ Nonostante svariati lavori sono stati già ampliamenti portati a termine e docum
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Descrizione del dominio}
 \subsection{Azienda}
-LDE s.r.l nasce nel 1997 come azienda per il trasporto e la logistica specializzata in abiti e tessuti. Ad oggi conta circa 30 dipendenti e un fatturato di oltre un milione di euro. Si è entrati in contatto con questa azienda grazie ad una collaborazione passata.
+LDE s.r.l nasce nel 1997 come azienda per il trasporto e la logistica specializzata in abiti e tessuti. Ad oggi conta circa 30 dipendenti e un fatturato di oltre un milione di euro.
 
 \subsection{Tipologia di lavoro e di ordini}
 Il lavoro svolto da questa azienda consiste principalmente nell'elaborazione, preparazione, ricezione e spedizione di articoli. Gli articoli in questione possono essere di svariati tipi, dai vestiti agli accessori, da macchinari a utensili da cucina,..
@@ -367,7 +360,7 @@ Una volta ottenuta la mappa del magazzino, si è andati a cercare di rappresenta
 \item Punti di scarico
 \item Area di attesa
 \item Area di ricarica
-\item Uffici:
+\item Uffici
 \end{itemize}
 \newpage
 
@@ -411,7 +404,7 @@ Una volta ottenuta la mappa del magazzino, si è andati a cercare di rappresenta
 \hspace{0.5cm}
 \begin{minipage}[]{0.45\linewidth}
 \vspace{0.2cm}
-\textbf{Area di attesa:} Indicata con due rettangoli rossi di fronte ai punti di scarico. Gli AGV in attesa di scaricare attenderanno qui il loro turno.
+\textbf{Area di attesa:} Indicata (nell'immagine) con due rettangoli rossi di fronte ai punti di scarico. Gli AGV in attesa di scaricare attenderanno qui il loro turno.
 \end{minipage}
 
 \begin{minipage}[ht]{0.45\linewidth}
@@ -804,7 +797,7 @@ Successivamente si sono selezionati N ordini casuali da quelli disponibili, mant
 
 \newpage
 
-\subsection{Metriche di valutazione}
+\subsection{Metriche di valutazione} \label{MetricheValutazione}
 Per poter valutare le performance delle configurazione simulate è stato realizzato un sistema di raccolta dati che ha permesso di raccogliere diverse informazioni, tra cui:
 
 \begin{itemize}
@@ -839,7 +832,6 @@ Una volta raccolti i dati inerenti alle diverse simulazioni, si è passati ad an
 \end{itemize}
 
 \newpage
-
 \subsection{Analisi generale delle configurazioni}
 \subsubsection{Timestep per ciascuna configurazione}
 Come prima cosa si è andati ad analizzare il tempo richiesto da ciascuna configurazione per elaborare la lista di ordini simulata, essendo questa una metrica di valutazione fondamentale per una possibile implementazione reale del sistema. Il seguente grafico riporta il tempo totale richiesto da ciascuna delle 12 diverse simulazioni avviate. \\
@@ -864,7 +856,38 @@ Il seguente grafico riporta sull'asse delle ascisse il tempo richiesto dalla sim
 \end{figure}
 
 \newpage
-\subsection{Analisi singoli AGV delle configurazioni}
+
+\subsection{Analisi intra BT: timestep/conflitti}
+Nel seguente paragrafo verranno mostrati e descritti i grafici inerenti al numero di timesteps e il relativo numero di conflitti avvenuti per ciascun Behaviour Type. In particolare, verrà analizzato il rapporto tra queste due metriche di valutazione all'aumentare del numero di AGV per ogni BT.
+
+\subsubsection{Analisi BT 1}
+Per quanto riguarda il BT1 si può notare la presenza di una forte diminuzione dei timestep solo tra le configurazioni che utilizzano rispettivamente 3 e 6 agenti. Infatti, pur aumentando il numero di agenti da 6 a 12, il numero totale di timestep richiesti rimane pressochè invariato a descapito però di un significativo aumento dei conflitti\\
+
+\begin{figure}[H]
+\centering
+  \includegraphics[width=1\linewidth]{Figures/Results_Graphics/BT1_TimeConflicts.png}
+  \caption{BT1: Confronto tra numero di conflitti e timestep richiesti}\label{fig:BT1_TimeConflicts}
+\end{figure}
+
+\subsubsection{Analisi BT 2}
+Per quanto riguarda il BT2 invece si può notare come, all'aumentare del numero di AGV, si ottiene da una parte una diminuzione dei timestep richiesti e dell'altra parte un aumento del numero di conflitti, che risultano entrambi gli andamenti pressochè costanti.
+
+\begin{figure}[H]
+\centering
+  \includegraphics[width=1\linewidth]{Figures/Results_Graphics/BT2_TimeConflicts.png}
+  \caption{BT2: Confronto tra numero di conflitti e timestep richiesti}\label{fig:BT2_TimeConflicts}
+\end{figure}
+
+\subsubsection{Analisi BT 3}
+Per quanto riguarda il BT3 invece si può notare come, all'aumentare del numero di AGV, le due metriche di valutazione rispecchiano pressochè un andamento inversamente proporzionale. Infatti, ad una significativa diminuzione del numero di timestep corrisponde un considerevole aumento del numero di conflitti.
+\begin{figure}[H]
+\centering
+  \includegraphics[width=1\linewidth]{Figures/Results_Graphics/BT3_TimeConflicts.png}
+  \caption{BT3: Confronto tra numero di conflitti e timestep richiesti}\label{fig:BT3_TimeConflicts}
+\end{figure}
+
+\newpage
+\subsection{Altri fattori di analisi}
 \subsubsection{Articoli elaborati da ciascun AGV}
 \noindent I grafici sotto illustrati riportano il numero di articoli correttamente elaborati da ogni singolo AGV per ciascuna configurazione durante l'esecuzione della simulazione. Questa metrica è di estrema importanza in quanto permette di verificare se esistono differenze significative tra la mole di lavoro assegnata ad un AGV rispetto ad un altro all'interno della stessa simulazione.
 
@@ -896,7 +919,7 @@ Il seguente grafico riporta sull'asse delle ascisse il tempo richiesto dalla sim
 \subsubsection{Timestep di attesa per ciascun AGV}
 Un'altra metrica che ci ha permesso di raggiungere l'obiettivo di questo lavoro è il numero di step temporali passati in attesa da ciascun AGV di ogni simulazione avviata. Considerando il dominio su cui questo lavoro è stato svolto, una delle priorità maggiori è proprio quella di ottimizzare l'utilizzo delle risorse, andando quindi a minimizzare quei momenti in cui le risorse non sono operative. \\
 
-Il seguente grafico riporta il numero di step temporali attesi da ciascun AGV nelle tre diverse BT durante la simulazione con 12 AGV.
+\noindent Il seguente grafico riporta il numero di step temporali attesi da ciascun AGV nelle tre diverse BT durante la simulazione con 12 AGV.
 \begin{figure}[H]
 \centering
   \includegraphics[width=1\linewidth]{Figures/Results_Graphics/Waiting.png}
@@ -921,20 +944,41 @@ Il seguente grafico riporta il numero di step temporali attesi da ciascun AGV ne
 % CONCLUSIONI 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Conclusioni}
+Dopo aver analizzato i risultati ottenuti dalle simulazioni ci si è posti il problema di individuare le configurazioni che riportassero le performance migliori. Come descritto in precedenza, per considerare una configurazione migliore rispetto ad un'altra si sono considerate ed analizzate attentamente le metriche di valutazione riportate nella sezione \ref{MetricheValutazione}. Questo paragrafo ha proprio lo scopo di andare ad individuare le configurazioni migliori prima per quanto riguarda quelle con lo stesso Behaviour Type, successivamente per quanto riguarda tutte le configurazione simulate..
+
+\subsection{Intra Behaviour Type}
+Di seguito sono riportate per ogni BT le configurazioni ritenute migliori rispetto alle altre con il medesimo BT: 
 \begin{itemize}
-\item BT3 presenta dei tempi di elaborazione decisamente più bassi di BT1 e BT2, in particolare all'aumentare del numero di AGV disponibili.
-\item BT3 seppur presenta una considerevole diminuzione del tempo di elaborazione degli ordini, presenta un elevato numero di conflitti. 
-\item BT3 distribuisce il maniera equa il lavoro a ciascun AGV indipendentemente dalla loro numerosità, mentre BT1 solo su pochi AGV e invece BT2 non lo fa proprio.
-\item BT3 tende ad azzerare i tempi in cui delle risorse siano in attesa, sia con pochi sia con tanti AGV. BT1 e BT2 invece presentano entrambi dei sostanziali tempi di attesa per tutti gli AGV durante le simulazioni. Al diminuir del numero di AGV diminuisce anche questa differenza, seppur rimanendo sempre presente (BT2 leggermente meglio di BT1).
+\item \textbf{BT1:} per quanto riguarda questo BT la configurazione che ha portato a dei risultati più vantaggiosi in termine di tempo, conflitti e risorse è la \text{BT1\_A6}. Infatti, pur andando ad aumentare il numero di AGV, non si è ottenuta una considerevole diminuzione del tempo richiesto, andando quindi a preferire una configurazione con meno agenti (6 in questo caso) che implica dei costi più contenuti in termini di risorse.
+
+\item \textbf{BT2:} per quanto riguarda questo BT si sono considerate due configurazioni: \text{BT2\_A6} e \text{BT2\_A12}. Entrambe queste configurazioni hanno riportato degli ottimi rapporti tempo/conflitti, coerenti con il variare del numero di AGV. Quindi la scelta tra una configurazione o l'altra si basa fondamentalmente sul budget di risorse a disposizione. Se si intende prioritizzare il tempo a descapito di un investimento di risorse maggiore allora conviene \text{BT2\_A12}, altrimenti la configurazione \text{BT2\_A6}. 
+
+\item \textbf{BT3:} anche per quanto riguarda questo BT si sono si sono individuate due configurazioni: \text{BT3\_A6} e \text{BT3\_A12}. Entrambe queste configurazioni hanno riportato degli ottimi rapporti tempo/conflitti, coerenti con il variare del numero di AGV. Quindi la scelta tra una configurazione o l'altra si basa fondamentalmente sul budget di risorse che si mette a disposizione. Se si intende prioritizzare il tempo a descapito di un investimento di risorse maggiore allora conviene \text{BT3\_A12}, altrimenti la configurazione \text{BT3\_A6}. 
 \end{itemize}
 
-\noindent BT3 è la migliore, indipendentemente dal numero di AGV. Considerare che, per ottenere delle performance di gran lunga migliore delle altre configurazioni, bisogna investire per un elevato numero di AGV. Notare che, come detto prima, se si decide di utilizzare un elevato numero di AGV,  quindi prestare molta più attenzione alla gestione di conflitti e cercare di ottimizzarla.
+\subsection{Conclusioni generali}
+Una volta individuate le configurazioni migliori intra BT si è passati a confrontarle quelle con BT diversi. Le configurazioni considerate durante questa fase sono state: \text{BT1\_A6}, \text{BT2\_A6}, \text{BT2\_A12}, \text{BT3\_A6} e \text{BT3\_A12}.\\
+Di seguito sono riportate le osservazioni più rilevanti per le configurazioni sopra riportate. \\
 
-\noindent Si potrebbero preferire il BT1 e il BT2 solo in casi particolari:\\
-La BT1 ...\\
-La BT2 potrebbe essere di estrema utilità nel caso in cui ci siano diversi tipi di AGV che si occupano di articoli diversi per questione prettamente fisiche/logistiche. In quel caso allora si potrebbe preferire una soluzione di questo genere, che assegna a ciascun AGV un set limitato di tipi di articoli prelevabili.
+\noindent Andando a considerare tutte le metriche di valutazione raccolte ci si è accorti che le configurazione testate con BT1 non si sono mai effettivamente rivelate più vantaggiose di quelle con gli altri BT, quindi si è deciso di concentrare la propria attenzione su BT2 e BT3. \\
+
+\noindent BT3 presenta dei tempi di elaborazione decisamente più bassi di BT2, in particolare all'aumentare del numero di AGV disponibili. Questo porta però ad un elevato numero di conflitti.
+Inoltre BT3 distribuisce in maniera equa il lavoro a ciascun AGV indipendentemente dalla loro numerosità, mentre BT1 solo su pochi AGV e invece BT2 non lo fa proprio.\\
+\noindent BT3 tende ad azzerare i tempi in cui delle risorse siano in attesa, sia con pochi sia con tanti AGV. BT1 e BT2 invece presentano entrambi dei sostanziali tempi di attesa per tutti gli AGV durante le simulazioni. Al diminuir del numero di AGV diminuisce anche questa differenza, seppur rimanendo sempre presente (BT2 leggermente meglio di BT1).\\
+
+\noindent Si può quindi concludere che le configurazioni con BT3 risultano essere decisamente le più performanti, indipendentemente dal numero di AGV. L'unico fattore che potrebbe eventualmente cambiare questa scelta è la presenza di articoli prioritari o fortemente eterogenei: questo requisito potrebbe infatti portare a preferire la BT2 che, a descapito del tempo totale di lavorazione degli ordini, permetterebbe una maggiore personalizzazione della gestione di quest'ultimi.\\
+
+\noindent Per quanto riguarda il numero di AGV da scegliere dipende principalmente dal budget di risorse a propria disposizione: se il tempo di elaborazione degli ordini rappresenta una priorità rispetto all'investimento economico da affrontare, allora converrà adottare configurazioni con 12 agenti, altrimenti anche configurazioni con 6 agenti si sono rivelate discretamente performanti.
 
 \newpage
+
+\subsection{Algoritmo di scelta}
+Il seguente schema rappresenta una visualizzazione minimalista del processo di scelta della configurazione migliore per un determinato scenario. 
+\begin{figure}[H]
+\centering
+  \includegraphics[width=1\linewidth]{Figures/Scelta_Config/AlgoritmoScelta.png}
+  \caption{Algoritmo per scegliere tra le configurazioni in base alle priorità}\label{fig:waiting_total}
+\end{figure}
 
 \subsection{Lavori e sviluppi futuri}
 I risultati ottenuti da questo lavoro sono stati soddisfacenti: nonostante ciò si potrebbe portare avanti questa ricerca, ampliandola e migliorandola sotto diversi aspetti come:
@@ -942,7 +986,7 @@ I risultati ottenuti da questo lavoro sono stati soddisfacenti: nonostante ciò 
 \item Gestione della batteria degli AGV:
 \item Gestione di danni o rotture degli AGV:
 \item Gestione di sistema con AGV eterogene:
-\item Gestione navigazione degli AGV: algoritmo A* oppure navigazione su corsie.
+\item Gestione navigazione degli AGV: navigazione su corsie.
 \end{itemize}
 
 \newpage

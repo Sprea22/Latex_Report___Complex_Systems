@@ -47,8 +47,15 @@
 \BOOKMARK [2][-]{subsection.7.1}{Analisi generale delle configurazioni}{section.7}% 47
 \BOOKMARK [3][-]{subsubsection.7.1.1}{Timestep per ciascuna configurazione}{subsection.7.1}% 48
 \BOOKMARK [3][-]{subsubsection.7.1.2}{Conflitti per ciascuna configurazione}{subsection.7.1}% 49
-\BOOKMARK [2][-]{subsection.7.2}{Analisi singoli AGV delle configurazioni}{section.7}% 50
-\BOOKMARK [3][-]{subsubsection.7.2.1}{Articoli elaborati da ciascun AGV}{subsection.7.2}% 51
-\BOOKMARK [3][-]{subsubsection.7.2.2}{Timestep di attesa per ciascun AGV}{subsection.7.2}% 52
-\BOOKMARK [1][-]{section.8}{Conclusioni}{}% 53
-\BOOKMARK [2][-]{subsection.8.1}{Lavori e sviluppi futuri}{section.8}% 54
+\BOOKMARK [2][-]{subsection.7.2}{Analisi intra BT: timestep/conflitti}{section.7}% 50
+\BOOKMARK [3][-]{subsubsection.7.2.1}{Analisi BT 1}{subsection.7.2}% 51
+\BOOKMARK [3][-]{subsubsection.7.2.2}{Analisi BT 2}{subsection.7.2}% 52
+\BOOKMARK [3][-]{subsubsection.7.2.3}{Analisi BT 3}{subsection.7.2}% 53
+\BOOKMARK [2][-]{subsection.7.3}{Altri fattori di analisi}{section.7}% 54
+\BOOKMARK [3][-]{subsubsection.7.3.1}{Articoli elaborati da ciascun AGV}{subsection.7.3}% 55
+\BOOKMARK [3][-]{subsubsection.7.3.2}{Timestep di attesa per ciascun AGV}{subsection.7.3}% 56
+\BOOKMARK [1][-]{section.8}{Conclusioni}{}% 57
+\BOOKMARK [2][-]{subsection.8.1}{Intra Behaviour Type}{section.8}% 58
+\BOOKMARK [2][-]{subsection.8.2}{Conclusioni generali}{section.8}% 59
+\BOOKMARK [2][-]{subsection.8.3}{Algoritmo di scelta}{section.8}% 60
+\BOOKMARK [2][-]{subsection.8.4}{Lavori e sviluppi futuri}{section.8}% 61

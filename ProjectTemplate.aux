@@ -31,8 +31,7 @@
 \@writefile{lof}{\contentsline {figure}{\numberline {1}{\ignorespaces Interazione di un agente con l'ambiente esterno}}{5}{figure.caption.1}}
 \providecommand*\caption@xref[2]{\@setref\relax\@undefined{#1}}
 \newlabel{fig:Agente}{{1}{5}{Interazione di un agente con l'ambiente esterno}{figure.caption.1}{}}
-\citation{AgenteIntelligente}
-\newlabel{Agente}{{2.1}{6}{Agente}{figure.caption.1}{}}
+\newlabel{Agente}{{2.1}{5}{Agente}{figure.caption.1}{}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {2.2}Sistema}{6}{subsection.2.2}}
 \citation{SistemaComplesso}
 \@writefile{toc}{\contentsline {subsection}{\numberline {2.3}Sistema complesso}{7}{subsection.2.3}}
@@ -113,6 +112,7 @@
 \@writefile{lof}{\contentsline {figure}{\numberline {15}{\ignorespaces Numero di diversi articoli per cliente}}{36}{figure.caption.17}}
 \newlabel{fig:Electron}{{15}{36}{Numero di diversi articoli per cliente}{figure.caption.17}{}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {6.3}Metriche di valutazione}{37}{subsection.6.3}}
+\newlabel{MetricheValutazione}{{6.3}{37}{Metriche di valutazione}{subsection.6.3}{}}
 \@writefile{toc}{\contentsline {section}{\numberline {7}Analisi dei risultati}{38}{section.7}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {7.1}Analisi generale delle configurazioni}{39}{subsection.7.1}}
 \@writefile{toc}{\contentsline {subsubsection}{\numberline {7.1.1}Timestep per ciascuna configurazione}{39}{subsubsection.7.1.1}}
@@ -121,21 +121,36 @@
 \@writefile{toc}{\contentsline {subsubsection}{\numberline {7.1.2}Conflitti per ciascuna configurazione}{40}{subsubsection.7.1.2}}
 \@writefile{lof}{\contentsline {figure}{\numberline {17}{\ignorespaces Rapporto tra tempo richiesto e conflitti avvenuti in ciascuna configurazione\relax }}{40}{figure.caption.19}}
 \newlabel{fig:articles_agv_bt1}{{17}{40}{Rapporto tra tempo richiesto e conflitti avvenuti in ciascuna configurazione\relax }{figure.caption.19}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {7.2}Analisi singoli AGV delle configurazioni}{41}{subsection.7.2}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {7.2.1}Articoli elaborati da ciascun AGV}{41}{subsubsection.7.2.1}}
-\@writefile{lof}{\contentsline {figure}{\numberline {18}{\ignorespaces Numero di articoli elaborati da ciascun AGV con BT1\relax }}{41}{figure.caption.20}}
-\newlabel{fig:articles_agv_bt1}{{18}{41}{Numero di articoli elaborati da ciascun AGV con BT1\relax }{figure.caption.20}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {19}{\ignorespaces Numero di articoli elaborati da ciascun AGV con BT2\relax }}{42}{figure.caption.21}}
-\newlabel{fig:articles_agv_bt2}{{19}{42}{Numero di articoli elaborati da ciascun AGV con BT2\relax }{figure.caption.21}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {20}{\ignorespaces Numero di articoli elaborati da ciascun AGV con BT3\relax }}{42}{figure.caption.22}}
-\newlabel{fig:articles_agv_bt3}{{20}{42}{Numero di articoli elaborati da ciascun AGV con BT3\relax }{figure.caption.22}{}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {7.2.2}Timestep di attesa per ciascun AGV}{43}{subsubsection.7.2.2}}
-\@writefile{lof}{\contentsline {figure}{\numberline {21}{\ignorespaces Numero di step temporali passati in attesa da ciascun AGV per i tre diversi BT\relax }}{43}{figure.caption.23}}
-\newlabel{fig:waiting_bt_a12}{{21}{43}{Numero di step temporali passati in attesa da ciascun AGV per i tre diversi BT\relax }{figure.caption.23}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {22}{\ignorespaces Numero totale di step passati in attesa dagli AGV di una configurazione\relax }}{44}{figure.caption.24}}
-\newlabel{fig:waiting_total}{{22}{44}{Numero totale di step passati in attesa dagli AGV di una configurazione\relax }{figure.caption.24}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {8}Conclusioni}{45}{section.8}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {8.1}Lavori e sviluppi futuri}{46}{subsection.8.1}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {7.2}Analisi intra BT: timestep/conflitti}{41}{subsection.7.2}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {7.2.1}Analisi BT 1}{41}{subsubsection.7.2.1}}
+\@writefile{lof}{\contentsline {figure}{\numberline {18}{\ignorespaces BT1: Confronto tra numero di conflitti e timestep richiesti\relax }}{41}{figure.caption.20}}
+\newlabel{fig:BT1_TimeConflicts}{{18}{41}{BT1: Confronto tra numero di conflitti e timestep richiesti\relax }{figure.caption.20}{}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {7.2.2}Analisi BT 2}{41}{subsubsection.7.2.2}}
+\@writefile{lof}{\contentsline {figure}{\numberline {19}{\ignorespaces BT2: Confronto tra numero di conflitti e timestep richiesti\relax }}{42}{figure.caption.21}}
+\newlabel{fig:BT2_TimeConflicts}{{19}{42}{BT2: Confronto tra numero di conflitti e timestep richiesti\relax }{figure.caption.21}{}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {7.2.3}Analisi BT 3}{42}{subsubsection.7.2.3}}
+\@writefile{lof}{\contentsline {figure}{\numberline {20}{\ignorespaces BT3: Confronto tra numero di conflitti e timestep richiesti\relax }}{42}{figure.caption.22}}
+\newlabel{fig:BT3_TimeConflicts}{{20}{42}{BT3: Confronto tra numero di conflitti e timestep richiesti\relax }{figure.caption.22}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {7.3}Altri fattori di analisi}{43}{subsection.7.3}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {7.3.1}Articoli elaborati da ciascun AGV}{43}{subsubsection.7.3.1}}
+\@writefile{lof}{\contentsline {figure}{\numberline {21}{\ignorespaces Numero di articoli elaborati da ciascun AGV con BT1\relax }}{43}{figure.caption.23}}
+\newlabel{fig:articles_agv_bt1}{{21}{43}{Numero di articoli elaborati da ciascun AGV con BT1\relax }{figure.caption.23}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {22}{\ignorespaces Numero di articoli elaborati da ciascun AGV con BT2\relax }}{44}{figure.caption.24}}
+\newlabel{fig:articles_agv_bt2}{{22}{44}{Numero di articoli elaborati da ciascun AGV con BT2\relax }{figure.caption.24}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {23}{\ignorespaces Numero di articoli elaborati da ciascun AGV con BT3\relax }}{44}{figure.caption.25}}
+\newlabel{fig:articles_agv_bt3}{{23}{44}{Numero di articoli elaborati da ciascun AGV con BT3\relax }{figure.caption.25}{}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {7.3.2}Timestep di attesa per ciascun AGV}{45}{subsubsection.7.3.2}}
+\@writefile{lof}{\contentsline {figure}{\numberline {24}{\ignorespaces Numero di step temporali passati in attesa da ciascun AGV per i tre diversi BT\relax }}{45}{figure.caption.26}}
+\newlabel{fig:waiting_bt_a12}{{24}{45}{Numero di step temporali passati in attesa da ciascun AGV per i tre diversi BT\relax }{figure.caption.26}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {25}{\ignorespaces Numero totale di step passati in attesa dagli AGV di una configurazione\relax }}{46}{figure.caption.27}}
+\newlabel{fig:waiting_total}{{25}{46}{Numero totale di step passati in attesa dagli AGV di una configurazione\relax }{figure.caption.27}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {8}Conclusioni}{47}{section.8}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {8.1}Intra Behaviour Type}{47}{subsection.8.1}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {8.2}Conclusioni generali}{48}{subsection.8.2}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {8.3}Algoritmo di scelta}{49}{subsection.8.3}}
+\@writefile{lof}{\contentsline {figure}{\numberline {26}{\ignorespaces Algoritmo per scegliere tra le configurazioni in base alle priorit\IeC {\`a}\relax }}{49}{figure.caption.28}}
+\newlabel{fig:waiting_total}{{26}{49}{Algoritmo per scegliere tra le configurazioni in base alle priorità\relax }{figure.caption.28}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {8.4}Lavori e sviluppi futuri}{49}{subsection.8.4}}
 \bibstyle{amsplain}
 \bibdata{references}
 \bibcite{Tableau}{1}

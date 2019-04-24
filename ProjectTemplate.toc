@@ -48,8 +48,15 @@
 \contentsline {subsection}{\numberline {7.1}Analisi generale delle configurazioni}{39}{subsection.7.1}
 \contentsline {subsubsection}{\numberline {7.1.1}Timestep per ciascuna configurazione}{39}{subsubsection.7.1.1}
 \contentsline {subsubsection}{\numberline {7.1.2}Conflitti per ciascuna configurazione}{40}{subsubsection.7.1.2}
-\contentsline {subsection}{\numberline {7.2}Analisi singoli AGV delle configurazioni}{41}{subsection.7.2}
-\contentsline {subsubsection}{\numberline {7.2.1}Articoli elaborati da ciascun AGV}{41}{subsubsection.7.2.1}
-\contentsline {subsubsection}{\numberline {7.2.2}Timestep di attesa per ciascun AGV}{43}{subsubsection.7.2.2}
-\contentsline {section}{\numberline {8}Conclusioni}{45}{section.8}
-\contentsline {subsection}{\numberline {8.1}Lavori e sviluppi futuri}{46}{subsection.8.1}
+\contentsline {subsection}{\numberline {7.2}Analisi intra BT: timestep/conflitti}{41}{subsection.7.2}
+\contentsline {subsubsection}{\numberline {7.2.1}Analisi BT 1}{41}{subsubsection.7.2.1}
+\contentsline {subsubsection}{\numberline {7.2.2}Analisi BT 2}{41}{subsubsection.7.2.2}
+\contentsline {subsubsection}{\numberline {7.2.3}Analisi BT 3}{42}{subsubsection.7.2.3}
+\contentsline {subsection}{\numberline {7.3}Altri fattori di analisi}{43}{subsection.7.3}
+\contentsline {subsubsection}{\numberline {7.3.1}Articoli elaborati da ciascun AGV}{43}{subsubsection.7.3.1}
+\contentsline {subsubsection}{\numberline {7.3.2}Timestep di attesa per ciascun AGV}{45}{subsubsection.7.3.2}
+\contentsline {section}{\numberline {8}Conclusioni}{47}{section.8}
+\contentsline {subsection}{\numberline {8.1}Intra Behaviour Type}{47}{subsection.8.1}
+\contentsline {subsection}{\numberline {8.2}Conclusioni generali}{48}{subsection.8.2}
+\contentsline {subsection}{\numberline {8.3}Algoritmo di scelta}{49}{subsection.8.3}
+\contentsline {subsection}{\numberline {8.4}Lavori e sviluppi futuri}{49}{subsection.8.4}
