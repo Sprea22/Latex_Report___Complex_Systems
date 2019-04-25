@@ -89,7 +89,7 @@ IoT, guida autonoma, domotica e tutto quello che riguarda l’automazione di pro
 Ad oggi, in LDE lo smistamento dei pacchi è eseguito in maniera totalmente manuale dai dipendenti e questo prevede un grande sforzo lavorativo ed organizzativo.
 
 \subsection{Obiettivi}
-Lo scopo di questo lavoro è quello di implementare, simulare e valutare la realizzazione di un sistema a veicoli a guida autonoma per la gestione semi automatica di un magazzino.
+Lo scopo di questo lavoro è quello di implementare, simulare e valutare la realizzazione di un sistema di veicoli a guida autonoma per la gestione semi automatica di un magazzino.
 In particolare, lo scopo finale del lavoro sarà quello di stimare il numero ottimale di veicoli e il comportamento che questi ultimi dovranno adottare per minimizzare i costi e i tempi di esecuzione nello smistamento degli ordini.
 
 \subsection{Strumenti utilizzati}
@@ -109,7 +109,7 @@ Gli strumenti principali utilizzati per la progettazione e l'implementazione di 
 
 \subsection{Agente}
 
-Un agente è una qualunque entità in grado di percepire l’ambiente che lo circonda attraverso l’uso di sensori e di eseguire delle azioni attraverso degli attuatori. Ad esempio, in un essere umano alcuni sensori sono gli occhi e le orecchie. Gli attuatori possono essere le mani, i piedi o pi`u in generale i muscoli.
+Un agente è una qualunque entità in grado di percepire l’ambiente che lo circonda attraverso l’uso di sensori e di eseguire delle azioni attraverso degli attuatori. Ad esempio, in un essere umano alcuni sensori sono gli occhi e le orecchie. Gli attuatori possono essere le mani, i piedi o più in generale i muscoli.
 
 \begin{figure}[ht]
 \includegraphics[width=\textwidth,height=\textheight,keepaspectratio]{Figures/Vario/Agente.png}
@@ -117,9 +117,9 @@ Un agente è una qualunque entità in grado di percepire l’ambiente che lo cir
 \label{fig:Agente}
 \end{figure}
 
-Nel campo dell’Intelligenza artificiale un obiettivo fondamentale è la realizzazione di agenti intelligenti (o agenti razionali). Nella fattispecie un agente si definisce intelligente se fa la cosa giusta al momento giusto. \\
-Per poter stabilire questo, però, occorre fornire una qualche misura delle prestazioni e definire come e quando eseguire la valutazione. Inoltre, questo rende necessario un modello di successo, stabilito a priori, con il quale confrontare i risultati ottenuti. \cite{AgenteIntelligente}
-
+\noindent Nel campo dell’Intelligenza artificiale un obiettivo fondamentale è la realizzazione di agenti intelligenti (o agenti razionali). Nella fattispecie un agente si definisce intelligente se fa la cosa giusta al momento giusto. \\
+Per poter stabilire questo, però, occorre fornire una qualche misura delle prestazioni e definire come e quando eseguire la valutazione. Inoltre, questo rende necessario un modello di successo, stabilito a priori, con il quale confrontare i risultati ottenuti. \cite{AgenteIntelligente} \\
+È possibile raggruppare gli agenti in 5 classi in base al grado di intelligenza percepita e alle capacità:
 \label{Agente}
 \begin{itemize}
 \item agenti con riflessi semplici (detti anche puramente reattivi);
@@ -167,7 +167,7 @@ Rappresenta un modo di sfruttare modelli computazionali con lo scopo di valutare
 \newpage
 
 \subsection{Sistema multiagente}
-Un sistema multiagente o (sistema ad agenti multipli) è un insieme di agenti situati in un certo ambiente ed interagenti tra loro mediante una opportuna organizzazione. Un agente è un'entità caratterizzata dal fatto di essere, almeno parzialmente, autonoma, sia essa un programma informatico, un robot, un essere umano, e così via.
+Un MAS (sistema multiagenti) è un insieme di agenti situati in un certo ambiente ed interagenti tra loro mediante una opportuna organizzazione. Un agente è un'entità caratterizzata dal fatto di essere, almeno parzialmente, autonoma, sia essa un programma informatico, un robot, un essere umano, e così via.
 
 \begin{figure}[ht]
 \centering
@@ -232,7 +232,7 @@ Esistono diverse tipologie di ambienti che possono essere caratterizzati nelle s
 \newpage
 
 \subsection{Automated Guided Vehicle}
-Un veicolo a guida autonoma (AGV) identifica dei veicoli, solitamente utilizzati in campo industriale per il trasporto di prodotti da un punto dello stabilimento ad un altro.\\
+Un AGV (veicolo a guida autonoma) identifica dei veicoli che vengono solitamente utilizzati in campo industriale per il trasporto di prodotti da un punto dello stabilimento ad un altro.\\
 
 \begin{figure}[ht]
 \centering
@@ -290,7 +290,7 @@ Solitamente la valutazione delle performance di un AGVS avviene tramite simulazi
 \subsection{Lavori precedenti}
 Nonostante esistano parecchi lavori e pubblicazioni che riguardano AGV e AGVS, non è stato semplice trovare indicazioni che potessero guidare le scelte implementative a causa della scarsità di simulazioni che riguardano questi argomenti.\\
 
-\noindent Nonostante ciò, due lavori sono stati molto utili:  ”Evaluation of automatic guided vehicle systems” \cite{EvaluationAGVS}, che ci ha permesso di individuare e definire le metriche utili alla valutazione del nostro simulatore e "Multi Agent Simulation for Decision Making in Warehouse Management” 1\cite{MAS_Warehouse}, in cui si analizza e simula un sistema complesso in un ambiente molto simile al nostro caso di studio.
+\noindent Nonostante ciò, due lavori sono stati molto utili:  ”Evaluation of automatic guided vehicle systems” \cite{EvaluationAGVS}, che ci ha permesso di individuare e definire le metriche utili alla valutazione del nostro simulatore e "Multi Agent Simulation for Decision Making in Warehouse Management” \cite{MAS_Warehouse}, in cui si analizza e simula un sistema complesso in un ambiente molto simile al nostro caso di studio.
 Molte delle scelte non arbitrarie del progetto, quindi, sono prese o ricavate dai due documenti sopra citati.
 
 \newpage
@@ -352,7 +352,7 @@ Una volta ottenuta la mappa del magazzino, si è andati a cercare di rappresenta
 \caption{Rappresentazione della mappa del magazzino sul simulatore}\label{fig:Rappresentazione_mappa}
 \end{figure}
 
-\noindent All'interno dell'ambiente sono stati definiti i seguenti elementi, di cui i primi 4 sono quelli fondamentali alla simulazione del problema e meglio descritti nella pagina seguente:
+\noindent All'interno dell'ambiente sono stati definiti i seguenti elementi, che vengono meglio descritti nelle prossime pagine:
 
 \begin{itemize}
 \item Scaffalature
@@ -447,7 +447,7 @@ Ciascun agente definito all'interno della simulazione è caratterizzato da i seg
 \end{itemize}
 
 \subsubsection{Stati assumibili}\label{StatiAssumibili}
-Come accennato nel paragrafo precedente, ciascun agente è caratterizzato da svariati attributi, tra cui uno che definisce lo stato in cui si trova l'agente in un determinato momento. Questo attributo ha un'estrema importanza per il corretto funzionamento della simulazione, in quanto regola il comportamento degli agenti in base allo stato in cui si trovano. \\
+Come accennato nel paragrafo precedente, ciascun agente è caratterizzato da svariati attributi, tra cui uno che definisce lo stato in cui si trova l'agente in un determinato momento.\\
 \noindent Di seguito è riportata la lista dei possibili stati che un agente può assumere durante il ciclo di vita di una simulazione insieme ad una breve descrizione per ciascuno di essi:
 \begin{itemize}
     \item \textbf{Free}: un agente in questo stato non sta elaborando nessun ordine, rimanendo quindi disponibile ad essere impiegato per l'elaborazione di un ordine. Tutti gli agenti all'inizio di una simulazione si trovano in questo stato.
@@ -700,7 +700,7 @@ Questo metodo fa si che ciascun AGV possa elaborare un qualsiasi articolo di un 
 \section{Implementazione simulatore} 
 \subsection{Interfaccia simulatore}
 Il sistema di simulazione è stato interamente sviluppato tramite il linguaggio di programmazione Python, andando ad usufruire in particolare del modulo PycxSimulator.
-Di seguito è riportata la struttura della schermata durante il ciclo di vita di una simulazione. I tasti sulla destra permettono all'utente di incominciare, finire o mettere in pausa la simulazione, mentre i grafici sulla sinistra permettono di monitorare la simulazione stessa e i relativi dati.
+Di seguito è riportata la struttura della schermata durante il ciclo di vita di una simulazione. I tasti sulla destra permettono all'utente di avviare, finire o mettere in pausa la simulazione, mentre i grafici sulla sinistra permettono di monitorare la simulazione stessa e i relativi dati.
 \begin{figure}[h]
 \centering
 \includegraphics[width=1\textwidth,height=\textheight,keepaspectratio]{Figures/GUI/Simulatore.jpg}
@@ -748,7 +748,7 @@ Di seguito è riportata la struttura della schermata durante il ciclo di vita di
 Dopo aver progettato l'AGVS ed implementato il sistema di simulazione, si è passati alla fase di simulazione. Questa fase si pone l'obiettivo di simulare il funzionamento degli agenti con diverse configurazioni di comportamento, tenendo invariato il set di ordini in input. Ciò fornisce la possibilità di raccogliere dati e statistiche che permettono di effettuare un analisi complessiva delle performance del sistema con diverse configurazioni.
 
 \subsection{Configurazioni simulate}
-In particolare, si è deciso di eseguire la simulazione su 12 diverse configurazione in modo da poter andare ad analizzare i risultati al variare del comportamento e del numero di AGV. Le configurazioni eseguite sono state:
+Si è deciso di eseguire la simulazione su 12 diverse configurazione in modo da poter andare ad analizzare i risultati al variare del comportamento e del numero di AGV. Le configurazioni eseguite sono state:
 \begin{itemize}
 \setlength\itemsep{0.1em}
     \item \textbf{BT1 A3:} Behaviour type 1 - Number of AGV 3 
@@ -959,7 +959,7 @@ Di seguito sono riportate per ogni BT le configurazioni ritenute migliori rispet
 \end{itemize}
 
 \subsection{Conclusioni generali}
-Una volta individuate le configurazioni migliori intra BT si è passati a confrontarle quelle con BT diversi. Le configurazioni considerate durante questa ultima fase sono state: \text{BT1\_A6}, \text{BT2\_A6}, \text{BT2\_A12}, \text{BT3\_A6} e \text{BT3\_A12}.\\
+Una volta individuate le configurazioni migliori intra BT si è passati a confrontarle con quelle con BT diversi. Le configurazioni considerate durante questa ultima fase sono state: \text{BT1\_A6}, \text{BT2\_A6}, \text{BT2\_A12}, \text{BT3\_A6} e \text{BT3\_A12}.\\
 \noindent Come prima cosa, andando a considerare le metriche di valutazione raccolte, ci si è accorti che le configurazione testate con BT1 non si sono mai effettivamente rivelate più vantaggiose di quelle con gli altri BT; per questo motivo si è deciso di concentrare la propria attenzione su BT2 e BT3. \\
 
 \noindent Le configurazioni testate con BT3 presentano dei tempi di elaborazione significativamente più bassi rispetto a quelle con BT2, in particolare all'aumentare del numero di agenti disponibili [Fig. \ref{fig:articles_agv_bt1}]. Allo stesso tempo BT3 riporta un numero maggiore di conflitti [Fig. \ref{fig:conflicts_time_a12}] rispetto a BT2 che, però, non dovrebbe rappresentare un problema a livello pratico se il gestore dei conflitti risulta essere robusto e affidabile. \\
